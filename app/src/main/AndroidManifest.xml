@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MobileHotelManagementSystem">
-        <activity android:name=".main_page"></activity>
+        <activity android:name=".EditPoolList" />
+        <activity android:name=".AddNewPoolReservation" />
+        <activity android:name=".EditCustomerList" />
+        <activity android:name=".AddNewCustomer" />
+        <activity android:name=".checkIn_and_checkOut" />
+        <activity android:name=".main_page" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

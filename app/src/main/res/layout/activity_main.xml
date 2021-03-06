@@ -25,6 +25,7 @@
         android:layout_height="80dp"
         android:layout_marginTop="60dp"
         android:autofillHints="Username"
+        android:background="#E4E4E4"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="@string/username"
@@ -40,6 +41,7 @@
         android:layout_height="80dp"
         android:layout_marginTop="40dp"
         android:autofillHints="Password"
+        android:background="#EFEAEA"
         android:ems="10"
         android:inputType="textVisiblePassword"
         android:text="@string/Password"
@@ -63,10 +65,11 @@
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="188dp"
-        android:layout_height="64dp"
+        android:layout_width="278dp"
+        android:layout_height="63dp"
         android:layout_marginTop="50dp"
         android:text="@string/login"
+        app:backgroundTint="#2196F3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/remember_password" />

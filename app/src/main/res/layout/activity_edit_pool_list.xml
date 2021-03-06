@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditPoolList">
+
+    <View
+        android:id="@+id/edit_pool_list_background"
+        android:layout_width="382dp"
+        android:layout_height="652dp"
+        android:layout_marginTop="10dp"
+        android:background="#D5D2D2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_pool_list"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/edit_pool_list_button"
+        android:layout_width="140dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="70dp"
+        android:text="@string/edit_pool_list_button"
+        android:textSize="18sp"
+        app:backgroundTint="#1A3CFB"
+        app:layout_constraintEnd_toEndOf="@+id/edit_pool_list_background"
+        app:layout_constraintStart_toStartOf="@+id/edit_pool_list_background"
+        app:layout_constraintTop_toBottomOf="@+id/edit_pool_list_time" />
+
+    <Button
+        android:id="@+id/cancel_edit_pool_list_button"
+        android:layout_width="140dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/cancel_edit_pool_list_button"
+        android:textSize="18sp"
+        app:backgroundTint="#F44336"
+        app:layout_constraintEnd_toEndOf="@+id/edit_pool_list_background"
+        app:layout_constraintStart_toStartOf="@+id/edit_pool_list_background"
+        app:layout_constraintTop_toBottomOf="@+id/edit_pool_list_button" />
+
+    <TextView
+        android:id="@+id/edit_pool_list_room_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/edit_pool_list_room"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/edit_pool_list_background"
+        app:layout_constraintTop_toTopOf="@+id/edit_pool_list_background" />
+
+    <TextView
+        android:id="@+id/edit_pool_list_phone_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="70dp"
+        android:text="@string/edit_pool_list_phone"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/edit_pool_list_background"
+        app:layout_constraintTop_toBottomOf="@+id/edit_pool_list_room_textView" />
+
+    <TextView
+        android:id="@+id/edit_pool_list_time_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="70dp"
+        android:text="@string/edit_pool_list_time"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/edit_pool_list_background"
+        app:layout_constraintTop_toBottomOf="@+id/edit_pool_list_phone_textView" />
+
+    <EditText
+        android:id="@+id/edit_pool_list_room"
+        android:layout_width="217dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="28dp"
+        android:background="#FFFCFC"
+        android:ems="3"
+        android:hint="@string/edit_edit_pool_list_room"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/edit_pool_list_room_textView"
+        app:layout_constraintTop_toTopOf="@+id/edit_pool_list_background" />
+
+    <EditText
+        android:id="@+id/edit_pool_list_phone"
+        android:layout_width="208dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="68dp"
+        android:background="#FFFCFC"
+        android:ems="3"
+        android:hint="@string/edit_edit_pool_list_phone"
+        android:importantForAutofill="no"
+        android:inputType="phone"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/edit_pool_list_phone_textView"
+        app:layout_constraintTop_toBottomOf="@+id/edit_pool_list_room" />
+
+    <EditText
+        android:id="@+id/edit_pool_list_time"
+        android:layout_width="208dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="64dp"
+        android:background="#FFFCFC"
+        android:ems="3"
+        android:hint="@string/edit_edit_pool_list_time"
+        android:importantForAutofill="no"
+        android:inputType="time"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/edit_pool_list_time_textView"
+        app:layout_constraintTop_toBottomOf="@+id/edit_pool_list_phone" />
+
+    <TextView
+        android:id="@+id/edit_pool_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/edit_pool_list"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.372"
+        app:layout_constraintStart_toEndOf="@+id/edit_pool_reservation_back_logo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/edit_pool_reservation_back_logo"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_arrow" />
+</androidx.constraintlayout.widget.ConstraintLayout>
