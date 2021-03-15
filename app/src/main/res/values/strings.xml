@@ -59,4 +59,15 @@
     <string name="edit_edit_pool_list_time">3.00pm ~ 5.00pm</string>
     <string name="edit_pool_list_button">Confirm</string>
     <string name="cancel_edit_pool_list_button">Cancel</string>
+
+    <string name="hello_string">Hello,</string>
+    <string name="check_in_and_check_out_string">Check-in and Check-out</string>
+    <string name="room_service_string">Room Service</string>
+    <string name="facilities_monitoring_string">Facilities Monitoring</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="indoor_swimming_pool">Indoor Swimming Pool</string>
+    <string name="facilities_list">Facilities List</string>
+    <string name="karaoke_room">Karaoke Room</string>
+    <string name="massage_room">Massage Room</string>
 </resources>
