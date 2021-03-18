@@ -27,24 +27,24 @@
         android:autofillHints="Username"
         android:background="#E4E4E4"
         android:ems="10"
+        android:hint="@string/username_string"
         android:inputType="textPersonName"
-        android:text="@string/username"
-        android:textColor="#A19E9E"
+        android:textColor="#000000"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hotel_logo" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/sign_in_password"
         android:layout_width="309dp"
         android:layout_height="80dp"
         android:layout_marginTop="40dp"
         android:autofillHints="Password"
         android:background="#EFEAEA"
         android:ems="10"
+        android:hint="@string/password_string"
         android:inputType="textVisiblePassword"
-        android:text="@string/Password"
         android:textColor="#A19E9E"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,10 +61,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
+        app:layout_constraintTop_toBottomOf="@+id/sign_in_password" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/sign_in_button"
         android:layout_width="278dp"
         android:layout_height="63dp"
         android:layout_marginTop="50dp"

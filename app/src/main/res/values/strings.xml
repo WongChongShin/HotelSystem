@@ -70,4 +70,6 @@
     <string name="facilities_list">Facilities List</string>
     <string name="karaoke_room">Karaoke Room</string>
     <string name="massage_room">Massage Room</string>
+    <string name="username_string">Username</string>
+    <string name="password_string">Password</string>
 </resources>
