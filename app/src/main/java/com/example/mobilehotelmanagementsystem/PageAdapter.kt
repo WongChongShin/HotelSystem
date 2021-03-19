@@ -26,8 +26,8 @@ public class PageAdapter(fn:FragmentManager):FragmentPagerAdapter(fn) {
     override fun getPageTitle(page: Int): CharSequence? {
         //set tabs title
         return when (page){
-            0->"One"
-            else->{"Two"}
+            0->"Cleaning List"
+            else->{"Food List"}
         }
     }
 }

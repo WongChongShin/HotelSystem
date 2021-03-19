@@ -1,50 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".rooms_service">
+    tools:context=".MainActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-       
-
-        <com.google.android.material.tabs.TabLayout
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:id="@+id/tabLayout">
-
-            <com.google.android.material.tabs.TabItem
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:text="Cleaning List"
-                android:id="@+id/cleaning_list_tab"/>
-
-            <com.google.android.material.tabs.TabItem
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:text="Food List"
-                android:id="@+id/food_list_tab"/>
-
-        </com.google.android.material.tabs.TabLayout>
-
- </com.google.android.material.appbar.AppBarLayout>
+        android:layout_height="wrap_content"
+        android:background="#1db995"></com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager.widget.ViewPager
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        android:id="@+id/viewPager">
-
-        <com.google.android.material.tabs.TabLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="top"
-        />
-
-    </androidx.viewpager.widget.ViewPager>
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+        android:id="@+id/viewPager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tabLayout"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="0dp"
+        tools:layout_editor_absoluteX="8dp" />
+</RelativeLayout>

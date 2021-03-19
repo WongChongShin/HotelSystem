@@ -10,17 +10,31 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
+        <ScrollView
+            android:layout_width="414dp"
+            android:layout_height="579dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editSearch2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+
         <ImageView
             android:id="@+id/check_page_search_logo2"
             android:layout_width="40dp"
             android:layout_height="34dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="250dp"
-            android:layout_marginBottom="670dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginBottom="600dp"
             android:contentDescription="@string/search"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.322"
+            app:layout_constraintHorizontal_bias="0.043"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/checkIn_and_checkOut_textView"
             app:srcCompat="@drawable/search_logo" />
@@ -31,23 +45,26 @@
             android:layout_height="45dp"
             android:layout_marginTop="50dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginBottom="660dp"
+            android:layout_marginBottom="592dp"
             android:hint="@string/editSearch"
             android:importantForAutofill="no"
             android:inputType="textPersonName"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.391"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/check_page_search_logo2"
             app:layout_constraintTop_toBottomOf="@+id/checkIn_and_checkOut_textView" />
 
-        <TextView
-            android:id="@+id/textView"
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="92dp"
-            android:layout_marginTop="8dp"
-            android:text="Clean"
+            android:layout_marginStart="177dp"
+            android:layout_marginTop="520dp"
+            android:layout_marginEnd="178dp"
+            android:clickable="true"
+            app:srcCompat="@drawable/add_logo"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editSearch2" />
 
