@@ -216,11 +216,11 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.474"
-        app:layout_constraintStart_toEndOf="@+id/edit_customer_back_logo3"
+        app:layout_constraintStart_toEndOf="@+id/edit_customer_back_logo"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/edit_customer_back_logo3"
+        android:id="@+id/edit_customer_back_logo"
         android:layout_width="40dp"
         android:layout_height="35dp"
         android:layout_marginStart="15dp"

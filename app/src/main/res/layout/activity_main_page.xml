@@ -6,13 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".main_page">
 
+    <ImageView
+        android:id="@+id/hotel_logo2"
+        android:layout_width="384dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="40dp"
+        android:contentDescription="@string/logo_desc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/hotel_logo" />
+
     <Button
         android:id="@+id/check_button"
         android:layout_width="205dp"
         android:layout_height="83dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="106dp"
+        android:layout_marginTop="40dp"
         android:text="@string/check_in_and_check_out_string"
         app:backgroundTint="#0784E4"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,47 +33,43 @@
         android:id="@+id/hotel_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="116dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="47dp"
         android:text="@string/hello_string"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/hotel_logo2" />
 
-    <TextView
-        android:id="@+id/main_page_username"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="120dp"
-        android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/hotel_textview"
-        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/room_button"
+        android:layout_width="205dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/room_service_string"
+        app:backgroundTint="#0784E4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/check_button" />
 
     <Button
         android:id="@+id/facility_button"
         android:layout_width="205dp"
         android:layout_height="83dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="106dp"
+        android:layout_marginTop="60dp"
         android:text="@string/facilities_monitoring_string"
         app:backgroundTint="#0784E4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/room_button" />
 
-    <Button
-        android:id="@+id/room_button"
-        android:layout_width="205dp"
-        android:layout_height="83dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="106dp"
-        android:text="@string/room_service_string"
-        app:backgroundTint="#0784E4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/check_button" />
+    <TextView
+        android:id="@+id/main_page_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="47dp"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/hotel_textview"
+        app:layout_constraintTop_toBottomOf="@+id/hotel_logo2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

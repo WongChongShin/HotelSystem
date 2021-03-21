@@ -35,7 +35,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/editSearch4"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkIn_and_checkOut_textView"
+            app:layout_constraintTop_toBottomOf="@+id/karaoke_room_textView"
             app:srcCompat="@drawable/search_logo" />
 
         <EditText
@@ -49,7 +49,7 @@
             android:inputType="textPersonName"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/check_page_search_logo4"
-            app:layout_constraintTop_toBottomOf="@+id/checkIn_and_checkOut_textView" />
+            app:layout_constraintTop_toBottomOf="@+id/karaoke_room_textView" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/floatingActionButton"

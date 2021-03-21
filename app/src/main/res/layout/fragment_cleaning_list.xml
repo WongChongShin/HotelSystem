@@ -36,7 +36,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.043"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkIn_and_checkOut_textView"
+            app:layout_constraintTop_toBottomOf="@+id/karaoke_room_textView"
             app:srcCompat="@drawable/search_logo" />
 
         <EditText
@@ -53,7 +53,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/check_page_search_logo2"
-            app:layout_constraintTop_toBottomOf="@+id/checkIn_and_checkOut_textView" />
+            app:layout_constraintTop_toBottomOf="@+id/karaoke_room_textView" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/floatingActionButton2"

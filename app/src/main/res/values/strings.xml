@@ -1,4 +1,5 @@
 <resources>
+    <!-- Login -->
     <string name="app_name">Mobile Hotel Management System</string>
     <string name="logo_desc">logo_desc</string>
     <string name="username">Username</string>
@@ -7,10 +8,28 @@
     <string name="Password">Password</string>
     <string name="remember_me">Remember me</string>
     <string name="login">Sign In</string>
+
+    <!-- Home Page -->
+    <string name="hello_string">Hello,</string>
+    <string name="check_in_and_check_out_string">Check-in and Check-out</string>
+    <string name="room_service_string">Room Service</string>
+    <string name="facilities_monitoring_string">Facilities Monitoring</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="indoor_swimming_pool">Indoor Swimming Pool</string>
+    <string name="facilities_list">Facilities List</string>
+    <string name="karaoke_room">Karaoke Room</string>
+    <string name="massage_room">Massage Room</string>
+    <string name="username_string">Username</string>
+    <string name="password_string">Password</string>
+
+    <!-- Check In & Check Out -->
     <string name="check_in_check_out"><![CDATA[Check In & Check Out]]></string>
     <string name="back">back page</string>
     <string name="search">search</string>
     <string name="editSearch">Search</string>
+
+    <!-- Add Check In & Check Out -->
     <string name="add_new_customer">Add New Customer</string>
     <string name="add_room_no">Room No.: </string>
     <string name="edit_add_room_no">101</string>
@@ -26,6 +45,8 @@
     <string name="edit_add_checkOut">1/2/2021</string>
     <string name="add_customer">Add</string>
     <string name="cancel_add_customer">Cancel</string>
+
+    <!-- Edit Customer List -->
     <string name="edit_customer_list">Edit Customer List</string>
     <string name="edit_room_no">Room No.: </string>
     <string name="edit_edit_room_no">101</string>
@@ -41,6 +62,14 @@
     <string name="edit_edit_checkOut">1/2/2021</string>
     <string name="edit_customer">Confirm</string>
     <string name="cancel_edit_customer">Cancel</string>
+
+    <!-- Indoor Swimming Pool -->
+    <string name="indoor_swimming_pool_list"><![CDATA[Indoor Swimming Pool]]></string>
+    <string name="pool_back">back page</string>
+    <string name="pool_search">search</string>
+    <string name="pool_editSearch">Search</string>
+
+    <!-- Add Pool Reservation -->
     <string name="add_new_pool_reservation">Add New Pool Reservation</string>
     <string name="add_pool_reservation_room_no">Room no.:</string>
     <string name="edit_add_pool_reservation_room">101</string>
@@ -50,6 +79,8 @@
     <string name="edit_add_pool_reservation_time">3.00pm ~ 5.00pm</string>
     <string name="add_pool_reservation_button">Add</string>
     <string name="cancel_add_pool_reservation_button">Cancel</string>
+
+    <!-- Edit Pool List -->
     <string name="edit_pool_list">Edit Pool List</string>
     <string name="edit_pool_list_room">Room no.:</string>
     <string name="edit_edit_pool_list_room">101</string>
@@ -60,16 +91,61 @@
     <string name="edit_pool_list_button">Confirm</string>
     <string name="cancel_edit_pool_list_button">Cancel</string>
 
-    <string name="hello_string">Hello,</string>
-    <string name="check_in_and_check_out_string">Check-in and Check-out</string>
-    <string name="room_service_string">Room Service</string>
-    <string name="facilities_monitoring_string">Facilities Monitoring</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="indoor_swimming_pool">Indoor Swimming Pool</string>
-    <string name="facilities_list">Facilities List</string>
-    <string name="karaoke_room">Karaoke Room</string>
-    <string name="massage_room">Massage Room</string>
-    <string name="username_string">Username</string>
-    <string name="password_string">Password</string>
+    <!-- Karaoke Room -->
+    <string name="karaoke_room_list"><![CDATA[Karaoke Room]]></string>
+    <string name="karaoke_back">back page</string>
+    <string name="karaoke_search">search</string>
+    <string name="karaoke_editSearch">Search</string>
+
+    <!-- Karaoke Reservation -->
+    <string name="add_new_karaoke_reservation">Add New Karaoke Reservation</string>
+    <string name="add_karaoke_reservation_room_no">Room no.:</string>
+    <string name="edit_add_karaoke_reservation_room">101</string>
+    <string name="add_karaoke_reservation_phone">Phone no.:</string>
+    <string name="edit_add_karaoke_reservation_phone">098-7654321</string>
+    <string name="add_karaoke_reservation_time">Time:</string>
+    <string name="edit_add_karaoke_reservation_time">3.00pm ~ 5.00pm</string>
+    <string name="add_karaoke_reservation_button">Add</string>
+    <string name="cancel_add_karaoke_reservation_button">Cancel</string>
+
+    <!-- Edit Karaoke List -->
+    <string name="edit_karaoke_list">Edit Karaoke List</string>
+    <string name="edit_karaoke_list_room">Room no.:</string>
+    <string name="edit_edit_karaoke_list_room">101</string>
+    <string name="edit_karaoke_list_phone">Phone no.:</string>
+    <string name="edit_edit_karaoke_list_phone">098-7654321</string>
+    <string name="edit_karaoke_list_time">Time:</string>
+    <string name="edit_edit_karaoke_list_time">3.00pm ~ 5.00pm</string>
+    <string name="edit_karaoke_list_button">Confirm</string>
+    <string name="cancel_edit_karaoke_list_button">Cancel</string>
+
+    <!-- Massage Room -->
+    <string name="massage_room_list"><![CDATA[Massage Room]]></string>
+    <string name="massage_back">back page</string>
+    <string name="massage_search">search</string>
+    <string name="massage_editSearch">Search</string>
+
+    <!-- Massage Reservation -->
+    <string name="add_new_massage_reservation">Add New Massage Reservation</string>
+    <string name="add_massage_reservation_room_no">Room no.:</string>
+    <string name="edit_add_massage_reservation_room">101</string>
+    <string name="add_massage_reservation_phone">Phone no.:</string>
+    <string name="edit_add_massage_reservation_phone">098-7654321</string>
+    <string name="add_massage_reservation_time">Time:</string>
+    <string name="edit_add_massage_reservation_time">3.00pm ~ 5.00pm</string>
+    <string name="add_massage_reservation_button">Add</string>
+    <string name="cancel_add_massage_reservation_button">Cancel</string>
+
+    <!-- Edit Karaoke List -->
+    <string name="edit_massage_list">Edit Massage List</string>
+    <string name="edit_massage_list_room">Room no.:</string>
+    <string name="edit_edit_massage_list_room">101</string>
+    <string name="edit_massage_list_phone">Phone no.:</string>
+    <string name="edit_edit_massage_list_phone">098-7654321</string>
+    <string name="edit_massage_list_time">Time:</string>
+    <string name="edit_edit_massage_list_time">3.00pm ~ 5.00pm</string>
+    <string name="edit_massage_list_button">Confirm</string>
+    <string name="cancel_edit_massage_list_button">Cancel</string>
 </resources>
+
+

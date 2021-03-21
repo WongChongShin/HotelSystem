@@ -16,12 +16,26 @@ class main_page : AppCompatActivity() {
 
         signInUsername.setText(username)
 
+        val btnCheck = findViewById<Button>(R.id.check_button)
         val btnRoom = findViewById<Button>(R.id.room_button)
+        val btnFacility = findViewById<Button>(R.id.facility_button)
+
+        btnCheck.setOnClickListener{
+
+            val checkInAndCheckOutIntent = Intent(this, checkIn_and_checkOut::class.java)
+            startActivity(checkInAndCheckOutIntent)
+        }
 
         btnRoom.setOnClickListener{
 
            val roomServiceIntent = Intent(this, rooms_service::class.java)
             startActivity(roomServiceIntent)
+        }
+
+        btnFacility.setOnClickListener{
+
+            val facilityIntent = Intent(this, facilities_monitoring::class.java)
+            startActivity(facilityIntent)
         }
     }
 }

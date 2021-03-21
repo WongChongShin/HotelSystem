@@ -9,7 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MobileHotelManagementSystem">
-        <activity android:name=".rooms_service"></activity>
+        <activity android:name=".MassageRoom"></activity>
+        <activity android:name=".KaraokeRoom" />
+        <activity android:name=".IndoorSwimmingPool" />
+        <activity android:name=".EditMassageList" />
+        <activity android:name=".AddNewMassageReservation" />
+        <activity android:name=".EditKaraokeList" />
+        <activity android:name=".rooms_service" />
+        <activity android:name=".AddNewKaraokeReservation" />
         <activity android:name=".EditPoolList" />
         <activity android:name=".AddNewPoolReservation" />
         <activity android:name=".EditCustomerList" />
