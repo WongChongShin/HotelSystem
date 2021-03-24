@@ -6,6 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".checkIn_and_checkOut">
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_check_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:clickable="true"
+        android:contentDescription="@string/add_check_button"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/customer_editSearch"
+        app:srcCompat="@drawable/add_logo" />
+
     <TextView
         android:id="@+id/customer_list_textView"
         android:layout_width="wrap_content"

@@ -146,6 +146,7 @@
     <string name="edit_edit_massage_list_time">3.00pm ~ 5.00pm</string>
     <string name="edit_massage_list_button">Confirm</string>
     <string name="cancel_edit_massage_list_button">Cancel</string>
+    <string name="add_check_button">add_check_button</string>
 </resources>
 
 
