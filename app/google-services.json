@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "119068076186",
+    "firebase_url": "https://mobile-hotel-management-system-default-rtdb.firebaseio.com",
+    "project_id": "mobile-hotel-management-system",
+    "storage_bucket": "mobile-hotel-management-system.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:119068076186:android:7170e9402ab0f49f3f9723",
+        "android_client_info": {
+          "package_name": "com.example.mobilehotelmanagementsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "119068076186-v56plvu7s6v64eibhucho24f3jolts93.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFTrrHuvK-eu20ZzGkHu6N7ABRBM96imM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "119068076186-v56plvu7s6v64eibhucho24f3jolts93.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

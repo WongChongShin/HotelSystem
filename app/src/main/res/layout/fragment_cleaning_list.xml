@@ -11,20 +11,6 @@
         android:layout_height="match_parent">
 
 
-        <ScrollView
-            android:layout_width="414dp"
-            android:layout_height="579dp"
-            android:layout_marginTop="15dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editSearch2">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" />
-        </ScrollView>
-
         <ImageView
             android:id="@+id/check_page_search_logo2"
             android:layout_width="40dp"
@@ -38,6 +24,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/karaoke_room_textView"
             app:srcCompat="@drawable/search_logo" />
+
+        <TextView
+            android:id="@+id/clean_name_result"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editSearch2" />
 
         <EditText
             android:id="@+id/editSearch2"
@@ -56,7 +54,7 @@
             app:layout_constraintTop_toBottomOf="@+id/karaoke_room_textView" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatingActionButton2"
+            android:id="@+id/add_clean_fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="177dp"
