@@ -11,12 +11,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val btnLogin = findViewById<Button>(R.id.sign_in_button)
+        val btnLogin = findViewById<Button>(R.id.customer_sign_in_button)
 
         btnLogin.setOnClickListener{
 
             val signInIntent = Intent(this, main_page::class.java)
-            val username = findViewById<TextView>(R.id.sign_in_username).text
+            val username = findViewById<TextView>(R.id.customer_sign_in_username).text
             signInIntent.putExtra("username", username.toString());
             startActivity(signInIntent)
         }

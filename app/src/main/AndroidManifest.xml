@@ -25,8 +25,12 @@
         <activity android:name=".AddNewCustomer" />
         <activity android:name=".checkIn_and_checkOut" />
         <activity android:name=".facilities_monitoring" />
+        <activity android:name=".CustomerMainActivity" />
+        <activity android:name=".Customer_select_room" />
+        <activity android:name=".customer_login" />
         <activity android:name=".main_page" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".Select_staff_customer_page">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
