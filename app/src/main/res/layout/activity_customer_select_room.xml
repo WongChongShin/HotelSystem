@@ -10,8 +10,8 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="164dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="120dp"
         android:text="Select Room"
         android:textColor="#FFEB3B"
         android:textSize="30sp"
@@ -36,7 +36,6 @@
         android:layout_marginBottom="26dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintVertical_bias="0.0">
@@ -78,12 +77,12 @@
                 app:layout_constraintTop_toTopOf="@+id/view8" />
 
             <TextView
-                android:id="@+id/customer_room_no_view20"
+                android:id="@+id/customer_room_no_107"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="140dp"
                 android:layout_marginTop="156dp"
-                android:text="101"
+                android:text="@string/room_no_107"
                 android:textColor="@color/black"
                 android:translationX="10dp"
                 android:translationY="930dp"
@@ -104,12 +103,12 @@
                 app:layout_constraintTop_toTopOf="@+id/view8" />
 
             <TextView
-                android:id="@+id/customer_room_description_view20"
+                android:id="@+id/customer_room_description_107"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="140dp"
                 android:layout_marginTop="184dp"
-                android:text="1 bedroom, 1 bathroom, 1 living room"
+                android:text="@string/room_desc_107"
                 android:textColor="@color/black"
                 android:translationX="10dp"
                 android:translationY="930dp"
@@ -122,7 +121,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="252dp"
-                android:text="Price:"
+                android:text="Price: RM"
                 android:textColor="@color/black"
                 android:translationX="10dp"
                 android:translationY="930dp"
@@ -143,14 +142,14 @@
                 app:layout_constraintTop_toTopOf="@+id/view8" />
 
             <TextView
-                android:id="@+id/customer_price_view20"
+                android:id="@+id/customer_price_107"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="48dp"
                 android:layout_marginTop="252dp"
-                android:text="RM130"
+                android:text="@string/price_107"
                 android:textColor="@color/black"
-                android:translationX="10dp"
+                android:translationX="30dp"
                 android:translationY="930dp"
                 app:layout_constraintStart_toStartOf="@+id/view8"
                 app:layout_constraintTop_toTopOf="@+id/view8" />
@@ -170,12 +169,12 @@
                 app:layout_constraintVertical_bias="0.033" />
 
             <TextView
-                android:id="@+id/customer_room_no_view21"
+                android:id="@+id/customer_room_no_106"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="140dp"
                 android:layout_marginTop="12dp"
-                android:text="100"
+                android:text="@string/room_no_106"
                 android:textColor="@color/black"
                 android:translationX="10dp"
                 android:translationY="930dp"
@@ -196,14 +195,14 @@
                 app:layout_constraintTop_toTopOf="@+id/view8" />
 
             <TextView
-                android:id="@+id/customer_price_view21"
+                android:id="@+id/customer_price_106"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="48dp"
                 android:layout_marginTop="104dp"
-                android:text="RM120"
+                android:text="@string/price_106"
                 android:textColor="@color/black"
-                android:translationX="10dp"
+                android:translationX="30dp"
                 android:translationY="930dp"
                 app:layout_constraintStart_toStartOf="@+id/view8"
                 app:layout_constraintTop_toTopOf="@+id/view8" />
@@ -214,7 +213,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="104dp"
-                android:text="Price:"
+                android:text="Price: RM"
                 android:textColor="@color/black"
                 android:translationX="10dp"
                 android:translationY="930dp"
@@ -222,12 +221,12 @@
                 app:layout_constraintTop_toTopOf="@+id/view8" />
 
             <TextView
-                android:id="@+id/customer_room_description_view21"
+                android:id="@+id/customer_room_description_106"
                 android:layout_width="209dp"
                 android:layout_height="64dp"
                 android:layout_marginStart="140dp"
                 android:layout_marginTop="40dp"
-                android:text="1 bedroom, 1 bathroom"
+                android:text="@string/room_desc_106"
                 android:textColor="@color/black"
                 android:translationX="10dp"
                 android:translationY="930dp"
@@ -275,12 +274,12 @@
                 app:layout_constraintVertical_bias="0.332" />
 
             <TextView
-                android:id="@+id/customer_room_no_view14"
+                android:id="@+id/customer_room_no_105"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="140dp"
                 android:layout_marginTop="156dp"
-                android:text="101"
+                android:text="@string/room_no_105"
                 android:textColor="@color/black"
                 android:translationX="10dp"
                 android:translationY="630dp"
@@ -301,12 +300,12 @@
                 app:layout_constraintTop_toTopOf="@+id/view8" />
 
             <TextView
-                android:id="@+id/customer_room_description_view14"
+                android:id="@+id/customer_room_description_105"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="140dp"
                 android:layout_marginTop="184dp"
-                android:text="1 bedroom, 1 bathroom, 1 living room"
+                android:text="@string/room_desc_105"
                 android:textColor="@color/black"
                 android:translationX="10dp"
                 android:translationY="630dp"
@@ -319,7 +318,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="252dp"
-                android:text="Price:"
+                android:text="Price: RM"
                 android:textColor="@color/black"
                 android:translationX="10dp"
                 android:translationY="630dp"
@@ -340,14 +339,14 @@
                 app:layout_constraintTop_toTopOf="@+id/view8" />
 
             <TextView
-                android:id="@+id/customer_price_view14"
+                android:id="@+id/customer_price_105"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="48dp"
                 android:layout_marginTop="252dp"
-                android:text="RM130"
+                android:text="@string/price_105"
                 android:textColor="@color/black"
-                android:translationX="10dp"
+                android:translationX="30dp"
                 android:translationY="630dp"
                 app:layout_constraintStart_toStartOf="@+id/view8"
                 app:layout_constraintTop_toTopOf="@+id/view8" />
@@ -367,12 +366,12 @@
                 app:layout_constraintVertical_bias="0.033" />
 
             <TextView
-                android:id="@+id/customer_room_no_view15"
+                android:id="@+id/customer_room_no_104"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="140dp"
                 android:layout_marginTop="12dp"
-                android:text="100"
+                android:text="@string/room_no_104"
                 android:textColor="@color/black"
                 android:translationX="10dp"
                 android:translationY="630dp"
@@ -393,14 +392,14 @@
                 app:layout_constraintTop_toTopOf="@+id/view8" />
 
             <TextView
-                android:id="@+id/customer_price_view15"
+                android:id="@+id/customer_price_104"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="48dp"
                 android:layout_marginTop="104dp"
-                android:text="RM120"
+                android:text="@string/price_104"
                 android:textColor="@color/black"
-                android:translationX="10dp"
+                android:translationX="30dp"
                 android:translationY="630dp"
                 app:layout_constraintStart_toStartOf="@+id/view8"
                 app:layout_constraintTop_toTopOf="@+id/view8" />
@@ -411,7 +410,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="104dp"
-                android:text="Price:"
+                android:text="Price: RM"
                 android:textColor="@color/black"
                 android:translationX="10dp"
                 android:translationY="630dp"
@@ -419,12 +418,12 @@
                 app:layout_constraintTop_toTopOf="@+id/view8" />
 
             <TextView
-                android:id="@+id/customer_room_description_view15"
+                android:id="@+id/customer_room_description_104"
                 android:layout_width="209dp"
                 android:layout_height="64dp"
                 android:layout_marginStart="140dp"
                 android:layout_marginTop="40dp"
-                android:text="1 bedroom, 1 bathroom"
+                android:text="@string/room_desc_104"
                 android:textColor="@color/black"
                 android:translationX="10dp"
                 android:translationY="630dp"
@@ -498,12 +497,12 @@
                 app:layout_constraintTop_toTopOf="@+id/view8" />
 
             <TextView
-                android:id="@+id/customer_room_no_view"
+                android:id="@+id/customer_room_no_103"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="136dp"
                 android:layout_marginTop="444dp"
-                android:text="130"
+                android:text="@string/room_no_103"
                 android:textColor="@color/black"
                 android:translationX="10dp"
                 android:translationY="45dp"
@@ -524,12 +523,12 @@
                 app:layout_constraintTop_toTopOf="@+id/view8" />
 
             <TextView
-                android:id="@+id/customer_room_description_view"
+                android:id="@+id/customer_room_description_103"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="136dp"
                 android:layout_marginTop="472dp"
-                android:text="2 bedroom, 2 bathroom, 1 living room"
+                android:text="@string/room_desc_103"
                 android:textColor="@color/black"
                 android:translationX="10dp"
                 android:translationY="45dp"
@@ -542,7 +541,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="540dp"
-                android:text="Price:"
+                android:text="Price: RM"
                 android:textColor="@color/black"
                 android:translationX="10dp"
                 android:translationY="45dp"
@@ -563,14 +562,14 @@
                 app:layout_constraintTop_toTopOf="@+id/view8" />
 
             <TextView
-                android:id="@+id/customer_price_view"
+                android:id="@+id/customer_price_103"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="48dp"
                 android:layout_marginTop="540dp"
-                android:text="RM150"
+                android:text="@string/price_103"
                 android:textColor="@color/black"
-                android:translationX="10dp"
+                android:translationX="30dp"
                 android:translationY="45dp"
                 app:layout_constraintStart_toStartOf="@+id/view8"
                 app:layout_constraintTop_toTopOf="@+id/view8" />
@@ -603,12 +602,12 @@
                 app:layout_constraintTop_toTopOf="@+id/view8" />
 
             <TextView
-                android:id="@+id/customer_room_no_view2"
+                android:id="@+id/customer_room_no_102"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="136dp"
                 android:layout_marginTop="300dp"
-                android:text="102"
+                android:text="@string/room_no_102"
                 android:textColor="@color/black"
                 android:translationX="10dp"
                 android:translationY="40dp"
@@ -629,12 +628,12 @@
                 app:layout_constraintTop_toTopOf="@+id/view8" />
 
             <TextView
-                android:id="@+id/customer_room_description_view2"
+                android:id="@+id/customer_room_description_102"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="136dp"
                 android:layout_marginTop="324dp"
-                android:text="2 bedroom, 1 bathroom"
+                android:text="@string/room_desc_102"
                 android:textColor="@color/black"
                 android:translationX="10dp"
                 android:translationY="40dp"
@@ -647,7 +646,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="396dp"
-                android:text="Price:"
+                android:text="Price: RM"
                 android:textColor="@color/black"
                 android:translationX="10dp"
                 android:translationY="40dp"
@@ -668,14 +667,14 @@
                 app:layout_constraintTop_toTopOf="@+id/view8" />
 
             <TextView
-                android:id="@+id/customer_price_view2"
+                android:id="@+id/customer_price_102"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="48dp"
                 android:layout_marginTop="396dp"
-                android:text="RM140"
+                android:text="@string/price_102"
                 android:textColor="@color/black"
-                android:translationX="10dp"
+                android:translationX="30dp"
                 android:translationY="40dp"
                 app:layout_constraintStart_toStartOf="@+id/view8"
                 app:layout_constraintTop_toTopOf="@+id/view8" />
@@ -708,12 +707,12 @@
                 app:layout_constraintTop_toTopOf="@+id/view8" />
 
             <TextView
-                android:id="@+id/customer_room_no_view3"
+                android:id="@+id/customer_room_no_101"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="140dp"
                 android:layout_marginTop="156dp"
-                android:text="101"
+                android:text="@string/room_no_101"
                 android:textColor="@color/black"
                 android:translationX="10dp"
                 android:translationY="35dp"
@@ -734,12 +733,12 @@
                 app:layout_constraintTop_toTopOf="@+id/view8" />
 
             <TextView
-                android:id="@+id/customer_room_description_view3"
+                android:id="@+id/customer_room_description_101"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="140dp"
                 android:layout_marginTop="184dp"
-                android:text="1 bedroom, 1 bathroom, 1 living room"
+                android:text="@string/room_desc_101"
                 android:textColor="@color/black"
                 android:translationX="10dp"
                 android:translationY="35dp"
@@ -752,7 +751,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="252dp"
-                android:text="Price:"
+                android:text="Price: RM"
                 android:textColor="@color/black"
                 android:translationX="10dp"
                 android:translationY="35dp"
@@ -773,14 +772,14 @@
                 app:layout_constraintTop_toTopOf="@+id/view8" />
 
             <TextView
-                android:id="@+id/customer_price_view3"
+                android:id="@+id/customer_price_101"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="48dp"
                 android:layout_marginTop="252dp"
-                android:text="RM130"
+                android:text="@string/price_101"
                 android:textColor="@color/black"
-                android:translationX="10dp"
+                android:translationX="30dp"
                 android:translationY="35dp"
                 app:layout_constraintStart_toStartOf="@+id/view8"
                 app:layout_constraintTop_toTopOf="@+id/view8" />
@@ -800,12 +799,12 @@
                 app:layout_constraintVertical_bias="0.033" />
 
             <TextView
-                android:id="@+id/customer_room_no_view4"
+                android:id="@+id/customer_room_no_100"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="140dp"
                 android:layout_marginTop="12dp"
-                android:text="100"
+                android:text="@string/room_no_100"
                 android:textColor="@color/black"
                 android:translationX="10dp"
                 android:translationY="30dp"
@@ -826,14 +825,14 @@
                 app:layout_constraintTop_toTopOf="@+id/view8" />
 
             <TextView
-                android:id="@+id/customer_price_view4"
+                android:id="@+id/customer_price_100"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="48dp"
                 android:layout_marginTop="104dp"
-                android:text="RM120"
+                android:text="@string/price_100"
                 android:textColor="@color/black"
-                android:translationX="10dp"
+                android:translationX="30dp"
                 android:translationY="30dp"
                 app:layout_constraintStart_toStartOf="@+id/view8"
                 app:layout_constraintTop_toTopOf="@+id/view8" />
@@ -844,7 +843,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="104dp"
-                android:text="Price:"
+                android:text="Price: RM"
                 android:textColor="@color/black"
                 android:translationX="10dp"
                 android:translationY="30dp"
@@ -852,12 +851,12 @@
                 app:layout_constraintTop_toTopOf="@+id/view8" />
 
             <TextView
-                android:id="@+id/customer_room_description_view4"
+                android:id="@+id/customer_room_description_100"
                 android:layout_width="209dp"
                 android:layout_height="64dp"
                 android:layout_marginStart="140dp"
                 android:layout_marginTop="40dp"
-                android:text="1 bedroom, 1 bathroom"
+                android:text="@string/room_desc_100"
                 android:textColor="@color/black"
                 android:translationX="10dp"
                 android:translationY="30dp"
@@ -889,6 +888,78 @@
                 android:translationY="30dp"
                 app:layout_constraintStart_toStartOf="@+id/view8"
                 app:layout_constraintTop_toTopOf="@+id/view8" />
+
+            <Button
+                android:id="@+id/book_room_100_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="book"
+                android:translationX="280dp"
+                android:translationY="120dp"
+                app:backgroundTint="@android:color/holo_green_light" />
+
+            <Button
+                android:id="@+id/book_room_107_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="book"
+                android:translationX="280dp"
+                android:translationY="1170dp"
+                app:backgroundTint="@android:color/holo_green_light" />
+
+            <Button
+                android:id="@+id/book_room_106_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="book"
+                android:translationX="280dp"
+                android:translationY="1020dp"
+                app:backgroundTint="@android:color/holo_green_light" />
+
+            <Button
+                android:id="@+id/book_room_105_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="book"
+                android:translationX="280dp"
+                android:translationY="870dp"
+                app:backgroundTint="@android:color/holo_green_light" />
+
+            <Button
+                android:id="@+id/book_room_104_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="book"
+                android:translationX="280dp"
+                android:translationY="720dp"
+                app:backgroundTint="@android:color/holo_green_light" />
+
+            <Button
+                android:id="@+id/book_room_103_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="book"
+                android:translationX="280dp"
+                android:translationY="570dp"
+                app:backgroundTint="@android:color/holo_green_light" />
+
+            <Button
+                android:id="@+id/book_room_102_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="book"
+                android:translationX="280dp"
+                android:translationY="420dp"
+                app:backgroundTint="@android:color/holo_green_light" />
+
+            <Button
+                android:id="@+id/book_room_101_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="book"
+                android:translationX="280dp"
+                android:translationY="270dp"
+                app:backgroundTint="@android:color/holo_green_light" />
         </FrameLayout>
     </ScrollView>
 

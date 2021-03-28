@@ -147,6 +147,39 @@
     <string name="edit_massage_list_button">Confirm</string>
     <string name="cancel_edit_massage_list_button">Cancel</string>
     <string name="add_check_button">add_check_button</string>
+
+
+    <!-- customer_select_room -->
+    <string name="room_desc_100">1 bedroom, 1 bathroom</string>
+    <string name="room_no_100">100</string>
+    <string name="price_100">120</string>
+    <string name="room_no_101">101</string>
+    <string name="room_desc_101">1 bedroom, 1 bathroom, 1 living room</string>
+    <string name="price_101">130</string>
+    <string name="room_no_102">102</string>
+    <string name="room_desc_102">2 bedroom, 1 bathroom, 1 living room</string>
+    <string name="price_102">140</string>
+    <string name="room_no_103">103</string>
+    <string name="room_desc_103">2 bedroom, 2 bathroom, 1 living room</string>
+    <string name="price_103">150</string>
+    <string name="room_no_104">104</string>
+    <string name="room_desc_104">3 bedroom, 2 bathroom, 1 living room</string>
+    <string name="price_104">160</string>
+    <string name="room_no_105">105</string>
+    <string name="room_desc_105">3 bedroom, 3 bathroom, 1 living room</string>
+    <string name="price_105">160</string>
+    <string name="room_no_106">106</string>
+    <string name="price_106">170</string>
+    <string name="room_desc_106">4 bedroom, 2 bathroom, 1 living room</string>
+    <string name="room_no_107">107</string>
+    <string name="room_desc_107">4 bedroom, 3 bathroom, 1 living room</string>
+    <string name="price_107">180</string>
+
+    <!-- customer_select_Detail -->
+    <string name="customer_check_in">22/01/2020</string>
+    <string name="customer_check_out">24/01/2020</string>
+
+
 </resources>
 
 

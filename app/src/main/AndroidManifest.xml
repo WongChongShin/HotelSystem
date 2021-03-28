@@ -25,6 +25,9 @@
         <activity android:name=".AddNewCustomer" />
         <activity android:name=".checkIn_and_checkOut" />
         <activity android:name=".facilities_monitoring" />
+        <activity android:name=".Customer_pay_successful" />
+        <activity android:name=".Customer_select_detail" />
+        <activity android:name=".Customer_purchase" />
         <activity android:name=".CustomerMainActivity" />
         <activity android:name=".Customer_select_room" />
         <activity android:name=".customer_login" />

@@ -16,9 +16,21 @@ class customer_login : AppCompatActivity() {
 
         customerLoginBtn.setOnClickListener{
 
-            val customerSignInIntent = Intent(this, CustomerMainActivity::class.java)
             val customerUsername = findViewById<TextView>(R.id.customer_sign_in_username).text
-            customerSignInIntent.putExtra("username", customerUsername.toString());
+            val customerPassword= findViewById<TextView>(R.id.customer_sign_in_password).text
+            validate(customerUsername.toString(),customerPassword.toString());
+
+        }
+    }
+    private fun validate(userName:String, password:String){
+        if(userName=="" || password==""){
+            val customerUsername = findViewById<TextView>(R.id.customer_error_message)
+            customerUsername.setText("You are require to fill up all the blank ")
+        }
+        else{
+            val customerSignInIntent = Intent(this, CustomerMainActivity::class.java)
+
+            customerSignInIntent.putExtra("username", userName.toString())
             startActivity(customerSignInIntent)
         }
     }
