@@ -26,48 +26,85 @@ class Customer_select_detail : AppCompatActivity() {
             startActivity(backCustomerSelectRoom)
         }
 
+        //----------------------------check in calender validation----------------------
+        val customerCheckInCalender = Calendar.getInstance()
+        val checkInYear = customerCheckInCalender.get(Calendar.YEAR)
+        val checkInMonth = customerCheckInCalender.get(Calendar.MONTH)
+        val checkInDay = customerCheckInCalender.get(Calendar.DAY_OF_MONTH)
+
+        //----------------------------check out calender validation----------------------
+        val customerCheckOutCalender = Calendar.getInstance()
+        val checkOutYear = customerCheckOutCalender.get(Calendar.YEAR)
+        val checkOutMonth = customerCheckOutCalender.get(Calendar.MONTH)
+        val checkOutDay = customerCheckOutCalender.get(Calendar.DAY_OF_MONTH)
+
+
         //----------------------------check in calender----------------------
         val checkInCalenderBtn: ImageView = findViewById<ImageView>(R.id.customer_select_calender);
-
         checkInCalenderBtn.setOnClickListener{
 
-            val customerCheckInCalender = Calendar.getInstance()
-            val checkInYear = customerCheckInCalender.get(Calendar.YEAR)
-            val checkInMonth = customerCheckInCalender.get(Calendar.MONTH)
-            val checkInDay = customerCheckInCalender.get(Calendar.DAY_OF_MONTH)
+
 
             val checkInDatePick = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { view, year, month, day ->
 
                 val checkInDate = findViewById<TextView>(R.id.customer_check_in)
-                checkInDate.setText("" + day + "/" + month + "/" + year)
+                customerCheckInCalender.set(year, month, day);
+
+                val checkInMonthText= month+1
+                checkInDate.setText("" + day + "/" + checkInMonthText + "/" + year)
 
             }, checkInYear, checkInMonth, checkInDay)
+
+
+            val nextDay = Calendar.getInstance()
+            nextDay.add(Calendar.DATE,1)
+            checkInDatePick.getDatePicker().setMinDate(nextDay.getTimeInMillis())
 
             checkInDatePick.show()
         }
 
-        //----------------------------check out calender----------------------
-        val checkOutCalenderBtn: ImageView = findViewById<ImageView>(R.id.customer_select_calender2);
-
-        checkOutCalenderBtn.setOnClickListener {
-
-            val customerCheckOutCalender = Calendar.getInstance()
-            val checkOutYear = customerCheckOutCalender.get(Calendar.YEAR)
-            val checkOutMonth = customerCheckOutCalender.get(Calendar.MONTH)
-            val checkOutDay = customerCheckOutCalender.get(Calendar.DAY_OF_MONTH)
-
-            val checkOutDatePick = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { view, year, month, day ->
 
 
-                val checkOutDate = findViewById<TextView>(R.id.customer_check_out)
-                checkOutDate.setText("" + day + "/" + month + "/" + year)
+            //----------------------------check out calender----------------------
+            val checkOutCalenderBtn: ImageView = findViewById<ImageView>(R.id.customer_select_calender2);
 
-            }, checkOutYear, checkOutMonth, checkOutDay)
+            checkOutCalenderBtn.setOnClickListener {
 
-            checkOutDatePick.show()
+                val checkingCheckInFill=findViewById<TextView>(R.id.customer_check_in).text.toString()
+
+                if(checkingCheckInFill==""){
+                    val checkInErrorMessage = findViewById<TextView>(R.id.customer_error_message_2)
+                    checkInErrorMessage.setText("You need to choose check in date first ")
+                }
+                else {
+
+                val checkOutDatePick = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { view, year, month, day ->
+
+
+                    val checkOutDate = findViewById<TextView>(R.id.customer_check_out)
+
+                    val checkOutMonthText = month + 1
+                    checkOutDate.setText("" + day + "/" + checkOutMonthText + "/" + year)
+
+
+                }, checkOutYear, checkOutMonth, checkOutDay)
+
+                customerCheckInCalender.add(Calendar.DATE,1)
+                checkOutDatePick.getDatePicker().setMinDate(customerCheckInCalender.getTimeInMillis())
+                checkOutDatePick.show()
+
+                val customerCheckInCalender = Calendar.getInstance()
+                val checkInYear = customerCheckInCalender.get(Calendar.YEAR)
+                val checkInMonth = customerCheckInCalender.get(Calendar.MONTH)
+                val checkInDay = customerCheckInCalender.get(Calendar.DAY_OF_MONTH)
+            }
         }
 
 
+
+
+
+        //-----------------------next button----------------------------------
         val detailNextBtn = findViewById<Button>(R.id.select_detail_nextBtn)
 
         detailNextBtn .setOnClickListener{
@@ -80,12 +117,13 @@ class Customer_select_detail : AppCompatActivity() {
 
 
 
+
     }
 
     private fun validate(checkInDate:String, checkOutDate:String){
         if(checkInDate=="" || checkOutDate==""){
-            val customerUsername = findViewById<TextView>(R.id.customer_error_message_2)
-            customerUsername.setText("You are require to fill up all the blank ")
+            val checkInErrorMessage = findViewById<TextView>(R.id.customer_error_message_2)
+            checkInErrorMessage.setText("You are require to fill up all the blank ")
         }
         else{
 
