@@ -32,12 +32,14 @@
 
     <TextView
         android:id="@+id/room_price_output"
-        android:layout_width="wrap_content"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="300dp"
         android:textColor="@color/black"
         android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView15"
         app:layout_constraintTop_toTopOf="@+id/view2" />
 
@@ -47,7 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="208dp"
         android:layout_marginTop="300dp"
-        android:text="Price:"
+        android:text="Price: RM"
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/view2"
@@ -90,23 +92,27 @@
 
     <TextView
         android:id="@+id/room_no_output"
-        android:layout_width="wrap_content"
+        android:layout_width="170dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginTop="44dp"
         android:textColor="@color/black"
         android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView5"
         app:layout_constraintTop_toTopOf="@+id/view2" />
 
     <TextView
         android:id="@+id/room_desc_output"
-        android:layout_width="wrap_content"
+        android:layout_width="170dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginTop="92dp"
         android:textColor="@color/black"
         android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView11"
         app:layout_constraintTop_toTopOf="@+id/view2" />
 
@@ -124,12 +130,14 @@
 
     <TextView
         android:id="@+id/room_check_in_output"
-        android:layout_width="wrap_content"
+        android:layout_width="170dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="176dp"
         android:textColor="@color/black"
         android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView12"
         app:layout_constraintTop_toTopOf="@+id/view2" />
 
@@ -159,12 +167,14 @@
 
     <TextView
         android:id="@+id/room_check_out_output"
-        android:layout_width="wrap_content"
+        android:layout_width="170dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="224dp"
         android:textColor="@color/black"
         android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView13"
         app:layout_constraintTop_toTopOf="@+id/view2" />
 

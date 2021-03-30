@@ -1,11 +1,11 @@
 package com.example.mobilehotelmanagementsystem
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
 class Customer_purchase : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,7 +29,7 @@ class Customer_purchase : AppCompatActivity() {
         val customerDesc = intent?.getStringExtra("room_desc")
         val roomDescOutput= findViewById<TextView>(R.id.room_desc_output)
 
-        //customerDesc.setText(roomDescOutput)
+        roomDescOutput.setText(customerDesc)
         
         //--------------------price--------------
         val customerPrice = intent?.getStringExtra("room_price")
@@ -41,13 +41,13 @@ class Customer_purchase : AppCompatActivity() {
         val customerCheckIn = intent?.getStringExtra("checkIn_date")
         val roomCheckInOutput = findViewById<TextView>(R.id.room_check_in_output)
 
-        //customerCheckIn.setText(roomCheckInOutput)
+        roomCheckInOutput.setText(customerCheckIn)
 
         //--------------------check out date--------------
         val customerCheckOut = intent?.getStringExtra("checkOut_date")
         val roomCheckOutOutput = findViewById<TextView>(R.id.room_check_out_output)
 
-        //customerCheckOut.setText(roomCheckOutOutput)
+        roomCheckOutOutput.setText(customerCheckOut)
 
 
         val purchaseButton = findViewById<Button>(R.id.select_detail_purchase)

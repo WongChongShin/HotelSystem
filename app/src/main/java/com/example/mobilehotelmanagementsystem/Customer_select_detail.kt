@@ -19,6 +19,8 @@ class Customer_select_detail : AppCompatActivity() {
 
 
 
+
+
         val detailBackBtn: ImageView = findViewById<ImageView>(R.id.select_detail_back2);
 
         detailBackBtn.setOnClickListener{
@@ -102,6 +104,15 @@ class Customer_select_detail : AppCompatActivity() {
 
 
 
+        //--------------------room no--------------
+        val customerRoomNo = intent?.getStringExtra("room_no")
+
+        //--------------------description--------------
+        val customerDesc = intent?.getStringExtra("room_desc")
+
+
+        //--------------------price--------------
+        val customerPrice = intent?.getStringExtra("room_price")
 
 
         //-----------------------next button----------------------------------
@@ -111,7 +122,7 @@ class Customer_select_detail : AppCompatActivity() {
 
             val checkInDateValidate = findViewById<TextView>(R.id.customer_check_in)
             val checkOutDateValidate  = findViewById<TextView>(R.id.customer_check_out)
-            validate(checkInDateValidate.getText().toString(),checkOutDateValidate.getText().toString());
+            validate(checkInDateValidate.getText().toString(),checkOutDateValidate.getText().toString(), customerRoomNo.toString(),customerDesc.toString(),customerPrice.toString());
 
         }
 
@@ -120,7 +131,7 @@ class Customer_select_detail : AppCompatActivity() {
 
     }
 
-    private fun validate(checkInDate:String, checkOutDate:String){
+    private fun validate(checkInDate:String, checkOutDate:String, customerRoomNo:String,customerDesc:String,customerPrice:String){
         if(checkInDate=="" || checkOutDate==""){
             val checkInErrorMessage = findViewById<TextView>(R.id.customer_error_message_2)
             checkInErrorMessage.setText("You are require to fill up all the blank ")
@@ -128,6 +139,9 @@ class Customer_select_detail : AppCompatActivity() {
         else{
 
             val customerDetailIntent = Intent(this, Customer_purchase::class.java)
+            customerDetailIntent.putExtra("room_no", customerRoomNo.toString());
+            customerDetailIntent.putExtra("room_desc", customerDesc.toString());
+            customerDetailIntent.putExtra("room_price", customerPrice.toString());
             customerDetailIntent.putExtra("checkIn_date", checkInDate);
             customerDetailIntent.putExtra("checkOut_date", checkOutDate);
             startActivity(customerDetailIntent)
