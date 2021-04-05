@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.database.FirebaseDatabase
 
 class Customer_purchase : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,6 +55,23 @@ class Customer_purchase : AppCompatActivity() {
         purchaseButton.setOnClickListener{
 
             val pruchaseRoom = Intent(this,Customer_pay_successful::class.java)
+
+            val database = FirebaseDatabase.getInstance();
+            val myRef = database.getReference("Room booking");
+
+            val roomID:String= findViewById<TextView>(R.id.room_no_output).text.toString()
+            val roomDesc:String=findViewById<TextView>(R.id.room_desc_output).text.toString()
+            val roomCheckIn:String=findViewById<TextView>(R.id.room_check_in_output).text.toString()
+            val roomCheckOut:String=findViewById<TextView>(R.id.room_check_out_output).text.toString()
+            val roomPurchase:String=findViewById<TextView>(R.id.room_price_output).text.toString()
+            val roomActivate:String= "full"
+
+
+            myRef.child(roomID).child("Description").setValue(roomDesc)
+            myRef.child(roomID).child("CheckIn").setValue(roomCheckIn)
+            myRef.child(roomID).child("CheckOut").setValue(roomCheckOut)
+            myRef.child(roomID).child("Purchase").setValue(roomPurchase)
+            myRef.child(roomID).child("Status").setValue(roomActivate)
             startActivity(pruchaseRoom)
         }
 
