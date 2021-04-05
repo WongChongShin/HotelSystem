@@ -16,9 +16,9 @@ class main_page : AppCompatActivity() {
 
         signInUsername.setText(username)
 
-        val btnCheck = findViewById<Button>(R.id.staff_button)
+        val btnCheck = findViewById<Button>(R.id.check_button)
         val btnRoom = findViewById<Button>(R.id.room_button)
-        val btnFacility = findViewById<Button>(R.id.customer_button)
+        val btnFacility = findViewById<Button>(R.id.facility_button)
 
         btnCheck.setOnClickListener{
 

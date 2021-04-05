@@ -22,7 +22,7 @@ class Select_staff_customer_page : AppCompatActivity() {
         val staffBtn = findViewById<Button>(R.id.staff_button)
         staffBtn.setOnClickListener{
 
-            val staffLogin = Intent(this,MainActivity::class.java)
+            val staffLogin = Intent(this, MainActivity::class.java)
             startActivity(staffLogin)
         }
 
