@@ -1,16 +1,122 @@
 package com.example.mobilehotelmanagementsystem
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.database.*
 
 class Customer_select_room : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_customer_select_room)
+
+        //val roomStatusArr = ArrayList<String>()
+        //for(i in 0 until 8) {
+            //roomStatusArr.add(intent?.getStringExtra("RoomStatusArr0").toString())
+        //}
+
+        val bookRoom100 = findViewById<Button>(R.id.book_room_100_btn)
+        val bookRoom101 = findViewById<Button>(R.id.book_room_101_btn)
+        val bookRoom102 = findViewById<Button>(R.id.book_room_102_btn)
+        val bookRoom103 = findViewById<Button>(R.id.book_room_103_btn)
+        val bookRoom104 = findViewById<Button>(R.id.book_room_104_btn)
+        val bookRoom105 = findViewById<Button>(R.id.book_room_105_btn)
+        val bookRoom106 = findViewById<Button>(R.id.book_room_106_btn)
+        val bookRoom107 = findViewById<Button>(R.id.book_room_107_btn)
+
+        val database = FirebaseDatabase.getInstance();
+        val roomDatabaseRef = database.getReference("Room booking");
+
+        val roomStatus = StringBuilder()
+        val roomStatusArr = ArrayList<String>()
+        val getRoomData = object : ValueEventListener {
+            override fun onCancelled(error: DatabaseError) {
+
+            }
+
+            override fun onDataChange(snapshot: DataSnapshot) {
+
+                for (s in snapshot.children) {
+                    val custRoomId = s.child("RoomNo").getValue().toString()
+                    roomStatus.append("${custRoomId}\n")
+                    roomStatusArr.add(custRoomId)
+
+                }
+                val statusLength= roomStatusArr!!.size
+                for(i in 0 until statusLength) {
+                    if (roomStatusArr[i].equals("100")) {
+                        bookRoom100.setBackgroundColor(Color.RED);
+                        bookRoom100.setText("Full")
+                        bookRoom100.setTextColor(Color.BLACK);
+                        bookRoom100.isEnabled = false
+                        bookRoom100.isClickable = false
+                    }
+                    else if(roomStatusArr[i].equals("101")) {
+                        bookRoom101.setBackgroundColor(Color.RED);
+                        bookRoom101.setText("Full");
+                        bookRoom101.setTextColor(Color.BLACK);
+                        bookRoom101.isEnabled = false
+                        bookRoom101.isClickable = false
+                    }
+                    else if(roomStatusArr[i].equals("102")) {
+                        bookRoom102.setBackgroundColor(Color.RED);
+                        bookRoom102.setText("Full");
+                        bookRoom102.setTextColor(Color.BLACK);
+                        bookRoom102.isEnabled = false
+                        bookRoom102.isClickable = false
+                    }
+                    else if(roomStatusArr[i].equals("103")) {
+                        bookRoom103.setBackgroundColor(Color.RED);
+                        bookRoom103.setText("Full");
+                        bookRoom103.setTextColor(Color.BLACK);
+                        bookRoom103.isEnabled = false
+                        bookRoom103.isClickable = false
+                    }
+                    else if(roomStatusArr[i].equals("104")) {
+                        bookRoom104.setBackgroundColor(Color.RED);
+                        bookRoom104.setText("Full");
+                        bookRoom104.setTextColor(Color.BLACK);
+                        bookRoom104.isEnabled = false
+                        bookRoom104.isClickable = false
+                    }
+                    else if(roomStatusArr[i].equals("105")) {
+                        bookRoom105.setBackgroundColor(Color.RED);
+                        bookRoom105.setText("Full");
+                        bookRoom105.setTextColor(Color.BLACK);
+                        bookRoom105.isEnabled = false
+                        bookRoom105.isClickable = false
+                    }
+                    else if(roomStatusArr[i].equals("106")) {
+                        bookRoom106.setBackgroundColor(Color.RED);
+                        bookRoom106.setText("Full");
+                        bookRoom106.setTextColor(Color.BLACK);
+                        bookRoom106.isEnabled = false
+                        bookRoom106.isClickable = false
+                    }
+                    else if(roomStatusArr[i].equals("107")) {
+                        bookRoom107.setBackgroundColor(Color.RED);
+                        bookRoom107.setText("Full");
+                        bookRoom107.setTextColor(Color.BLACK);
+                        bookRoom107.isEnabled = false
+                        bookRoom107.isClickable = false
+                    }
+
+                }
+
+
+            }
+        }
+
+        val q: Query = roomDatabaseRef.orderByChild("Status").equalTo("full")
+
+        q.addValueEventListener(getRoomData)
+        q.addListenerForSingleValueEvent(getRoomData)
+
+
 
         val roomBackBtn: ImageView = findViewById<ImageView>(R.id.select_room_back);
 
@@ -19,35 +125,34 @@ class Customer_select_room : AppCompatActivity() {
             startActivity(backCustomerMain)
         }
 
-        val bookRoom100 = findViewById<Button>(R.id.book_room_100_btn)
 
-        bookRoom100 .setOnClickListener{
 
-            val customerRoom100Intent = Intent(this, Customer_select_detail::class.java)
-            val customerNo100 = findViewById<TextView>(R.id.customer_room_no_100).text
-            val customerDesc100 = findViewById<TextView>(R.id.customer_room_description_100).text
-            val customerPrice100 = findViewById<TextView>(R.id.customer_price_100).text
-            customerRoom100Intent.putExtra("room_no", customerNo100.toString());
-            customerRoom100Intent.putExtra("room_desc", customerDesc100.toString());
-            customerRoom100Intent.putExtra("room_price", customerPrice100.toString());
-            startActivity(customerRoom100Intent)
-        }
+        //----------------------button 100-107----------------------------------
+            bookRoom100.setOnClickListener {
 
-        val bookRoom101 = findViewById<Button>(R.id.book_room_101_btn)
+                val customerRoom100Intent = Intent(this, Customer_select_detail::class.java)
+                val customerNo100 = findViewById<TextView>(R.id.customer_room_no_100).text
+                val customerDesc100 = findViewById<TextView>(R.id.customer_room_description_100).text
+                val customerPrice100 = findViewById<TextView>(R.id.customer_price_100).text
+                customerRoom100Intent.putExtra("room_no", customerNo100.toString());
+                customerRoom100Intent.putExtra("room_desc", customerDesc100.toString());
+                customerRoom100Intent.putExtra("room_price", customerPrice100.toString());
+                startActivity(customerRoom100Intent)
+            }
 
-        bookRoom101 .setOnClickListener{
 
-            val customerRoom101Intent = Intent(this, Customer_select_detail::class.java)
-            val customerNo101 = findViewById<TextView>(R.id.customer_room_no_101).text
-            val customerDesc101 = findViewById<TextView>(R.id.customer_room_description_101).text
-            val customerPrice101 = findViewById<TextView>(R.id.customer_price_101).text
-            customerRoom101Intent.putExtra("room_no", customerNo101.toString());
-            customerRoom101Intent.putExtra("room_desc", customerDesc101.toString());
-            customerRoom101Intent.putExtra("room_price", customerPrice101.toString());
-            startActivity(customerRoom101Intent)
-        }
+            bookRoom101.setOnClickListener {
 
-        val bookRoom102 = findViewById<Button>(R.id.book_room_102_btn)
+                val customerRoom101Intent = Intent(this, Customer_select_detail::class.java)
+                val customerNo101 = findViewById<TextView>(R.id.customer_room_no_101).text
+                val customerDesc101 = findViewById<TextView>(R.id.customer_room_description_101).text
+                val customerPrice101 = findViewById<TextView>(R.id.customer_price_101).text
+                customerRoom101Intent.putExtra("room_no", customerNo101.toString());
+                customerRoom101Intent.putExtra("room_desc", customerDesc101.toString());
+                customerRoom101Intent.putExtra("room_price", customerPrice101.toString());
+                startActivity(customerRoom101Intent)
+            }
+
 
         bookRoom102 .setOnClickListener{
 
@@ -61,7 +166,6 @@ class Customer_select_room : AppCompatActivity() {
             startActivity(customerRoom102Intent)
         }
 
-        val bookRoom103 = findViewById<Button>(R.id.book_room_103_btn)
 
         bookRoom103 .setOnClickListener{
 
@@ -75,7 +179,6 @@ class Customer_select_room : AppCompatActivity() {
             startActivity(customerRoom103Intent)
         }
 
-        val bookRoom104 = findViewById<Button>(R.id.book_room_104_btn)
 
         bookRoom104 .setOnClickListener{
 
@@ -89,7 +192,6 @@ class Customer_select_room : AppCompatActivity() {
             startActivity(customerRoom104Intent)
         }
 
-        val bookRoom105 = findViewById<Button>(R.id.book_room_105_btn)
 
         bookRoom105 .setOnClickListener{
 
@@ -103,7 +205,6 @@ class Customer_select_room : AppCompatActivity() {
             startActivity(customerRoom105Intent)
         }
 
-        val bookRoom106 = findViewById<Button>(R.id.book_room_106_btn)
 
         bookRoom106 .setOnClickListener{
 
@@ -116,8 +217,6 @@ class Customer_select_room : AppCompatActivity() {
             customerRoom106Intent.putExtra("room_price", customerPrice106.toString());
             startActivity(customerRoom106Intent)
         }
-
-        val bookRoom107 = findViewById<Button>(R.id.book_room_107_btn)
 
         bookRoom107 .setOnClickListener{
 

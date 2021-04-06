@@ -1,10 +1,10 @@
 package com.example.mobilehotelmanagementsystem
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
 class CustomerMainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,10 +18,41 @@ class CustomerMainActivity : AppCompatActivity() {
 
 
         val bookingButton = findViewById<Button>(R.id.bookingBtn)
-        bookingButton.setOnClickListener{
+        bookingButton.setOnClickListener {
 
-            val bookingRoom = Intent(this,Customer_select_room::class.java)
-            startActivity(bookingRoom)
+            /*val database = FirebaseDatabase.getInstance();
+            val roomDatabaseRef = database.getReference("Room booking");
+
+            val roomStatus = StringBuilder()
+            val roomStatusArr = ArrayList<String>()
+            val getRoomData = object : ValueEventListener {
+                override fun onCancelled(error: DatabaseError) {
+
+                }
+
+                override fun onDataChange(snapshot: DataSnapshot) {
+
+                    for (s in snapshot.children) {
+                        val custRoomId = s.child("RoomNo").getValue().toString()
+                        roomStatus.append("${custRoomId}\n")
+                        roomStatusArr.add(custRoomId)
+
+                    }
+
+
+                }
+            }
+
+            val q: Query = roomDatabaseRef.orderByChild("Status").equalTo("full")
+
+            q.addValueEventListener(getRoomData)
+            q.addListenerForSingleValueEvent(getRoomData)*/
+
+            val bookingRoom = Intent(this, Customer_select_room::class.java)
+            //for (i in 0 until 8) {
+                //intent.putExtra("RoomStatusArr0", roomStatusArr.toString())
+                startActivity(bookingRoom)
+            //}
         }
 
         //-------------Sui Bing(service request button press)----------------

@@ -67,6 +67,7 @@ class Customer_purchase : AppCompatActivity() {
             val roomActivate:String= "full"
 
 
+            myRef.child(roomID).child("RoomNo").setValue(roomID)
             myRef.child(roomID).child("Description").setValue(roomDesc)
             myRef.child(roomID).child("CheckIn").setValue(roomCheckIn)
             myRef.child(roomID).child("CheckOut").setValue(roomCheckOut)
