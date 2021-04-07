@@ -31,7 +31,8 @@ class Customer_purchase : AppCompatActivity() {
         val roomDescOutput= findViewById<TextView>(R.id.room_desc_output)
 
         roomDescOutput.setText(customerDesc)
-        
+
+
         //--------------------price--------------
         val customerPrice = intent?.getStringExtra("room_price")
         val roomPriceOutput = findViewById<TextView>(R.id.room_price_output)

@@ -2,14 +2,19 @@ package com.example.mobilehotelmanagementsystem
 
 import android.app.DatePickerDialog
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import java.time.LocalDate
+import java.time.temporal.ChronoUnit
 import java.util.*
 
 class Customer_select_detail : AppCompatActivity() {
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_customer_select_detail)
@@ -33,12 +38,17 @@ class Customer_select_detail : AppCompatActivity() {
         val checkInYear = customerCheckInCalender.get(Calendar.YEAR)
         val checkInMonth = customerCheckInCalender.get(Calendar.MONTH)
         val checkInDay = customerCheckInCalender.get(Calendar.DAY_OF_MONTH)
+        var startDay=LocalDate.of(checkInYear,checkInMonth,checkInDay)
+
+
 
         //----------------------------check out calender validation----------------------
         val customerCheckOutCalender = Calendar.getInstance()
-        val checkOutYear = customerCheckOutCalender.get(Calendar.YEAR)
-        val checkOutMonth = customerCheckOutCalender.get(Calendar.MONTH)
-        val checkOutDay = customerCheckOutCalender.get(Calendar.DAY_OF_MONTH)
+        var checkOutYear = customerCheckOutCalender.get(Calendar.YEAR)
+        var checkOutMonth = customerCheckOutCalender.get(Calendar.MONTH)
+        var checkOutDay = customerCheckOutCalender.get(Calendar.DAY_OF_MONTH)
+        var endDay=LocalDate.of(checkOutYear,checkOutMonth,checkOutDay)
+
 
 
         //----------------------------check in calender----------------------
@@ -54,6 +64,7 @@ class Customer_select_detail : AppCompatActivity() {
 
                 val checkInMonthText= month+1
                 checkInDate.setText("" + day + "/" + checkInMonthText + "/" + year)
+                startDay= LocalDate.of(year,checkInMonthText,day)
 
             }, checkInYear, checkInMonth, checkInDay)
 
@@ -86,7 +97,12 @@ class Customer_select_detail : AppCompatActivity() {
                     val checkOutDate = findViewById<TextView>(R.id.customer_check_out)
 
                     val checkOutMonthText = month + 1
+
                     checkOutDate.setText("" + day + "/" + checkOutMonthText + "/" + year)
+
+                    endDay= LocalDate.of(year,checkOutMonthText,day)
+
+
 
 
                 }, checkOutYear, checkOutMonth, checkOutDay)
@@ -118,11 +134,14 @@ class Customer_select_detail : AppCompatActivity() {
         //-----------------------next button----------------------------------
         val detailNextBtn = findViewById<Button>(R.id.select_detail_nextBtn)
 
+
         detailNextBtn .setOnClickListener{
 
             val checkInDateValidate = findViewById<TextView>(R.id.customer_check_in)
             val checkOutDateValidate  = findViewById<TextView>(R.id.customer_check_out)
-            validate(checkInDateValidate.getText().toString(),checkOutDateValidate.getText().toString(), customerRoomNo.toString(),customerDesc.toString(),customerPrice.toString());
+            val dayBetween= ChronoUnit.DAYS.between(startDay,endDay)
+            val totalPrice=Integer.parseInt(customerPrice)*Integer.parseInt(dayBetween.toString())
+            validate(checkInDateValidate.getText().toString(),checkOutDateValidate.getText().toString(), customerRoomNo.toString(),customerDesc.toString(),totalPrice.toString());
 
         }
 
