@@ -1,11 +1,9 @@
 package com.example.mobilehotelmanagementsystem
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
 class Customer_pay_successful : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,6 +11,12 @@ class Customer_pay_successful : AppCompatActivity() {
         setContentView(R.layout.activity_customer_pay_success)
 
 
+        val mainMenuBtn= findViewById<Button>(R.id.customer_main_menu_btn);
+
+        mainMenuBtn.setOnClickListener{
+            val goMainMenu = Intent(this, CustomerMainActivity::class.java)
+            startActivity(goMainMenu)
+        }
 
 
 

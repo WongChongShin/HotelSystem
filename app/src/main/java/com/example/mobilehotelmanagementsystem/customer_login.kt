@@ -1,10 +1,14 @@
 package com.example.mobilehotelmanagementsystem
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.async
+import kotlinx.coroutines.delay
 
 class customer_login : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,10 +32,24 @@ class customer_login : AppCompatActivity() {
             customerUsername.setText("You are require to fill up all the blank ")
         }
         else{
-            val customerSignInIntent = Intent(this, CustomerMainActivity::class.java)
+            if(password.length<8){
+                val customerUsername = findViewById<TextView>(R.id.customer_error_message)
+                customerUsername.setText("Your password need more than 8 word")
+            }
+            else {
+                val customerSignInIntent = Intent(this, CustomerMainActivity::class.java)
 
-            customerSignInIntent.putExtra("username", userName.toString())
-            startActivity(customerSignInIntent)
+                customerSignInIntent.putExtra("username", userName.toString())
+
+                val toast = Toast.makeText(applicationContext, "Login Successful", Toast.LENGTH_SHORT)
+                toast.show()
+                GlobalScope.async {
+                    delay(800)
+                    startActivity(customerSignInIntent)
+                }
+
+
+            }
         }
     }
 }

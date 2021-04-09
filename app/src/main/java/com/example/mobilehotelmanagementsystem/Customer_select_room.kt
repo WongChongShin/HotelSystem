@@ -3,11 +3,16 @@ package com.example.mobilehotelmanagementsystem
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.database.*
+import java.text.SimpleDateFormat
+import java.util.*
+import kotlin.collections.ArrayList
 
 class Customer_select_room : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,6 +36,8 @@ class Customer_select_room : AppCompatActivity() {
         val database = FirebaseDatabase.getInstance();
         val roomDatabaseRef = database.getReference("Room booking");
 
+
+        //------------------------checking status------------------------------
         val roomStatus = StringBuilder()
         val roomStatusArr = ArrayList<String>()
         val getRoomData = object : ValueEventListener {
@@ -105,6 +112,7 @@ class Customer_select_room : AppCompatActivity() {
                         bookRoom107.isClickable = false
                     }
 
+
                 }
 
 
@@ -117,20 +125,120 @@ class Customer_select_room : AppCompatActivity() {
         q.addListenerForSingleValueEvent(getRoomData)
 
 
+        //------------------------checking date
 
-        val roomBackBtn: ImageView = findViewById<ImageView>(R.id.select_room_back);
 
-        roomBackBtn.setOnClickListener{
-            val backCustomerMain = Intent(this, CustomerMainActivity::class.java)
-            startActivity(backCustomerMain)
+        val getRoomCheckOutData = object : ValueEventListener {
+            override fun onCancelled(error: DatabaseError) {
+
+            }
+
+            override fun onDataChange(snapshot: DataSnapshot) {
+
+                for (s in snapshot.children) {
+                    val custRoomId = s.child("RoomNo").getValue().toString()
+                    roomStatus.append("${custRoomId}\n")
+                    roomStatusArr.add(custRoomId)
+                    val roomCheckOutDate = s.child("CheckOut").getValue().toString()
+                    val sdf = SimpleDateFormat("dd/MM/yyyy")
+                    val strDate: Date = sdf.parse(roomCheckOutDate)
+                    if (System.currentTimeMillis()>strDate.time) {
+
+                        val statusLength= roomStatusArr!!.size
+                        for(i in 0 until statusLength) {
+                            if (roomStatusArr[i].equals("100")) {
+                                bookRoom100.setBackgroundColor(Color.parseColor("#ff99cc00"));
+                                bookRoom100.setText("Book")
+                                bookRoom100.setTextColor(Color.BLACK);
+                                bookRoom100.isEnabled = true
+                                bookRoom100.isClickable = true
+                                roomDatabaseRef.child(custRoomId).child("Status").setValue("empty")
+                            } else if (roomStatusArr[i].equals("101")) {
+                                bookRoom101.setBackgroundColor(Color.parseColor("#ff99cc00"));
+                                bookRoom101.setText("Book");
+                                bookRoom101.setTextColor(Color.BLACK);
+                                bookRoom101.isEnabled = true
+                                bookRoom101.isClickable = true
+                                roomDatabaseRef.child(custRoomId).child("Status").setValue("empty")
+                            } else if (roomStatusArr[i].equals("102")) {
+                                bookRoom102.setBackgroundColor(Color.parseColor("#ff99cc00"));
+                                bookRoom102.setText("Book");
+                                bookRoom102.setTextColor(Color.BLACK);
+                                bookRoom102.isEnabled = true
+                                bookRoom102.isClickable = true
+                                roomDatabaseRef.child(custRoomId).child("Status").setValue("empty")
+                            } else if (roomStatusArr[i].equals("103")) {
+                                bookRoom103.setBackgroundColor(Color.parseColor("#ff99cc00"));
+                                bookRoom103.setText("Book");
+                                bookRoom103.setTextColor(Color.BLACK);
+                                bookRoom103.isEnabled = true
+                                bookRoom103.isClickable = true
+                                roomDatabaseRef.child(custRoomId).child("Status").setValue("empty")
+                            } else if (roomStatusArr[i].equals("104")) {
+                                bookRoom104.setBackgroundColor(Color.parseColor("#ff99cc00"));
+                                bookRoom104.setText("Book");
+                                bookRoom104.setTextColor(Color.BLACK);
+                                bookRoom104.isEnabled = true
+                                bookRoom104.isClickable = true
+                                roomDatabaseRef.child(custRoomId).child("Status").setValue("empty")
+                            } else if (roomStatusArr[i].equals("105")) {
+                                bookRoom105.setBackgroundColor(Color.parseColor("#ff99cc00"));
+                                bookRoom105.setText("Book");
+                                bookRoom105.setTextColor(Color.BLACK);
+                                bookRoom105.isEnabled = true
+                                bookRoom105.isClickable = true
+                                roomDatabaseRef.child(custRoomId).child("Status").setValue("empty")
+                            } else if (roomStatusArr[i].equals("106")) {
+                                bookRoom106.setBackgroundColor(Color.parseColor("#ff99cc00"));
+                                bookRoom106.setText("Book");
+                                bookRoom106.setTextColor(Color.BLACK);
+                                bookRoom106.isEnabled = true
+                                bookRoom106.isClickable = true
+                                roomDatabaseRef.child(custRoomId).child("Status").setValue("empty")
+                            } else if (roomStatusArr[i].equals("107")) {
+                                bookRoom107.setBackgroundColor(Color.parseColor("#ff99cc00"));
+                                bookRoom107.setText("Book");
+                                bookRoom107.setTextColor(Color.BLACK);
+                                bookRoom107.isEnabled = true
+                                bookRoom107.isClickable = true
+                                roomDatabaseRef.child(custRoomId).child("Status").setValue("empty")
+                            }
+
+                        }
+                    }
+
+                }
+
+
+
+            }
         }
 
 
 
-        //----------------------button 100-107----------------------------------
+        val checkOutQuery: Query = roomDatabaseRef.orderByChild("CheckOut")
+
+        checkOutQuery.addValueEventListener(getRoomCheckOutData)
+        checkOutQuery.addListenerForSingleValueEvent(getRoomCheckOutData)
+
+
+
+
+            val roomBackBtn: ImageView = findViewById<ImageView>(R.id.select_room_back);
+
+            roomBackBtn.setOnClickListener {
+                val backCustomerMain = Intent(this, CustomerMainActivity::class.java)
+
+                    startActivity(backCustomerMain)
+            }
+
+        val handler = Handler(Looper.getMainLooper())
+        val someThread = Runnable {
+            //----------------------button 100-107----------------------------------
             bookRoom100.setOnClickListener {
 
                 val customerRoom100Intent = Intent(this, Customer_select_detail::class.java)
+
                 val customerNo100 = findViewById<TextView>(R.id.customer_room_no_100).text
                 val customerDesc100 = findViewById<TextView>(R.id.customer_room_description_100).text
                 val customerPrice100 = findViewById<TextView>(R.id.customer_price_100).text
@@ -139,6 +247,7 @@ class Customer_select_room : AppCompatActivity() {
                 customerRoom100Intent.putExtra("room_price", customerPrice100.toString());
                 startActivity(customerRoom100Intent)
             }
+
 
 
             bookRoom101.setOnClickListener {
@@ -154,81 +263,83 @@ class Customer_select_room : AppCompatActivity() {
             }
 
 
-        bookRoom102 .setOnClickListener{
+            bookRoom102.setOnClickListener {
 
-            val customerRoom102Intent = Intent(this, Customer_select_detail::class.java)
-            val customerNo102 = findViewById<TextView>(R.id.customer_room_no_102).text
-            val customerDesc102 = findViewById<TextView>(R.id.customer_room_description_102).text
-            val customerPrice102 = findViewById<TextView>(R.id.customer_price_102).text
-            customerRoom102Intent.putExtra("room_no", customerNo102.toString());
-            customerRoom102Intent.putExtra("room_desc", customerDesc102.toString());
-            customerRoom102Intent.putExtra("room_price", customerPrice102.toString());
-            startActivity(customerRoom102Intent)
+                val customerRoom102Intent = Intent(this, Customer_select_detail::class.java)
+                val customerNo102 = findViewById<TextView>(R.id.customer_room_no_102).text
+                val customerDesc102 = findViewById<TextView>(R.id.customer_room_description_102).text
+                val customerPrice102 = findViewById<TextView>(R.id.customer_price_102).text
+                customerRoom102Intent.putExtra("room_no", customerNo102.toString());
+                customerRoom102Intent.putExtra("room_desc", customerDesc102.toString());
+                customerRoom102Intent.putExtra("room_price", customerPrice102.toString());
+                startActivity(customerRoom102Intent)
+            }
+
+
+            bookRoom103.setOnClickListener {
+
+                val customerRoom103Intent = Intent(this, Customer_select_detail::class.java)
+                val customerNo103 = findViewById<TextView>(R.id.customer_room_no_103).text
+                val customerDesc103 = findViewById<TextView>(R.id.customer_room_description_103).text
+                val customerPrice103 = findViewById<TextView>(R.id.customer_price_103).text
+                customerRoom103Intent.putExtra("room_no", customerNo103.toString());
+                customerRoom103Intent.putExtra("room_desc", customerDesc103.toString());
+                customerRoom103Intent.putExtra("room_price", customerPrice103.toString());
+                startActivity(customerRoom103Intent)
+            }
+
+
+            bookRoom104.setOnClickListener {
+
+                val customerRoom104Intent = Intent(this, Customer_select_detail::class.java)
+                val customerNo104 = findViewById<TextView>(R.id.customer_room_no_104).text
+                val customerDesc104 = findViewById<TextView>(R.id.customer_room_description_104).text
+                val customerPrice104 = findViewById<TextView>(R.id.customer_price_104).text
+                customerRoom104Intent.putExtra("room_no", customerNo104.toString());
+                customerRoom104Intent.putExtra("room_desc", customerDesc104.toString());
+                customerRoom104Intent.putExtra("room_price", customerPrice104.toString());
+                startActivity(customerRoom104Intent)
+            }
+
+
+            bookRoom105.setOnClickListener {
+
+                val customerRoom105Intent = Intent(this, Customer_select_detail::class.java)
+                val customerNo105 = findViewById<TextView>(R.id.customer_room_no_105).text
+                val customerDesc105 = findViewById<TextView>(R.id.customer_room_description_105).text
+                val customerPrice105 = findViewById<TextView>(R.id.customer_price_105).text
+                customerRoom105Intent.putExtra("room_no", customerNo105.toString());
+                customerRoom105Intent.putExtra("room_desc", customerDesc105.toString());
+                customerRoom105Intent.putExtra("room_price", customerPrice105.toString());
+                startActivity(customerRoom105Intent)
+            }
+
+
+            bookRoom106.setOnClickListener {
+
+                val customerRoom106Intent = Intent(this, Customer_select_detail::class.java)
+                val customerNo106 = findViewById<TextView>(R.id.customer_room_no_106).text
+                val customerDesc106 = findViewById<TextView>(R.id.customer_room_description_106).text
+                val customerPrice106 = findViewById<TextView>(R.id.customer_price_106).text
+                customerRoom106Intent.putExtra("room_no", customerNo106.toString());
+                customerRoom106Intent.putExtra("room_desc", customerDesc106.toString());
+                customerRoom106Intent.putExtra("room_price", customerPrice106.toString());
+                startActivity(customerRoom106Intent)
+            }
+
+            bookRoom107.setOnClickListener {
+
+                val customerRoom107Intent = Intent(this, Customer_select_detail::class.java)
+                val customerNo107 = findViewById<TextView>(R.id.customer_room_no_107).text
+                val customerDesc107 = findViewById<TextView>(R.id.customer_room_description_107).text
+                val customerPrice107 = findViewById<TextView>(R.id.customer_price_107).text
+                customerRoom107Intent.putExtra("room_no", customerNo107.toString());
+                customerRoom107Intent.putExtra("room_desc", customerDesc107.toString());
+                customerRoom107Intent.putExtra("room_price", customerPrice107.toString());
+                startActivity(customerRoom107Intent)
+            }
         }
-
-
-        bookRoom103 .setOnClickListener{
-
-            val customerRoom103Intent = Intent(this, Customer_select_detail::class.java)
-            val customerNo103 = findViewById<TextView>(R.id.customer_room_no_103).text
-            val customerDesc103 = findViewById<TextView>(R.id.customer_room_description_103).text
-            val customerPrice103 = findViewById<TextView>(R.id.customer_price_103).text
-            customerRoom103Intent.putExtra("room_no", customerNo103.toString());
-            customerRoom103Intent.putExtra("room_desc", customerDesc103.toString());
-            customerRoom103Intent.putExtra("room_price", customerPrice103.toString());
-            startActivity(customerRoom103Intent)
-        }
-
-
-        bookRoom104 .setOnClickListener{
-
-            val customerRoom104Intent = Intent(this, Customer_select_detail::class.java)
-            val customerNo104 = findViewById<TextView>(R.id.customer_room_no_104).text
-            val customerDesc104 = findViewById<TextView>(R.id.customer_room_description_104).text
-            val customerPrice104 = findViewById<TextView>(R.id.customer_price_104).text
-            customerRoom104Intent.putExtra("room_no", customerNo104.toString());
-            customerRoom104Intent.putExtra("room_desc", customerDesc104.toString());
-            customerRoom104Intent.putExtra("room_price", customerPrice104.toString());
-            startActivity(customerRoom104Intent)
-        }
-
-
-        bookRoom105 .setOnClickListener{
-
-            val customerRoom105Intent = Intent(this, Customer_select_detail::class.java)
-            val customerNo105 = findViewById<TextView>(R.id.customer_room_no_105).text
-            val customerDesc105 = findViewById<TextView>(R.id.customer_room_description_105).text
-            val customerPrice105 = findViewById<TextView>(R.id.customer_price_105).text
-            customerRoom105Intent.putExtra("room_no", customerNo105.toString());
-            customerRoom105Intent.putExtra("room_desc", customerDesc105.toString());
-            customerRoom105Intent.putExtra("room_price", customerPrice105.toString());
-            startActivity(customerRoom105Intent)
-        }
-
-
-        bookRoom106 .setOnClickListener{
-
-            val customerRoom106Intent = Intent(this, Customer_select_detail::class.java)
-            val customerNo106 = findViewById<TextView>(R.id.customer_room_no_106).text
-            val customerDesc106 = findViewById<TextView>(R.id.customer_room_description_106).text
-            val customerPrice106 = findViewById<TextView>(R.id.customer_price_106).text
-            customerRoom106Intent.putExtra("room_no", customerNo106.toString());
-            customerRoom106Intent.putExtra("room_desc", customerDesc106.toString());
-            customerRoom106Intent.putExtra("room_price", customerPrice106.toString());
-            startActivity(customerRoom106Intent)
-        }
-
-        bookRoom107 .setOnClickListener{
-
-            val customerRoom107Intent = Intent(this, Customer_select_detail::class.java)
-            val customerNo107 = findViewById<TextView>(R.id.customer_room_no_107).text
-            val customerDesc107 = findViewById<TextView>(R.id.customer_room_description_107).text
-            val customerPrice107 = findViewById<TextView>(R.id.customer_price_107).text
-            customerRoom107Intent.putExtra("room_no", customerNo107.toString());
-            customerRoom107Intent.putExtra("room_desc", customerDesc107.toString());
-            customerRoom107Intent.putExtra("room_price", customerPrice107.toString());
-            startActivity(customerRoom107Intent)
-        }
+        handler.postDelayed(someThread, 1500)
 
 
 
