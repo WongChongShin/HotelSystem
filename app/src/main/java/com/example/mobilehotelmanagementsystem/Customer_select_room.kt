@@ -37,9 +37,109 @@ class Customer_select_room : AppCompatActivity() {
         val roomDatabaseRef = database.getReference("Room booking");
 
 
-        //------------------------checking status------------------------------
+        //------------------------checking date
+
+        val roomNo = StringBuilder()
+        val roomNoArr = ArrayList<String>()
+        val getRoomCheckOutData = object : ValueEventListener {
+            override fun onCancelled(error: DatabaseError) {
+
+            }
+
+            override fun onDataChange(snapshot: DataSnapshot) {
+
+                for (s in snapshot.children) {
+                    val custRoomId = s.child("RoomNo").getValue().toString()
+                    roomNo.append("${custRoomId}\n")
+                    roomNoArr.add(custRoomId)
+                    val roomCheckOutDate = s.child("CheckOut").getValue().toString()
+                    val sdf = SimpleDateFormat("dd/MM/yyyy")
+                    val strDate: Date = sdf.parse(roomCheckOutDate)
+                    if (System.currentTimeMillis()>strDate.time) {
+
+                        val roomNoLength= roomNoArr!!.size
+                        for(i in 0 until roomNoLength) {
+                            if (roomNoArr[i].equals("100")) {
+                                roomDatabaseRef.child(custRoomId).child("Status").setValue("empty")
+
+                            } else if (roomNoArr[i].equals("101")) {
+                                roomDatabaseRef.child(custRoomId).child("Status").setValue("empty")
+
+                            } else if (roomNoArr[i].equals("102")) {
+                                roomDatabaseRef.child(custRoomId).child("Status").setValue("empty")
+
+                            } else if (roomNoArr[i].equals("103")) {
+                                roomDatabaseRef.child(custRoomId).child("Status").setValue("empty")
+
+                            } else if (roomNoArr[i].equals("104")) {
+                                roomDatabaseRef.child(custRoomId).child("Status").setValue("empty")
+
+                            } else if (roomNoArr[i].equals("105")) {
+                                roomDatabaseRef.child(custRoomId).child("Status").setValue("empty")
+
+                            } else if (roomNoArr[i].equals("106")) {
+                                roomDatabaseRef.child(custRoomId).child("Status").setValue("empty")
+
+                            } else if (roomNoArr[i].equals("107")) {
+                                roomDatabaseRef.child(custRoomId).child("Status").setValue("empty")
+
+                            }
+
+                        }
+                    }
+                    else{
+                        val roomNoLength= roomNoArr!!.size
+                        for(i in 0 until roomNoLength) {
+                            if (roomNoArr[i].equals("100")) {
+                                roomDatabaseRef.child(custRoomId).child("Status").setValue("full")
+
+                            } else if (roomNoArr[i].equals("101")) {
+                                roomDatabaseRef.child(custRoomId).child("Status").setValue("full")
+
+                            } else if (roomNoArr[i].equals("102")) {
+                                roomDatabaseRef.child(custRoomId).child("Status").setValue("full")
+
+                            } else if (roomNoArr[i].equals("103")) {
+                                roomDatabaseRef.child(custRoomId).child("Status").setValue("full")
+
+                            } else if (roomNoArr[i].equals("104")) {
+                                roomDatabaseRef.child(custRoomId).child("Status").setValue("full")
+
+                            } else if (roomNoArr[i].equals("105")) {
+                                roomDatabaseRef.child(custRoomId).child("Status").setValue("full")
+
+                            } else if (roomNoArr[i].equals("106")) {
+                                roomDatabaseRef.child(custRoomId).child("Status").setValue("full")
+
+                            } else if (roomNoArr[i].equals("107")) {
+                                roomDatabaseRef.child(custRoomId).child("Status").setValue("full")
+
+                            }
+
+                        }
+                    }
+
+                }
+
+
+
+            }
+        }
+
+
+
+        val checkOutQuery: Query = roomDatabaseRef.orderByChild("CheckOut")
+
+        checkOutQuery.addValueEventListener(getRoomCheckOutData)
+        checkOutQuery.addListenerForSingleValueEvent(getRoomCheckOutData)
+
+
+        //------------------------checking status full------------------------------
         val roomStatus = StringBuilder()
         val roomStatusArr = ArrayList<String>()
+        val q: Query = roomDatabaseRef.orderByChild("Status").equalTo("full")
+
+
         val getRoomData = object : ValueEventListener {
             override fun onCancelled(error: DatabaseError) {
 
@@ -118,17 +218,15 @@ class Customer_select_room : AppCompatActivity() {
 
             }
         }
-
-        val q: Query = roomDatabaseRef.orderByChild("Status").equalTo("full")
-
         q.addValueEventListener(getRoomData)
         q.addListenerForSingleValueEvent(getRoomData)
 
 
-        //------------------------checking date
 
-
-        val getRoomCheckOutData = object : ValueEventListener {
+        //------------------------checking status empty------------------------------
+        val roomStatusEmpty = StringBuilder()
+        val roomStatusEmptyArr = ArrayList<String>()
+        val getRoomDataEmpty = object : ValueEventListener {
             override fun onCancelled(error: DatabaseError) {
 
             }
@@ -137,89 +235,76 @@ class Customer_select_room : AppCompatActivity() {
 
                 for (s in snapshot.children) {
                     val custRoomId = s.child("RoomNo").getValue().toString()
-                    roomStatus.append("${custRoomId}\n")
-                    roomStatusArr.add(custRoomId)
-                    val roomCheckOutDate = s.child("CheckOut").getValue().toString()
-                    val sdf = SimpleDateFormat("dd/MM/yyyy")
-                    val strDate: Date = sdf.parse(roomCheckOutDate)
-                    if (System.currentTimeMillis()>strDate.time) {
-
-                        val statusLength= roomStatusArr!!.size
-                        for(i in 0 until statusLength) {
-                            if (roomStatusArr[i].equals("100")) {
-                                bookRoom100.setBackgroundColor(Color.parseColor("#ff99cc00"));
-                                bookRoom100.setText("Book")
-                                bookRoom100.setTextColor(Color.BLACK);
-                                bookRoom100.isEnabled = true
-                                bookRoom100.isClickable = true
-                                roomDatabaseRef.child(custRoomId).child("Status").setValue("empty")
-                            } else if (roomStatusArr[i].equals("101")) {
-                                bookRoom101.setBackgroundColor(Color.parseColor("#ff99cc00"));
-                                bookRoom101.setText("Book");
-                                bookRoom101.setTextColor(Color.BLACK);
-                                bookRoom101.isEnabled = true
-                                bookRoom101.isClickable = true
-                                roomDatabaseRef.child(custRoomId).child("Status").setValue("empty")
-                            } else if (roomStatusArr[i].equals("102")) {
-                                bookRoom102.setBackgroundColor(Color.parseColor("#ff99cc00"));
-                                bookRoom102.setText("Book");
-                                bookRoom102.setTextColor(Color.BLACK);
-                                bookRoom102.isEnabled = true
-                                bookRoom102.isClickable = true
-                                roomDatabaseRef.child(custRoomId).child("Status").setValue("empty")
-                            } else if (roomStatusArr[i].equals("103")) {
-                                bookRoom103.setBackgroundColor(Color.parseColor("#ff99cc00"));
-                                bookRoom103.setText("Book");
-                                bookRoom103.setTextColor(Color.BLACK);
-                                bookRoom103.isEnabled = true
-                                bookRoom103.isClickable = true
-                                roomDatabaseRef.child(custRoomId).child("Status").setValue("empty")
-                            } else if (roomStatusArr[i].equals("104")) {
-                                bookRoom104.setBackgroundColor(Color.parseColor("#ff99cc00"));
-                                bookRoom104.setText("Book");
-                                bookRoom104.setTextColor(Color.BLACK);
-                                bookRoom104.isEnabled = true
-                                bookRoom104.isClickable = true
-                                roomDatabaseRef.child(custRoomId).child("Status").setValue("empty")
-                            } else if (roomStatusArr[i].equals("105")) {
-                                bookRoom105.setBackgroundColor(Color.parseColor("#ff99cc00"));
-                                bookRoom105.setText("Book");
-                                bookRoom105.setTextColor(Color.BLACK);
-                                bookRoom105.isEnabled = true
-                                bookRoom105.isClickable = true
-                                roomDatabaseRef.child(custRoomId).child("Status").setValue("empty")
-                            } else if (roomStatusArr[i].equals("106")) {
-                                bookRoom106.setBackgroundColor(Color.parseColor("#ff99cc00"));
-                                bookRoom106.setText("Book");
-                                bookRoom106.setTextColor(Color.BLACK);
-                                bookRoom106.isEnabled = true
-                                bookRoom106.isClickable = true
-                                roomDatabaseRef.child(custRoomId).child("Status").setValue("empty")
-                            } else if (roomStatusArr[i].equals("107")) {
-                                bookRoom107.setBackgroundColor(Color.parseColor("#ff99cc00"));
-                                bookRoom107.setText("Book");
-                                bookRoom107.setTextColor(Color.BLACK);
-                                bookRoom107.isEnabled = true
-                                bookRoom107.isClickable = true
-                                roomDatabaseRef.child(custRoomId).child("Status").setValue("empty")
-                            }
-
-                        }
-                    }
+                    roomStatusEmpty.append("${custRoomId}\n")
+                    roomStatusEmptyArr.add(custRoomId)
 
                 }
+                val statusEmptyLength= roomStatusEmptyArr!!.size
+                for(i in 0 until statusEmptyLength) {
+                    if (roomStatusEmptyArr[i].equals("100")) {
+                        bookRoom100.setBackgroundColor(Color.parseColor("#ff99cc00"));
+                        bookRoom100.setText("Book")
+                        bookRoom100.setTextColor(Color.BLACK);
+                        bookRoom100.isEnabled = true
+                        bookRoom100.isClickable = true
+                    } else if (roomStatusEmptyArr[i].equals("101")) {
+                        bookRoom101.setBackgroundColor(Color.parseColor("#ff99cc00"));
+                        bookRoom101.setText("Book");
+                        bookRoom101.setTextColor(Color.BLACK);
+                        bookRoom101.isEnabled = true
+                        bookRoom101.isClickable = true
+                    } else if (roomStatusEmptyArr[i].equals("102")) {
+                        bookRoom102.setBackgroundColor(Color.parseColor("#ff99cc00"));
+                        bookRoom102.setText("Book");
+                        bookRoom102.setTextColor(Color.BLACK);
+                        bookRoom102.isEnabled = true
+                        bookRoom102.isClickable = true
+                    } else if (roomStatusEmptyArr[i].equals("103")) {
+                        bookRoom103.setBackgroundColor(Color.parseColor("#ff99cc00"));
+                        bookRoom103.setText("Book");
+                        bookRoom103.setTextColor(Color.BLACK);
+                        bookRoom103.isEnabled = true
+                        bookRoom103.isClickable = true
+                    } else if (roomStatusEmptyArr[i].equals("104")) {
+                        bookRoom104.setBackgroundColor(Color.parseColor("#ff99cc00"));
+                        bookRoom104.setText("Book");
+                        bookRoom104.setTextColor(Color.BLACK);
+                        bookRoom104.isEnabled = true
+                        bookRoom104.isClickable = true
+                    } else if (roomStatusEmptyArr[i].equals("105")) {
+                        bookRoom105.setBackgroundColor(Color.parseColor("#ff99cc00"));
+                        bookRoom105.setText("Book");
+                        bookRoom105.setTextColor(Color.BLACK);
+                        bookRoom105.isEnabled = true
+                        bookRoom105.isClickable = true
+                    } else if (roomStatusEmptyArr[i].equals("106")) {
+                        bookRoom106.setBackgroundColor(Color.parseColor("#ff99cc00"));
+                        bookRoom106.setText("Book");
+                        bookRoom106.setTextColor(Color.BLACK);
+                        bookRoom106.isEnabled = true
+                        bookRoom106.isClickable = true
+                    } else if (roomStatusEmptyArr[i].equals("107")) {
+                        bookRoom107.setBackgroundColor(Color.parseColor("#ff99cc00"));
+                        bookRoom107.setText("Book");
+                        bookRoom107.setTextColor(Color.BLACK);
+                        bookRoom107.isEnabled = true
+                        bookRoom107.isClickable = true
+                    }
 
+
+                }
 
 
             }
         }
 
+        val qEmpty: Query = roomDatabaseRef.orderByChild("Status").equalTo("empty")
+
+        qEmpty.addValueEventListener(getRoomDataEmpty)
+        qEmpty.addListenerForSingleValueEvent(getRoomDataEmpty)
 
 
-        val checkOutQuery: Query = roomDatabaseRef.orderByChild("CheckOut")
 
-        checkOutQuery.addValueEventListener(getRoomCheckOutData)
-        checkOutQuery.addListenerForSingleValueEvent(getRoomCheckOutData)
 
 
 
@@ -339,7 +424,7 @@ class Customer_select_room : AppCompatActivity() {
                 startActivity(customerRoom107Intent)
             }
         }
-        handler.postDelayed(someThread, 1500)
+        handler.postDelayed(someThread, 4000)
 
 
 
