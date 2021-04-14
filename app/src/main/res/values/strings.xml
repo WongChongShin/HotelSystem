@@ -179,6 +179,12 @@
     <string name="customer_check_in">22/01/2020</string>
     <string name="customer_check_out">24/01/2020</string>
 
+    <!-- select_service_page -->
+    <string name="select_service_text">Select a service.</string>
+    <string name="select_food_service">Food Ordering Services</string>
+    <string name="select_cleaning_service">Room Cleaning Services</string>
+    <string name="select_service_warning">Please note that you will need to have a room booked to access the service.*</string>
+
 
 </resources>
 

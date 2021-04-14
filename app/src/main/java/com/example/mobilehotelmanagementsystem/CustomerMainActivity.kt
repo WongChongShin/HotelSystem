@@ -25,12 +25,12 @@ class CustomerMainActivity : AppCompatActivity() {
                 startActivity(bookingRoom)
         }
 
-        //-------------Sui Bing(service request button press)----------------
-        //val serviceRequestBtn = findViewById<Button>(R.id. )
-        //serviceRequestBtn.setOnClickListener{
+        //-------------Sui Bin(service request button press)----------------
+        val serviceRequestBtn = findViewById<Button>(R.id.serviceBtn )
+        serviceRequestBtn.setOnClickListener{
 
-        //val serviceRequest= Intent(this,"fill in your class name")
-        //startActivity(serviceRequest)
-    //}
+        val serviceRequest= Intent(this, activity_customer_select_service::class.java)
+        startActivity(serviceRequest)
+        }
     }
 }
