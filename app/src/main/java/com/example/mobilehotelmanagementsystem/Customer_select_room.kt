@@ -1,46 +1,90 @@
 package com.example.mobilehotelmanagementsystem
 
 import android.content.Intent
-import android.graphics.Color
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.google.firebase.database.*
-import java.text.SimpleDateFormat
-import java.util.*
-import kotlin.collections.ArrayList
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
-class Customer_select_room : AppCompatActivity() {
+
+class Customer_select_room : AppCompatActivity(),Customer_room_adapter.OnItemClickListener {
+
+    private val roomNoArr = ArrayList<String>()
+    private val roomDescArr = ArrayList<String>()
+    private val roomPriceArr = ArrayList<String>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_customer_select_room)
 
-        //val roomStatusArr = ArrayList<String>()
-        //for(i in 0 until 8) {
-            //roomStatusArr.add(intent?.getStringExtra("RoomStatusArr0").toString())
-        //}
 
-        val bookRoom100 = findViewById<Button>(R.id.book_room_100_btn)
+        val database = FirebaseDatabase.getInstance();
+        val roomDatabaseRef = database.getReference("Room booking");
+        var roomList: ArrayList<customer_room_list>
+
+        //var recyclerView : RecyclerView?=null
+        var recycleView: RecyclerView
+
+        recycleView=findViewById(R.id.customer_roomList)
+        recycleView?.setHasFixedSize(true)
+        recycleView?.layoutManager = LinearLayoutManager(this)
+
+        roomList= arrayListOf<customer_room_list>()
+
+
+
+        roomDatabaseRef.addValueEventListener(object : ValueEventListener {
+            override fun onCancelled(p0: DatabaseError) {
+                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+            }
+
+            override fun onDataChange(snapshot: DataSnapshot) {
+
+
+                if(snapshot!!.exists()){
+
+                    for (s in snapshot.children){
+                        val custRoomId = s.child("RoomNo").getValue().toString()
+                        val custRoomDesc = s.child("Description").getValue().toString()
+                        val custRoomPrice = s.child("OriginalPrice").getValue().toString()
+                        val room = s.getValue(customer_room_list::class.java)
+                        room!!.roomNo=custRoomId
+                        roomNoArr.add(custRoomId)
+                        room!!.roomDesc=custRoomDesc
+                        roomDescArr.add(custRoomDesc)
+                        room!!.roomPrice=custRoomPrice
+                        roomPriceArr.add(custRoomPrice)
+                        roomList.add(room)
+
+                    }
+
+                    val adapter = Customer_room_adapter(this@Customer_select_room, roomList,this@Customer_select_room)
+
+                    recycleView.setAdapter(adapter)
+
+                }
+
+            }
+        })
+
+
+       /* *//*val bookRoom100 = findViewById<Button>(R.id.book_room_100_btn)
         val bookRoom101 = findViewById<Button>(R.id.book_room_101_btn)
         val bookRoom102 = findViewById<Button>(R.id.book_room_102_btn)
         val bookRoom103 = findViewById<Button>(R.id.book_room_103_btn)
         val bookRoom104 = findViewById<Button>(R.id.book_room_104_btn)
         val bookRoom105 = findViewById<Button>(R.id.book_room_105_btn)
         val bookRoom106 = findViewById<Button>(R.id.book_room_106_btn)
-        val bookRoom107 = findViewById<Button>(R.id.book_room_107_btn)
+        val bookRoom107 = findViewById<Button>(R.id.book_room_107_btn)*//*
 
-        val database = FirebaseDatabase.getInstance();
-        val roomDatabaseRef = database.getReference("Room booking");
 
 
         //------------------------checking date
 
-        val roomNo = StringBuilder()
-        val roomNoArr = ArrayList<String>()
+
         val getRoomCheckOutData = object : ValueEventListener {
             override fun onCancelled(error: DatabaseError) {
 
@@ -49,9 +93,6 @@ class Customer_select_room : AppCompatActivity() {
             override fun onDataChange(snapshot: DataSnapshot) {
 
                 for (s in snapshot.children) {
-                    val custRoomId = s.child("RoomNo").getValue().toString()
-                    roomNo.append("${custRoomId}\n")
-                    roomNoArr.add(custRoomId)
                     val roomCheckOutDate = s.child("CheckOut").getValue().toString()
                     val sdf = SimpleDateFormat("dd/MM/yyyy")
                     val strDate: Date = sdf.parse(roomCheckOutDate)
@@ -60,28 +101,28 @@ class Customer_select_room : AppCompatActivity() {
                         val roomNoLength= roomNoArr!!.size
                         for(i in 0 until roomNoLength) {
                             if (roomNoArr[i].equals("100")) {
-                                roomDatabaseRef.child(custRoomId).child("Status").setValue("empty")
+                                roomDatabaseRef.child(roomNoArr[i]).child("Status").setValue("empty")
 
                             } else if (roomNoArr[i].equals("101")) {
-                                roomDatabaseRef.child(custRoomId).child("Status").setValue("empty")
+                                roomDatabaseRef.child(roomNoArr[i]).child("Status").setValue("empty")
 
                             } else if (roomNoArr[i].equals("102")) {
-                                roomDatabaseRef.child(custRoomId).child("Status").setValue("empty")
+                                roomDatabaseRef.child(roomNoArr[i]).child("Status").setValue("empty")
 
                             } else if (roomNoArr[i].equals("103")) {
-                                roomDatabaseRef.child(custRoomId).child("Status").setValue("empty")
+                                roomDatabaseRef.child(roomNoArr[i]).child("Status").setValue("empty")
 
                             } else if (roomNoArr[i].equals("104")) {
-                                roomDatabaseRef.child(custRoomId).child("Status").setValue("empty")
+                                roomDatabaseRef.child(roomNoArr[i]).child("Status").setValue("empty")
 
                             } else if (roomNoArr[i].equals("105")) {
-                                roomDatabaseRef.child(custRoomId).child("Status").setValue("empty")
+                                roomDatabaseRef.child(roomNoArr[i]).child("Status").setValue("empty")
 
                             } else if (roomNoArr[i].equals("106")) {
-                                roomDatabaseRef.child(custRoomId).child("Status").setValue("empty")
+                                roomDatabaseRef.child(roomNoArr[i]).child("Status").setValue("empty")
 
                             } else if (roomNoArr[i].equals("107")) {
-                                roomDatabaseRef.child(custRoomId).child("Status").setValue("empty")
+                                roomDatabaseRef.child(roomNoArr[i]).child("Status").setValue("empty")
 
                             }
 
@@ -91,28 +132,28 @@ class Customer_select_room : AppCompatActivity() {
                         val roomNoLength= roomNoArr!!.size
                         for(i in 0 until roomNoLength) {
                             if (roomNoArr[i].equals("100")) {
-                                roomDatabaseRef.child(custRoomId).child("Status").setValue("full")
+                                roomDatabaseRef.child(roomNoArr[i]).child("Status").setValue("full")
 
                             } else if (roomNoArr[i].equals("101")) {
-                                roomDatabaseRef.child(custRoomId).child("Status").setValue("full")
+                                roomDatabaseRef.child(roomNoArr[i]).child("Status").setValue("full")
 
                             } else if (roomNoArr[i].equals("102")) {
-                                roomDatabaseRef.child(custRoomId).child("Status").setValue("full")
+                                roomDatabaseRef.child(roomNoArr[i]).child("Status").setValue("full")
 
                             } else if (roomNoArr[i].equals("103")) {
-                                roomDatabaseRef.child(custRoomId).child("Status").setValue("full")
+                                roomDatabaseRef.child(roomNoArr[i]).child("Status").setValue("full")
 
                             } else if (roomNoArr[i].equals("104")) {
-                                roomDatabaseRef.child(custRoomId).child("Status").setValue("full")
+                                roomDatabaseRef.child(roomNoArr[i]).child("Status").setValue("full")
 
                             } else if (roomNoArr[i].equals("105")) {
-                                roomDatabaseRef.child(custRoomId).child("Status").setValue("full")
+                                roomDatabaseRef.child(roomNoArr[i]).child("Status").setValue("full")
 
                             } else if (roomNoArr[i].equals("106")) {
-                                roomDatabaseRef.child(custRoomId).child("Status").setValue("full")
+                                roomDatabaseRef.child(roomNoArr[i]).child("Status").setValue("full")
 
                             } else if (roomNoArr[i].equals("107")) {
-                                roomDatabaseRef.child(custRoomId).child("Status").setValue("full")
+                                roomDatabaseRef.child(roomNoArr[i]).child("Status").setValue("full")
 
                             }
 
@@ -309,13 +350,13 @@ class Customer_select_room : AppCompatActivity() {
 
 
 
-            val roomBackBtn: ImageView = findViewById<ImageView>(R.id.select_room_back);
+        val roomBackBtn: ImageView = findViewById<ImageView>(R.id.select_room_back);
 
-            roomBackBtn.setOnClickListener {
-                val backCustomerMain = Intent(this, CustomerMainActivity::class.java)
+        roomBackBtn.setOnClickListener {
+            val backCustomerMain = Intent(this, CustomerMainActivity::class.java)
 
-                    startActivity(backCustomerMain)
-            }
+            startActivity(backCustomerMain)
+        }
 
         val handler = Handler(Looper.getMainLooper())
         val someThread = Runnable {
@@ -428,5 +469,20 @@ class Customer_select_room : AppCompatActivity() {
 
 
 
+    }
+
+
+
+*/
+
+}
+
+    override fun onItemClick(position: Int) {
+        val customerRoomIntent = Intent(this, Customer_select_detail::class.java)
+        customerRoomIntent.putExtra("room_no", roomNoArr[position].toString());
+        customerRoomIntent.putExtra("room_desc", roomDescArr[position].toString());
+        customerRoomIntent.putExtra("room_price", roomPriceArr[position].toString());
+
+        startActivity(customerRoomIntent)
     }
 }
