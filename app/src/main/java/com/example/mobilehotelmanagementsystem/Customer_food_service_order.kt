@@ -13,8 +13,8 @@ class Customer_food_service_order : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_customer_food_service_order)
 
-        //get order object that is chossen
-        val order : FoodService =  intent?.getSerializableExtra("order") as FoodService
+    //get order object that is chossen
+    val order : FoodService =  intent?.getSerializableExtra("order") as FoodService
 
 
         //initialize UI
