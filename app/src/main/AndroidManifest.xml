@@ -37,6 +37,7 @@
         <activity android:name=".CustomerMainActivity" />
         <activity android:name=".Customer_select_room" />
         <activity android:name=".customer_login" />
+        <activity android:name=".customer_register" />
         <activity android:name=".main_page" />
         <activity android:name=".MainActivity" />
         <activity android:name=".Select_staff_customer_page">
