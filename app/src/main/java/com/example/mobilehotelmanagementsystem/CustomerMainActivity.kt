@@ -29,7 +29,7 @@ class CustomerMainActivity : AppCompatActivity() {
         val serviceRequestBtn = findViewById<Button>(R.id.serviceBtn )
         serviceRequestBtn.setOnClickListener{
 
-        val serviceRequest= Intent(this, Customer_Select_Service::class.java)
+        val serviceRequest= Intent(this, Customer_select_service::class.java)
         startActivity(serviceRequest)
         }
     }
