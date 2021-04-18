@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:text="Select Food Service"
+        android:text="Select food sercive"
         android:textColor="#170539"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,7 +39,6 @@
                 android:orientation="vertical">
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/select_food_item_1"
                     android:layout_width="match_parent"
                     android:layout_height="180dp"
                     app:cardBackgroundColor="#FFFFFF">
@@ -55,7 +54,6 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:text="American Breakfast"
-                        android:textColor="@color/black"
                         android:textSize="22sp"
                         android:translationX="175dp" />
 
@@ -84,119 +82,6 @@
                         android:translationY="90dp" />
 
                     <Button
-                        android:id="@+id/select_food_btn_1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:background="@color/purple_500"
-                        android:text="Order"
-                        android:textColor="#FFFFFF"
-                        android:translationX="175dp"
-                        android:translationY="120dp" />
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/select_food_item_2"
-                    android:layout_width="match_parent"
-                    android:layout_height="180dp"
-                    app:cardBackgroundColor="#FFFFFF">
-
-                    <ImageView
-                        android:layout_width="160dp"
-                        android:layout_height="wrap_content"
-                        android:translationX="5dp"
-                        tools:srcCompat="@tools:sample/backgrounds/scenic" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:text="Farmer's Salad"
-                        android:textColor="@color/black"
-                        android:textSize="22sp"
-                        android:translationX="175dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:text="Price: RM 8"
-                        android:translationX="175dp"
-                        android:translationY="40dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:text="Serving Time: 1am ~ 8pm"
-                        android:translationX="175dp"
-                        android:translationY="65dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:text="Availability: Available"
-                        android:translationX="175dp"
-                        android:translationY="90dp" />
-
-                    <Button
-                        android:id="@+id/select_food_btn_2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:background="@color/purple_500"
-                        android:text="Order"
-                        android:textColor="#FFFFFF"
-                        android:translationX="175dp"
-                        android:translationY="120dp" />
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/select_food_item_3"
-                    android:layout_width="match_parent"
-                    android:layout_height="180dp"
-                    app:cardBackgroundColor="#FFFFFF">
-
-                    <ImageView
-                        android:layout_width="160dp"
-                        android:layout_height="wrap_content"
-                        android:translationX="5dp"
-                        tools:srcCompat="@tools:sample/backgrounds/scenic" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:text="Specialty Tea"
-                        android:textColor="@color/black"
-                        android:textSize="22sp"
-                        android:translationX="175dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:text="Price: RM 5"
-                        android:translationX="175dp"
-                        android:translationY="40dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:text="Serving time: 1pm ~ 8pm"
-                        android:translationX="175dp"
-                        android:translationY="65dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:text="Availability: Available"
-                        android:translationX="175dp"
-                        android:translationY="90dp" />
-
-                    <Button
-                        android:id="@+id/select_food_btn_3"
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
                         android:background="@color/purple_500"
@@ -207,7 +92,6 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/select_food_item_4"
                     android:layout_width="match_parent"
                     android:layout_height="180dp"
                     app:cardBackgroundColor="#FFFFFF">
@@ -222,8 +106,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Kids Meal"
-                        android:textColor="@color/black"
+                        android:text="American Breakfast"
                         android:textSize="22sp"
                         android:translationX="175dp" />
 
@@ -231,7 +114,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Price: RM 18"
+                        android:text="Price: RM 10"
                         android:translationX="175dp"
                         android:translationY="40dp" />
 
@@ -239,7 +122,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Serving time: 12pm ~ 8pm"
+                        android:text="Serving time: 7am ~ 11am"
                         android:translationX="175dp"
                         android:translationY="65dp" />
 
@@ -252,7 +135,6 @@
                         android:translationY="90dp" />
 
                     <Button
-                        android:id="@+id/select_food_btn_4"
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
                         android:background="@color/purple_500"
@@ -263,7 +145,6 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/select_food_item_5"
                     android:layout_width="match_parent"
                     android:layout_height="180dp"
                     app:cardBackgroundColor="#FFFFFF">
@@ -278,8 +159,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Nyonya Rice Special"
-                        android:textColor="@color/black"
+                        android:text="American Breakfast"
                         android:textSize="22sp"
                         android:translationX="175dp" />
 
@@ -287,7 +167,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Price: RM 115"
+                        android:text="Price: RM 10"
                         android:translationX="175dp"
                         android:translationY="40dp" />
 
@@ -295,7 +175,113 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Serving time: 12pm ~ 8pm"
+                        android:text="Serving time: 7am ~ 11am"
+                        android:translationX="175dp"
+                        android:translationY="65dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Availability: Available"
+                        android:translationX="175dp"
+                        android:translationY="90dp" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:background="@color/purple_500"
+                        android:text="order"
+                        android:textColor="#FFFFFF"
+                        android:translationX="175dp"
+                        android:translationY="120dp" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    app:cardBackgroundColor="#FFFFFF">
+
+                    <ImageView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:translationX="5dp"
+                        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="American Breakfast"
+                        android:textSize="22sp"
+                        android:translationX="175dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Price: RM 10"
+                        android:translationX="175dp"
+                        android:translationY="40dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Serving time: 7am ~ 11am"
+                        android:translationX="175dp"
+                        android:translationY="65dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Availability: Available"
+                        android:translationX="175dp"
+                        android:translationY="90dp" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:background="@color/purple_500"
+                        android:text="order"
+                        android:textColor="#FFFFFF"
+                        android:translationX="175dp"
+                        android:translationY="120dp" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    app:cardBackgroundColor="#FFFFFF">
+
+                    <ImageView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:translationX="5dp"
+                        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="American Breakfast"
+                        android:textSize="22sp"
+                        android:translationX="175dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Price: RM 10"
+                        android:translationX="175dp"
+                        android:translationY="40dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Serving time: 7am ~ 11am"
                         android:translationX="175dp"
                         android:translationY="65dp" />
 
@@ -309,7 +295,6 @@
                         android:translationY="90dp" />
 
                     <Button
-                        android:id="@+id/select_food_btn_5"
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
                         android:background="@color/purple_500"
@@ -320,7 +305,6 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/select_food_item_6"
                     android:layout_width="match_parent"
                     android:layout_height="180dp"
                     app:cardBackgroundColor="#FFFFFF">
@@ -335,8 +319,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Smoothie Deluxe"
-                        android:textColor="@color/black"
+                        android:text="American Breakfast"
                         android:textSize="22sp"
                         android:translationX="175dp" />
 
@@ -344,7 +327,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Price: RM  12"
+                        android:text="Price: RM 10"
                         android:translationX="175dp"
                         android:translationY="40dp" />
 
@@ -352,7 +335,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Serving time: 3pm ~ 8pm"
+                        android:text="Serving time: 7am ~ 11am"
                         android:translationX="175dp"
                         android:translationY="65dp" />
 
@@ -360,13 +343,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Availability: Unavailable"
-                        android:textColor="#FF3737"
+                        android:text="Availability: Available"
                         android:translationX="175dp"
                         android:translationY="90dp" />
 
                     <Button
-                        android:id="@+id/select_food_btn_6"
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
                         android:background="@color/purple_500"
