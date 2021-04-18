@@ -16,7 +16,7 @@ class checkIn_and_checkOut : AppCompatActivity() {
     private val bd:FirebaseDatabase = FirebaseDatabase.getInstance()
     private val databaseReference: DatabaseReference = bd.getReference("Customer List")
     var customerAdapter: CustomerAdapter? = null
-    val recyclerView : RecyclerView = findViewById(R.id.customer_list_view)
+    private val recyclerView : RecyclerView = findViewById(R.id.customer_list_view)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,7 +38,7 @@ class checkIn_and_checkOut : AppCompatActivity() {
         }
     }
 
-    fun setUpRecyclerView(){
+    private fun setUpRecyclerView(){
 
         val query: DatabaseReference = databaseReference
         val firebaseRecyclerOptions: FirebaseRecyclerOptions<CustomerModel> = FirebaseRecyclerOptions.Builder<CustomerModel>()

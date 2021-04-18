@@ -7,9 +7,6 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.database.*
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.async
-import kotlinx.coroutines.delay
 
 class customer_login : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,6 +41,8 @@ class customer_login : AppCompatActivity() {
         val roomDatabaseRef = database.getReference("Customer Account");
         val customerSignInIntent = Intent(this, CustomerMainActivity::class.java)
         val error_message = findViewById<TextView>(R.id.customer_error_message)
+        var login_successful:Boolean=false
+        var userName_match:String=""
 
 
 
@@ -67,20 +66,27 @@ class customer_login : AppCompatActivity() {
                         val custName=s.child("CustomerName").getValue().toString()
 
                         if (userName==custEmail && password==custPassword) {
+                            login_successful=true
                             customerSignInIntent.putExtra("username", custName.toString())
 
-                            val toast = Toast.makeText(applicationContext, "Login Successful", Toast.LENGTH_SHORT)
-                            toast.show()
-                            GlobalScope.async {
-                                delay(800)
-                                startActivity(customerSignInIntent)
-                            }
+                        }
+                    }
+                    if(login_successful) {
+
+                        error_message.setText("")
+                        val toast = Toast.makeText(applicationContext, "Login Successful", Toast.LENGTH_SHORT)
+                        toast.show()
+
+                        startActivity(customerSignInIntent)
+                        val emptyUsername = findViewById<TextView>(R.id.customer_sign_in_username)
+                        val emptyPassword= findViewById<TextView>(R.id.customer_sign_in_password)
+                        emptyUsername.setText("")
+                        emptyPassword.setText("")
 
 
-                        }
-                        else{
-                            error_message.setText("You email and password cannot be found")
-                        }
+                    }
+                    else {
+                        error_message.setText("Your email and password cannot be find")
                     }
 
                 }
@@ -89,9 +95,11 @@ class customer_login : AppCompatActivity() {
             }
 
 
+
+
             val emailAddressQuery: Query = roomDatabaseRef.orderByChild("CustomerName")
 
-            emailAddressQuery.addValueEventListener(getCustomerAccountData)
+            //emailAddressQuery.addValueEventListener(getCustomerAccountData)
             emailAddressQuery.addListenerForSingleValueEvent(getCustomerAccountData)
 
 

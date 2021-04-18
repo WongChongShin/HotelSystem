@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".add_new_cleaning_service">
+    tools:context=".add_new_food_service">
 
     <View
-        android:id="@+id/add_customer_background2"
+        android:id="@+id/add_food_background"
         android:layout_width="382dp"
         android:layout_height="652dp"
         android:layout_marginTop="3dp"
@@ -16,11 +16,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.448"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_clean_textview"
+        app:layout_constraintTop_toBottomOf="@+id/add_food_textview"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/add_clean_phone"
+        android:id="@+id/add_food_phone"
         android:layout_width="254dp"
         android:layout_height="41dp"
         android:layout_marginStart="10dp"
@@ -31,11 +31,11 @@
         android:importantForAutofill="no"
         android:inputType="date"
         android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/add_clean_phone_textview"
-        app:layout_constraintTop_toBottomOf="@+id/add_clean_name" />
+        app:layout_constraintStart_toEndOf="@+id/add_food_phone_textview"
+        app:layout_constraintTop_toBottomOf="@+id/add_food_name" />
 
     <EditText
-        android:id="@+id/add_clean_name"
+        android:id="@+id/add_food_name"
         android:layout_width="257dp"
         android:layout_height="39dp"
         android:layout_marginStart="10dp"
@@ -46,11 +46,11 @@
         android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/add_clean_name_textview"
-        app:layout_constraintTop_toBottomOf="@+id/add_clean_room" />
+        app:layout_constraintStart_toEndOf="@+id/add_food_name_textview"
+        app:layout_constraintTop_toBottomOf="@+id/add_food_room" />
 
     <EditText
-        android:id="@+id/add_clean_room"
+        android:id="@+id/add_food_room"
         android:layout_width="217dp"
         android:layout_height="36dp"
         android:layout_marginStart="10dp"
@@ -61,11 +61,11 @@
         android:importantForAutofill="no"
         android:inputType="number"
         android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/add_clean_room_textview"
-        app:layout_constraintTop_toBottomOf="@+id/add_clean_textview" />
+        app:layout_constraintStart_toEndOf="@+id/add_food_room_textview"
+        app:layout_constraintTop_toBottomOf="@+id/add_food_textview" />
 
     <ImageView
-        android:id="@+id/add_customer_back_logo2"
+        android:id="@+id/add_food_back_logo"
         android:layout_width="40dp"
         android:layout_height="35dp"
         android:layout_marginStart="15dp"
@@ -76,11 +76,11 @@
         app:srcCompat="@drawable/back_arrow" />
 
     <TextView
-        android:id="@+id/add_clean_textview"
+        android:id="@+id/add_food_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Add New Cleaning Service"
+        android:text="Add New Food Service"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -88,7 +88,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/add_clean_room_textview"
+        android:id="@+id/add_food_room_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -97,10 +97,10 @@
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/add_customer_background2" />
+        app:layout_constraintTop_toTopOf="@+id/add_food_background" />
 
     <TextView
-        android:id="@+id/add_clean_name_textview"
+        android:id="@+id/add_food_name_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -109,10 +109,10 @@
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_clean_room_textview" />
+        app:layout_constraintTop_toBottomOf="@+id/add_food_room_textview" />
 
     <TextView
-        android:id="@+id/add_clean_phone_textview"
+        android:id="@+id/add_food_phone_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -121,10 +121,10 @@
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_clean_name_textview" />
+        app:layout_constraintTop_toBottomOf="@+id/add_food_name_textview" />
 
     <Button
-        android:id="@+id/add_clean_button"
+        android:id="@+id/add_food_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -132,10 +132,10 @@
         app:backgroundTint="#1A3CFB"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_clean_phone" />
+        app:layout_constraintTop_toBottomOf="@+id/add_food_phone" />
 
     <Button
-        android:id="@+id/cancel_clean_button"
+        android:id="@+id/cancel_food_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -143,5 +143,5 @@
         app:backgroundTint="#FF0000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_clean_button" />
+        app:layout_constraintTop_toBottomOf="@+id/add_food_button" />
 </androidx.constraintlayout.widget.ConstraintLayout>

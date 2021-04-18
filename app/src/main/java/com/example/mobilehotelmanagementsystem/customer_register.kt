@@ -63,6 +63,10 @@ class customer_register : AppCompatActivity() {
                         GlobalScope.async {
                             delay(800)
                             startActivity(customerLogInIntent)
+                            findViewById<TextView>(R.id.customer_register_username).setText("")
+                            findViewById<TextView>(R.id.customer_register_mail).setText("")
+                            findViewById<TextView>(R.id.customer_register_phone).setText("")
+                            findViewById<TextView>(R.id.customer_register_password).setText("")
                         }
                     }
                     else{
