@@ -26,11 +26,13 @@ class Customer_select_room : AppCompatActivity(),Customer_room_adapter.OnItemCli
     private lateinit var roomList: ArrayList<customer_room_list>
     private lateinit var recycleView: RecyclerView
     private var room_search_input:EditText?=null
+    private var customerUsername:String?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_customer_select_room)
 
+        customerUsername = intent?.getStringExtra("username")
 
         recycleView=findViewById(R.id.customer_roomList)
         recycleView?.setHasFixedSize(true)
@@ -202,6 +204,7 @@ class Customer_select_room : AppCompatActivity(),Customer_room_adapter.OnItemCli
         customerRoomIntent.putExtra("room_no", roomNoArr[position].toString());
         customerRoomIntent.putExtra("room_desc", roomDescArr[position].toString());
         customerRoomIntent.putExtra("room_price", roomPriceArr[position].toString());
+        customerRoomIntent.putExtra("username", customerUsername.toString())
 
         startActivity(customerRoomIntent)
     }

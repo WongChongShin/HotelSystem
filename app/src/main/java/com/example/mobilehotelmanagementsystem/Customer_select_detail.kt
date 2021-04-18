@@ -14,10 +14,14 @@ import java.time.temporal.ChronoUnit
 import java.util.*
 
 class Customer_select_detail : AppCompatActivity() {
+
+    private var customerUsername:String?=null
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_customer_select_detail)
+        customerUsername = intent?.getStringExtra("username")
+
 
 
 
@@ -163,7 +167,12 @@ class Customer_select_detail : AppCompatActivity() {
             customerDetailIntent.putExtra("room_price", customerPrice.toString());
             customerDetailIntent.putExtra("checkIn_date", checkInDate);
             customerDetailIntent.putExtra("checkOut_date", checkOutDate);
+            customerDetailIntent.putExtra("username", customerUsername.toString())
             startActivity(customerDetailIntent)
+            val checkInDateValidate = findViewById<TextView>(R.id.customer_check_in)
+            checkInDateValidate.setText("")
+            val checkOutDateValidate  = findViewById<TextView>(R.id.customer_check_out)
+            checkOutDateValidate.setText("")
         }
     }
 }

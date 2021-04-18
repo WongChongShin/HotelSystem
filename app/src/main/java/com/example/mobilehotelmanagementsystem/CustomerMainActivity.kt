@@ -22,7 +22,8 @@ class CustomerMainActivity : AppCompatActivity() {
 
             val bookingRoom = Intent(this, Customer_select_room::class.java)
 
-                startActivity(bookingRoom)
+            bookingRoom.putExtra("username", customerUsername.toString())
+            startActivity(bookingRoom)
         }
 
         //-------------Sui Bin(service request button press)----------------

@@ -6,12 +6,13 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.*
 
 class Customer_purchase : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_customer_purchase)
+        val customerUsername = intent?.getStringExtra("username")
 
         val purchaseBackBtn: ImageView = findViewById<ImageView>(R.id.select_purchase_back);
 
@@ -59,6 +60,7 @@ class Customer_purchase : AppCompatActivity() {
 
             val database = FirebaseDatabase.getInstance();
             val myRef = database.getReference("Room booking");
+            val custRef = database.getReference("Customer Account");
 
             val roomID:String= findViewById<TextView>(R.id.room_no_output).text.toString()
             val roomDesc:String=findViewById<TextView>(R.id.room_desc_output).text.toString()
@@ -66,6 +68,31 @@ class Customer_purchase : AppCompatActivity() {
             val roomCheckOut:String=findViewById<TextView>(R.id.room_check_out_output).text.toString()
             val roomPurchase:String=findViewById<TextView>(R.id.room_price_output).text.toString()
             val roomActivate:String= "full"
+
+            val getCustomerAccountData = object : ValueEventListener {
+                override fun onCancelled(error: DatabaseError) {
+
+                }
+
+                override fun onDataChange(snapshot: DataSnapshot) {
+
+                    for (s in snapshot.children) {
+                        val custName=s.child("CustomerName").getValue().toString()
+
+                        if (custName==customerUsername) {
+                            custRef.child(custName).child("RoomNo").setValue(roomID)
+
+                        }
+                    }
+
+                }
+
+
+            }
+            val userNameQuery: Query = custRef.orderByChild("CustomerName")
+
+            userNameQuery.addValueEventListener(getCustomerAccountData)
+            userNameQuery.addListenerForSingleValueEvent(getCustomerAccountData)
 
 
             myRef.child(roomID).child("RoomNo").setValue(roomID)
