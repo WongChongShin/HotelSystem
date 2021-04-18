@@ -16,8 +16,12 @@ class Customer_select_food_service : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_customer_select_food_service)
+
+        //create a array of all available orders
+        //(hard coded)
         initServices()
 
+        //initialize buttons corresponding to each orders
         var orderButton1: Button = findViewById(R.id.select_food_btn_1)
         var orderButton2: Button = findViewById(R.id.select_food_btn_2)
         var orderButton3: Button = findViewById(R.id.select_food_btn_3)
@@ -47,8 +51,9 @@ class Customer_select_food_service : AppCompatActivity() {
         }
 
         if (serviceArr[itemIndex].checkTimeAvailable()){
-            //val foodOrder= Intent(this, Customer_select_food_service::class.java)
-            //startActivity(foodOrder)
+            val foodOrder= Intent(this, Customer_food_service_order::class.java)
+            foodOrder.putExtra("order", serviceArr[itemIndex])
+            startActivity(foodOrder)
 
         }else {
             val toast = Toast.makeText(applicationContext, "This service is not available right now", Toast.LENGTH_SHORT)

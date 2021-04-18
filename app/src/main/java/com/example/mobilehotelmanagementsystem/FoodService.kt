@@ -1,9 +1,9 @@
 package com.example.mobilehotelmanagementsystem
 
-import android.widget.Toast
 import java.util.*
+import java.io.Serializable;
 
-class FoodService (){
+class FoodService: Serializable {
     public var name:String = "default Name"
     public var price:Float = 0.00f
     public var description:String = "default description"
@@ -25,3 +25,4 @@ class FoodService (){
 
 
 }
+

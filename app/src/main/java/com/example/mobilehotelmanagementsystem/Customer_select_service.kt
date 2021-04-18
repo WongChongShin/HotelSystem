@@ -12,6 +12,7 @@ class Customer_select_service : AppCompatActivity() {
 
         val foodServiceBtn: Button = findViewById(R.id.select_food_service_btn)
 
+        //initialize food service button
         foodServiceBtn.setOnClickListener(){
             val foodService= Intent(this, Customer_select_food_service::class.java)
             startActivity(foodService)
