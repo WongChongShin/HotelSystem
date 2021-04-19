@@ -9,11 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MobileHotelManagementSystem">
-        <activity android:name=".activity_customer_select_cleaning_service"></activity>
+        <activity android:name=".Customer_select_clean_service"></activity>
         <activity android:name=".edit_food_service" />
         <activity android:name=".add_new_food_service" />
         <activity android:name=".Customer_select_food_service" />
-        <activity android:name=".Customer_food_service_order" />
+        <activity android:name=".Customer_service_order" />
         <!--
  <activity
             android:name=".Customer_select_food_service"

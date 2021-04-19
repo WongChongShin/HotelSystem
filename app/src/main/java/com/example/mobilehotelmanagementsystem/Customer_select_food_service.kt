@@ -58,7 +58,7 @@ class Customer_select_food_service : AppCompatActivity() {
         }
 
         if (serviceArr[itemIndex].checkTimeAvailable()){
-            val foodOrder= Intent(this, Customer_food_service_order::class.java)
+            val foodOrder= Intent(this, Customer_service_order::class.java)
             foodOrder.putExtra("order", serviceArr[itemIndex])
             foodOrder.putExtra("username", currentUsername)
             foodOrder.putExtra("email", currentEmail)

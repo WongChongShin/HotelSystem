@@ -11,14 +11,14 @@ import com.google.firebase.database.*
 import java.util.*
 
 
-class Customer_food_service_order : AppCompatActivity() {
+class Customer_service_order : AppCompatActivity() {
 
     var currentUsername = ""
     var currentEmail = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_customer_food_service_order)
+        setContentView(R.layout.activity_customer_service_order)
 
         //get order object that is chossen
         val order : CustomerService =  intent?.getSerializableExtra("order") as CustomerService
@@ -31,13 +31,13 @@ class Customer_food_service_order : AppCompatActivity() {
         var orderTitle : TextView = findViewById(R.id.service_order_title_text)
         orderTitle.text = order.serviceType + " Order"
 
-        var orderName : TextView = findViewById(R.id.food_order_name_textview)
+        var orderName : TextView = findViewById(R.id.service_order_name_textview)
         orderName.text = order.name
 
-        var orderPrice : TextView = findViewById(R.id.food_order_price_textview)
+        var orderPrice : TextView = findViewById(R.id.service_order_price_textview)
         orderPrice.text = "RM ${order.price}"
 
-        var orderTime : TextView = findViewById(R.id.food_order_time_textview)
+        var orderTime : TextView = findViewById(R.id.service_order_time_textview)
         var displayTimeText  = ""
         if (order.minTime24 < 12) {
             displayTimeText += "${order.minTime24}am ~ "
@@ -55,7 +55,7 @@ class Customer_food_service_order : AppCompatActivity() {
         }
         orderTime.text = displayTimeText
 
-        var orderDes : TextView = findViewById(R.id.food_order_des_textview)
+        var orderDes : TextView = findViewById(R.id.service_order_des_textview)
         orderDes.text = order.description
 
         var orderImage : ImageView = findViewById(R.id.food_order_image)
@@ -63,7 +63,7 @@ class Customer_food_service_order : AppCompatActivity() {
 
 
         //need to add the function to store the data in fire base later
-        var orderButton : Button = findViewById(R.id.food_order_btn)
+        var orderButton : Button = findViewById(R.id.service_order_btn)
         orderButton.setOnClickListener(){
             validateRoom(order);
         }
@@ -88,7 +88,7 @@ class Customer_food_service_order : AppCompatActivity() {
            //check every room here
            override fun onDataChange(snapshot: DataSnapshot) {
 
-               val customerRoom = findViewById<TextView>(R.id.food_order_room_edit).text.toString()
+               val customerRoom = findViewById<TextView>(R.id.service_order_room_edit).text.toString()
 
                for (s in snapshot.children) {
                    val roomNumber  = s.child("RoomNo").getValue().toString()

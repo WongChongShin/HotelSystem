@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
 
-class activity_customer_select_cleaning_service : AppCompatActivity() {
+class Customer_select_clean_service : AppCompatActivity() {
     var  serviceArr = Array(3, { CustomerService() })
 
     var currentUsername = ""
@@ -50,7 +50,7 @@ class activity_customer_select_cleaning_service : AppCompatActivity() {
         }
 
         if (serviceArr[itemIndex].checkTimeAvailable()){
-            val foodOrder= Intent(this, Customer_food_service_order::class.java)
+            val foodOrder= Intent(this, Customer_service_order::class.java)
             foodOrder.putExtra("order", serviceArr[itemIndex])
             foodOrder.putExtra("username", currentUsername)
             foodOrder.putExtra("email", currentEmail)

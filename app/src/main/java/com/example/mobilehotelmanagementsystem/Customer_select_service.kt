@@ -34,7 +34,7 @@ class Customer_select_service : AppCompatActivity() {
 
         //initialize food service button
         cleanServiceBtn.setOnClickListener(){
-            val foodService= Intent(this, activity_customer_select_cleaning_service::class.java)
+            val foodService= Intent(this, Customer_select_clean_service::class.java)
             foodService.putExtra("username", currentUsername)
             foodService.putExtra("email", currentEmail)
             startActivity(foodService)
