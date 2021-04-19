@@ -9,9 +9,14 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.database.*
 
 class customer_login : AppCompatActivity() {
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_customer_login)
+
+
 
 
 
@@ -68,7 +73,7 @@ class customer_login : AppCompatActivity() {
                         if (userName==custEmail && password==custPassword) {
                             login_successful=true
                             customerSignInIntent.putExtra("username", custName.toString())
-
+                            customerSignInIntent.putExtra("email", userName)
                         }
                     }
                     if(login_successful) {
@@ -76,6 +81,8 @@ class customer_login : AppCompatActivity() {
                         error_message.setText("")
                         val toast = Toast.makeText(applicationContext, "Login Successful", Toast.LENGTH_SHORT)
                         toast.show()
+
+
 
                         startActivity(customerSignInIntent)
                         val emptyUsername = findViewById<TextView>(R.id.customer_sign_in_username)

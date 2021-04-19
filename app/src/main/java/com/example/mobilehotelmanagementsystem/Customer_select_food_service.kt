@@ -12,10 +12,18 @@ class Customer_select_food_service : AppCompatActivity() {
 
     var  serviceArr = Array(6, { FoodService() })
 
+    var currentUsername = ""
+    var currentEmail = ""
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_customer_select_food_service)
+
+        //get username and email
+        currentUsername  =  intent?.getStringExtra("username") as String
+        currentEmail  =  intent?.getStringExtra("email") as String
 
         //create a array of all available orders
         //(hard coded)
@@ -53,6 +61,8 @@ class Customer_select_food_service : AppCompatActivity() {
         if (serviceArr[itemIndex].checkTimeAvailable()){
             val foodOrder= Intent(this, Customer_food_service_order::class.java)
             foodOrder.putExtra("order", serviceArr[itemIndex])
+            foodOrder.putExtra("username", currentUsername)
+            foodOrder.putExtra("email", currentEmail)
             startActivity(foodOrder)
 
         }else {

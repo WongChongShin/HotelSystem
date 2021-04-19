@@ -12,6 +12,7 @@ class CustomerMainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_customer_main)
 
         val customerUsername = intent?.getStringExtra("username")
+        val CustomerEmail = intent?.getStringExtra("email")
         val customerSignInUsername = findViewById<TextView>(R.id.customer_username_textview)
 
         customerSignInUsername.setText(customerUsername)
@@ -30,8 +31,10 @@ class CustomerMainActivity : AppCompatActivity() {
         val serviceRequestBtn = findViewById<Button>(R.id.serviceBtn )
         serviceRequestBtn.setOnClickListener{
 
-        val serviceRequest= Intent(this, Customer_select_service::class.java)
-        startActivity(serviceRequest)
+            val serviceRequest= Intent(this, Customer_select_service::class.java)
+            serviceRequest.putExtra("username", customerUsername)
+            serviceRequest.putExtra("email", CustomerEmail)
+            startActivity(serviceRequest)
         }
     }
 }
