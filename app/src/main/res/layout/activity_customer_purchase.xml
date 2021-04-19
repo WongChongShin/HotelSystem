@@ -6,52 +6,388 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <View
-        android:id="@+id/view2"
-        android:layout_width="372dp"
-        android:layout_height="546dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="68dp"
-        android:background="#D5D2D2"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ScrollView
+        android:layout_width="417dp"
+        android:layout_height="611dp"
+        android:layout_marginTop="116dp"
+        android:focusableInTouchMode="false"
+        android:isScrollContainer="false"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_pool_reservation"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <View
-        android:id="@+id/view3"
-        android:layout_width="358dp"
-        android:layout_height="293dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="32dp"
-        android:background="@color/white"
-        app:layout_constraintStart_toStartOf="@+id/view2"
-        app:layout_constraintTop_toTopOf="@+id/view2" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#988888">
 
-    <TextView
-        android:id="@+id/room_price_output"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="300dp"
-        android:layout_marginEnd="8dp"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/view2"
-        app:layout_constraintTop_toTopOf="@+id/view2" />
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="1100dp"
+                android:background="#988888"
+                android:translationX="0dp"
+                android:translationY="0dp" />
 
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="208dp"
-        android:layout_marginTop="300dp"
-        android:text="Price: RM"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/view2"
-        app:layout_constraintTop_toTopOf="@+id/view2" />
+            <View
+                android:id="@+id/view5"
+                android:layout_width="379dp"
+                android:layout_height="620dp"
+                android:background="@color/white"
+                android:scrollbarAlwaysDrawHorizontalTrack="true"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:translationX="8dp"
+                android:translationY="380dp" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="379dp"
+                android:layout_height="320dp"
+                android:background="@color/white"
+                android:scrollbarAlwaysDrawHorizontalTrack="false"
+                android:scrollbars="none"
+                android:translationX="8dp"
+                android:translationY="20dp" />
+
+            <Button
+                android:id="@+id/select_detail_purchase"
+                android:layout_width="185dp"
+                android:layout_height="63dp"
+                android:text="Purchase"
+                android:textSize="24sp"
+                android:translationX="193dp"
+                android:translationY="890dp"
+                app:backgroundTint="@android:color/holo_red_light" />
+
+            <TextView
+                android:id="@+id/room_check_in_output"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:translationX="193dp"
+                android:translationY="250dp" />
+
+            <TextView
+                android:id="@+id/room_desc_output"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:translationX="193dp"
+                android:translationY="100dp" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Check out date:"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:translationX="33dp"
+                android:translationY="300dp" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Room Description:"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:translationX="33dp"
+                android:translationY="100dp" />
+
+            <TextView
+                android:id="@+id/room_price_output"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:translationX="223dp"
+                android:translationY="200dp" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Check in date:"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:translationX="33dp"
+                android:translationY="250dp" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Room No:"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:translationX="33dp"
+                android:translationY="50dp" />
+
+            <TextView
+                android:id="@+id/room_no_output"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:translationX="193dp"
+                android:translationY="50dp" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price:"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:translationX="33dp"
+                android:translationY="200dp" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RM"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:translationX="193dp"
+                android:translationY="200dp" />
+
+            <TextView
+                android:id="@+id/room_check_out_output"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:translationX="193dp"
+                android:translationY="300dp" />
+
+            <TextView
+                android:id="@+id/customer_purchase_error_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="16sp"
+                android:translationX="33dp"
+                android:translationY="960dp" />
+
+            <EditText
+                android:id="@+id/customer_purchase_cvv"
+                android:layout_width="69dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="36dp"
+                android:autofillHints="Username"
+                android:background="#E4E4E4"
+                android:ems="10"
+                android:hint="123"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textColorHint="#6A5F5F"
+                android:textSize="18sp"
+                android:translationX="33dp"
+                android:translationY="810dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.47"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hotel_logo" />
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CVV:"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:translationX="33dp"
+                android:translationY="810dp" />
+
+            <EditText
+                android:id="@+id/customer_purchase_expYear"
+                android:layout_width="69dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="36dp"
+                android:autofillHints="Username"
+                android:background="#E4E4E4"
+                android:ems="10"
+                android:hint="YY"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textColorHint="#6A5F5F"
+                android:textSize="18sp"
+                android:translationX="150dp"
+                android:translationY="720dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.47"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hotel_logo" />
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:translationX="120dp"
+                android:translationY="750dp" />
+
+            <EditText
+                android:id="@+id/customer_purchase_expMonth"
+                android:layout_width="69dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="36dp"
+                android:autofillHints="Username"
+                android:background="#E4E4E4"
+                android:ems="10"
+                android:hint="MM"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textColorHint="#6A5F5F"
+                android:textSize="18sp"
+                android:translationX="33dp"
+                android:translationY="720dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.47"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hotel_logo" />
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Expiry Date:"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:translationX="33dp"
+                android:translationY="720dp" />
+
+            <EditText
+                android:id="@+id/customer_purchase_holderName"
+                android:layout_width="311dp"
+                android:layout_height="54dp"
+                android:layout_marginTop="36dp"
+                android:autofillHints="Username"
+                android:background="#E4E4E4"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="18sp"
+                android:translationX="33dp"
+                android:translationY="620dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.47"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hotel_logo" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Card Holder Name:"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:translationX="33dp"
+                android:translationY="620dp" />
+
+            <EditText
+                android:id="@+id/customer_purchase_cardNumber"
+                android:layout_width="311dp"
+                android:layout_height="54dp"
+                android:layout_marginTop="36dp"
+                android:autofillHints="Username"
+                android:background="#E4E4E4"
+                android:ems="10"
+                android:hint="1234 0000 5678 1111"
+                android:inputType="phone"
+                android:textColor="@color/black"
+                android:textColorHint="#6A5F5F"
+                android:textSize="18sp"
+                android:translationX="33dp"
+                android:translationY="520dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.47"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hotel_logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Card Number:"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:translationX="33dp"
+                android:translationY="530dp" />
+
+            <TextView
+                android:id="@+id/customer_payment_visaText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/visa_card"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:translationX="153dp"
+                android:translationY="430dp" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Purchase Method"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:translationX="123dp"
+                android:translationY="380dp" />
+
+            <TextView
+                android:id="@+id/customer_payment_MasterText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/master_card"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:translationX="153dp"
+                android:translationY="480dp" />
+
+            <RadioGroup
+                android:id="@+id/customer_purchase_radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:translationX="293dp"
+                android:translationY="420dp">
+
+                <RadioButton
+                    android:id="@+id/customer_payment_visaBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:id="@+id/customer_payment_masterBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </RadioGroup>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="86dp"
+                android:layout_height="47dp"
+                android:translationX="33dp"
+                android:translationY="470dp"
+                app:srcCompat="@drawable/mastercard" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="145dp"
+                android:layout_height="59dp"
+                android:translationX="2dp"
+                android:translationY="410dp"
+                app:srcCompat="@drawable/visacard" />
+
+        </FrameLayout>
+    </ScrollView>
 
     <TextView
         android:id="@+id/textView4"
@@ -60,7 +396,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="140dp"
         android:text="Purchase"
-        android:textColor="@color/black"
+        android:textColor="#FFEB3B"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -76,115 +412,4 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/back_arrow" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="44dp"
-        android:text="Room No:"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/view2"
-        app:layout_constraintTop_toTopOf="@+id/view2" />
-
-    <TextView
-        android:id="@+id/room_no_output"
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="44dp"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/view3"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView5"
-        app:layout_constraintTop_toTopOf="@+id/view2" />
-
-    <TextView
-        android:id="@+id/room_desc_output"
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="92dp"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/view3"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView11"
-        app:layout_constraintTop_toTopOf="@+id/view2" />
-
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="92dp"
-        android:text="Room Description:"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/view2"
-        app:layout_constraintTop_toTopOf="@+id/view2" />
-
-    <TextView
-        android:id="@+id/room_check_in_output"
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="176dp"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/view3"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView12"
-        app:layout_constraintTop_toTopOf="@+id/view2" />
-
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="176dp"
-        android:text="Check in date:"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/view2"
-        app:layout_constraintTop_toTopOf="@+id/view2" />
-
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="224dp"
-        android:text="Check out date:"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/view2"
-        app:layout_constraintTop_toTopOf="@+id/view2" />
-
-    <TextView
-        android:id="@+id/room_check_out_output"
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="224dp"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/view3"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView13"
-        app:layout_constraintTop_toTopOf="@+id/view2" />
-
-    <Button
-        android:id="@+id/select_detail_purchase"
-        android:layout_width="185dp"
-        android:layout_height="63dp"
-        android:layout_marginStart="164dp"
-        android:layout_marginTop="128dp"
-        android:text="Purchase"
-        android:textSize="24sp"
-        app:backgroundTint="@android:color/holo_red_light"
-        app:layout_constraintStart_toStartOf="@+id/view2"
-        app:layout_constraintTop_toBottomOf="@+id/view3" />
 </androidx.constraintlayout.widget.ConstraintLayout>
