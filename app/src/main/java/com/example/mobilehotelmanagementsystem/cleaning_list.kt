@@ -10,24 +10,29 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.firebase.ui.database.FirebaseRecyclerOptions
+import com.google.firebase.database.*
 
 class cleaning_list : Fragment() {
+
+    //Recycler View
+    private val db:FirebaseDatabase = FirebaseDatabase.getInstance()
+    private val databaseReference: DatabaseReference = db.getReference("Cleaning List")
+    private var cleanServiceAdapter: CleanServiceAdapter? = null;
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        //val database = FirebaseDatabase.getInstance()
+        //val myRef = database.getReference("Cleaning List")
 
         val v = inflater.inflate(R.layout.fragment_cleaning_list,container,false)
 
         val btnAddClean = v.findViewById<ImageView>(R.id.add_clean_fab)
-
-        val database = FirebaseDatabase.getInstance()
-        val myRef = database.getReference("Cleaning List")
 
         btnAddClean.setOnClickListener(){
 
@@ -35,7 +40,7 @@ class cleaning_list : Fragment() {
             startActivity(addNewCleanIntent)
         }
 
-        var getCleanData = object:ValueEventListener{
+        /*var getCleanData = object:ValueEventListener{
             override fun onCancelled(error: DatabaseError) {
 
             }
@@ -47,15 +52,38 @@ class cleaning_list : Fragment() {
                     val name = s.child("Name").getValue()
                     sbRoom.append("${name}\n")
                 }
-                v.findViewById<TextView>(R.id.clean_name_result)
+                v.findViewById<TextView>(R.id.clean_name_result)//.setText(sbRoom)
             }
 
 
         }
         myRef.addValueEventListener(getCleanData)
-        myRef.addListenerForSingleValueEvent(getCleanData)
+        myRef.addListenerForSingleValueEvent(getCleanData)*/
 
+        //Recycler View
+
+            val recyclerView: RecyclerView = v.findViewById(R.id.clean_rv)
+            val query: Query = databaseReference
+            val firebaseRecyclerOptions: FirebaseRecyclerOptions<CleanServiceModel> = FirebaseRecyclerOptions.Builder<CleanServiceModel>()
+                    .setQuery(query, CleanServiceModel::class.java)
+                    .build()
+
+            cleanServiceAdapter = CleanServiceAdapter(firebaseRecyclerOptions)
+
+            recyclerView.layoutManager = LinearLayoutManager(this.context)
+
+            recyclerView.adapter = cleanServiceAdapter
 
         return v
+    }
+
+    override fun onStart() {
+        super.onStart()
+        cleanServiceAdapter!!.startListening()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        cleanServiceAdapter!!.stopListening()
     }
 }

@@ -95,7 +95,7 @@
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_clean_room_textview2" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_clean_room_textview" />
 
     <EditText
         android:id="@+id/add_clean_room2"
@@ -109,11 +109,11 @@
         android:importantForAutofill="no"
         android:inputType="number"
         android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/add_clean_room_textview2"
+        app:layout_constraintStart_toEndOf="@+id/edit_clean_room_textview"
         app:layout_constraintTop_toTopOf="@+id/add_customer_background3" />
 
     <TextView
-        android:id="@+id/add_clean_room_textview2"
+        android:id="@+id/edit_clean_room_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"

@@ -46,7 +46,7 @@ class food_list : Fragment() {
                     val name = s.child("Name").getValue()
                     sbRoom.append("${name}\n")
                 }
-                v.findViewById<TextView>(R.id.clean_name_result)
+
             }
 
 
