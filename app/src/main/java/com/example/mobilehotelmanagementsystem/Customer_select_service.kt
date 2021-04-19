@@ -30,6 +30,17 @@ class Customer_select_service : AppCompatActivity() {
 
         }
 
+        val viewServiceBtn: Button = findViewById(R.id.select_cleaning_service_btn)
+
+        //initialize food service button
+        viewServiceBtn.setOnClickListener(){
+            val viewService= Intent(this, activity_customer_view_service::class.java)
+            viewService.putExtra("username", currentUsername)
+            viewService.putExtra("email", currentEmail)
+            startActivity(viewService)
+
+        }
+
     }
 
 

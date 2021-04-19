@@ -5,12 +5,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
-import java.util.*
 
 
 class Customer_select_food_service : AppCompatActivity() {
 
-    var  serviceArr = Array(6, { FoodService() })
+    var  serviceArr = Array(6, { CustomerService() })
 
     var currentUsername = ""
     var currentEmail = ""

@@ -3,7 +3,7 @@ package com.example.mobilehotelmanagementsystem
 import java.util.*
 import java.io.Serializable;
 
-class FoodService: Serializable {
+class CustomerService: Serializable {
     public var name:String = "default Name"
     public var price:Float = 0.00f
     public var description:String = "default description"
@@ -11,6 +11,7 @@ class FoodService: Serializable {
     public var minTime24: Int = 0
     public var maxTime24: Int = 23
     public var availability: Boolean = true;
+
 
 
     fun checkTimeAvailable(): Boolean{

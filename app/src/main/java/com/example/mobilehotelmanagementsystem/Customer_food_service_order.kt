@@ -21,7 +21,7 @@ class Customer_food_service_order : AppCompatActivity() {
         setContentView(R.layout.activity_customer_food_service_order)
 
         //get order object that is chossen
-        val order : FoodService =  intent?.getSerializableExtra("order") as FoodService
+        val order : CustomerService =  intent?.getSerializableExtra("order") as CustomerService
 
         //get username and email
         currentUsername  =  intent?.getStringExtra("username") as String
@@ -70,7 +70,7 @@ class Customer_food_service_order : AppCompatActivity() {
     }
 
 
-    fun validateRoom (order: FoodService){
+    fun validateRoom (order: CustomerService){
        //get the room booking database
        val database = FirebaseDatabase.getInstance()
        val roomDatabaseRef = database.getReference("Room booking");
@@ -121,7 +121,7 @@ class Customer_food_service_order : AppCompatActivity() {
    }
 
     //adding a new service entry to service database
-    fun addOrderDatabase(order: FoodService, room:String){
+    fun addOrderDatabase(order: CustomerService, room:String){
         val database = FirebaseDatabase.getInstance()
         val serviceDatabase = database.getReference("Customer Service")
 

@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MobileHotelManagementSystem">
-        <activity android:name=".edit_food_service"></activity>
+        <activity android:name=".activity_customer_view_service"></activity>
+        <activity android:name=".edit_food_service" />
         <activity android:name=".add_new_food_service" />
         <activity android:name=".Customer_select_food_service" />
         <activity android:name=".Customer_food_service_order" />
@@ -46,6 +47,7 @@
         <activity android:name=".main_page" />
         <activity android:name=".MainActivity" />
         <activity android:name=".Select_staff_customer_page">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
