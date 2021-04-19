@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Customer_select_food_service">
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Select Cleaning Service"
+        android:textColor="#170539"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView29"
+        app:layout_constraintVertical_bias="1.0">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/select_clean_item_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    app:cardBackgroundColor="#FFFFFF">
+
+                    <ImageView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:translationX="5dp"
+                        app:srcCompat="@drawable/salad"
+                        tools:srcCompat="@drawable/salad" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Quick Cleaning"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        android:translationX="175dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Price: RM 10"
+                        android:translationX="175dp"
+                        android:translationY="40dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Serving Time: 10am ~ 5pm"
+                        android:translationX="175dp"
+                        android:translationY="65dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Availability: Available"
+                        android:translationX="175dp"
+                        android:translationY="90dp" />
+
+                    <Button
+                        android:id="@+id/select_clean_btn_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:background="@color/purple_500"
+                        android:text="Order"
+                        android:textColor="#FFFFFF"
+                        android:translationX="175dp"
+                        android:translationY="120dp" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/select_clean_item_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    app:cardBackgroundColor="#FFFFFF">
+
+                    <ImageView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:translationX="5dp"
+                        app:srcCompat="@drawable/american_breakfast"
+                        tools:srcCompat="@drawable/american_breakfast" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Advanced Cleaning"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        android:translationX="175dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Price: RM 20"
+                        android:translationX="175dp"
+                        android:translationY="40dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Serving Time: 10am ~ 5pm"
+                        android:translationX="175dp"
+                        android:translationY="65dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Availability: Available"
+                        android:translationX="175dp"
+                        android:translationY="90dp" />
+
+                    <Button
+                        android:id="@+id/select_clean_btn_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:background="@color/purple_500"
+                        android:text="Order"
+                        android:textColor="#FFFFFF"
+                        android:translationX="175dp"
+                        android:translationY="120dp" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/select_clean_item_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    app:cardBackgroundColor="#FFFFFF">
+
+                    <ImageView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:translationX="5dp"
+                        app:srcCompat="@drawable/salad"
+                        tools:srcCompat="@drawable/salad" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Deep Cleaning"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        android:translationX="175dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Price: RM 35"
+                        android:translationX="175dp"
+                        android:translationY="40dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Serving Time: 10am ~ 5pm"
+                        android:translationX="175dp"
+                        android:translationY="65dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Availability: Available"
+                        android:translationX="175dp"
+                        android:translationY="90dp" />
+
+                    <Button
+                        android:id="@+id/select_clean_btn_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:background="@color/purple_500"
+                        android:text="Order"
+                        android:textColor="#FFFFFF"
+                        android:translationX="175dp"
+                        android:translationY="120dp" />
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
