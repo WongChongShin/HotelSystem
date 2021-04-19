@@ -1,8 +1,10 @@
 package com.example.mobilehotelmanagementsystem
 
 import android.content.Intent
+import android.media.Image
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -44,6 +46,9 @@ class Customer_food_service_order : AppCompatActivity() {
 
         var orderDes : TextView = findViewById(R.id.food_order_des_textview)
         orderDes.text = order.description
+
+        var orderImage : ImageView = findViewById(R.id.food_order_image)
+        orderImage.setImageResource(order.picture)
 
 
         //need to add the function to store the data in fire base later

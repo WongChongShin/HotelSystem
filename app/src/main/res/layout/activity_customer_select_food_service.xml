@@ -48,7 +48,8 @@
                         android:layout_width="160dp"
                         android:layout_height="wrap_content"
                         android:translationX="5dp"
-                        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+                        app:srcCompat="@drawable/american_breakfast"
+                        tools:srcCompat="@drawable/american_breakfast" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -104,7 +105,8 @@
                         android:layout_width="160dp"
                         android:layout_height="wrap_content"
                         android:translationX="5dp"
-                        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+                        app:srcCompat="@drawable/salad"
+                        tools:srcCompat="@drawable/salad" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -160,7 +162,8 @@
                         android:layout_width="160dp"
                         android:layout_height="wrap_content"
                         android:translationX="5dp"
-                        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+                        app:srcCompat="@drawable/tea"
+                        tools:srcCompat="@drawable/tea" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -216,7 +219,8 @@
                         android:layout_width="160dp"
                         android:layout_height="wrap_content"
                         android:translationX="5dp"
-                        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+                        app:srcCompat="@drawable/kids_meal"
+                        tools:srcCompat="@drawable/kids_meal" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -272,7 +276,8 @@
                         android:layout_width="160dp"
                         android:layout_height="wrap_content"
                         android:translationX="5dp"
-                        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+                        app:srcCompat="@drawable/nyonya_rice"
+                        tools:srcCompat="@drawable/nyonya_rice" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -329,7 +334,8 @@
                         android:layout_width="160dp"
                         android:layout_height="wrap_content"
                         android:translationX="5dp"
-                        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+                        app:srcCompat="@drawable/smoothie"
+                        tools:srcCompat="@drawable/smoothie" />
 
                     <TextView
                         android:layout_width="wrap_content"
