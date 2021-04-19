@@ -11,6 +11,7 @@ class CustomerService: Serializable {
     public var minTime24: Int = 0
     public var maxTime24: Int = 23
     public var availability: Boolean = true;
+    public var serviceType :String = "Food Service"
 
 
 

@@ -28,6 +28,9 @@ class Customer_food_service_order : AppCompatActivity() {
         currentEmail  =  intent?.getStringExtra("email") as String
 
         //initialize UI
+        var orderTitle : TextView = findViewById(R.id.service_order_title_text)
+        orderTitle.text = order.serviceType + " Order"
+
         var orderName : TextView = findViewById(R.id.food_order_name_textview)
         orderName.text = order.name
 
@@ -144,7 +147,7 @@ class Customer_food_service_order : AppCompatActivity() {
 
                 //add entry
                 serviceDatabase.child(key).child("ServiceName").setValue(order.name)
-                serviceDatabase.child(key).child("ServiceType").setValue("Food Service")
+                serviceDatabase.child(key).child("ServiceType").setValue(order.serviceType)
                 serviceDatabase.child(key).child("Description").setValue(order.description)
                 serviceDatabase.child(key).child("Price").setValue(order.price)
                 serviceDatabase.child(key).child("RoomDestination").setValue(room)

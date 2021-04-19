@@ -70,6 +70,7 @@ class activity_customer_select_cleaning_service : AppCompatActivity() {
         serviceArr[0].minTime24 = 10
         serviceArr[0].maxTime24 = 17
         serviceArr[0].picture = R.drawable.american_breakfast
+        serviceArr[0].serviceType = "Cleaning Service"
 
         serviceArr[1].name = "Advanced Cleaning"
         serviceArr[1].price = 20.00f
@@ -77,6 +78,7 @@ class activity_customer_select_cleaning_service : AppCompatActivity() {
         serviceArr[1].minTime24 = 10
         serviceArr[1].maxTime24 = 17
         serviceArr[1].picture = R.drawable.salad
+        serviceArr[1].serviceType = "Cleaning Service"
 
         serviceArr[2].name = "Deep Cleaning"
         serviceArr[2].price = 35.00f
@@ -84,6 +86,7 @@ class activity_customer_select_cleaning_service : AppCompatActivity() {
         serviceArr[2].minTime24 = 10
         serviceArr[2].maxTime24 = 17
         serviceArr[2].picture = R.drawable.tea
+        serviceArr[2].serviceType = "Cleaning Service"
 
 
     }
