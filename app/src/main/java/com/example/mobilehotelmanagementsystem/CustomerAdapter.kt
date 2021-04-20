@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
@@ -32,8 +33,8 @@ class CustomerAdapter(val context: Context, val customerList: ArrayList<Customer
         val phone = view?.findViewById<TextView>(R.id.customer_phone_textView)
         val checkIn = view?.findViewById<TextView>(R.id.customer_checkIn_textView)
         val checkOut = view?.findViewById<TextView>(R.id.customer_checkOut_textView)
-        val customerEdit = view?.findViewById<Button>(R.id.edit_row_customer)
-        val customerDelete = view?.findViewById<Button>(R.id.delete_row_customer)
+        val customerEdit = view?.findViewById<ImageView>(R.id.edit_row_customer)
+        val customerDelete = view?.findViewById<ImageView>(R.id.delete_row_customer)
 
         init{
             customerEdit?.setOnClickListener(this)
