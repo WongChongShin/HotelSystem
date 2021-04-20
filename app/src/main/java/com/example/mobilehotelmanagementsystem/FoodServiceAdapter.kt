@@ -10,12 +10,12 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 
-class CleanServiceAdapter(val fragment: cleaning_list, val cleanServiceList: ArrayList<CleanServiceModel>, private val listener: OnItemClickListener):
-        RecyclerView.Adapter<CleanServiceAdapter.Holder>() {
+class FoodServiceAdapter(val fragment: food_list, val foodServiceList: ArrayList<FoodServiceModel>, private val listener: OnItemClickListener):
+        RecyclerView.Adapter<FoodServiceAdapter.Holder>() {
 
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
-        holder?.bind(cleanServiceList[position])
+        holder?.bind(foodServiceList[position])
 
 
     }
@@ -23,32 +23,32 @@ class CleanServiceAdapter(val fragment: cleaning_list, val cleanServiceList: Arr
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
         val view = LayoutInflater.from(fragment.context)
-                .inflate(R.layout.row_clean_service, parent, false)
+                .inflate(R.layout.row_food_service, parent, false)
         return Holder(view)
     }
 
     override fun getItemCount(): Int {
-        return cleanServiceList.size
+        return foodServiceList.size
     }
 
 
     inner class Holder(view: View?) : RecyclerView.ViewHolder(view!!),View.OnClickListener {
-        val cleanRoom = view?.findViewById<TextView>(R.id.row_clean_room)
-        val cleanName = view?.findViewById<TextView>(R.id.row_clean_name)
-        val cleanPhone = view?.findViewById<TextView>(R.id.row_clean_phone)
-        val cleanEdit = view?.findViewById<ImageButton>(R.id.clean_edit_button)
+        val foodRoom = view?.findViewById<TextView>(R.id.row_food_room)
+        val foodName = view?.findViewById<TextView>(R.id.row_food_name)
+        val foodPhone = view?.findViewById<TextView>(R.id.row_food_phone)
+        val foodEdit = view?.findViewById<ImageButton>(R.id.food_edit_button)
 
         init{
-            cleanEdit?.setOnClickListener(this)
+            foodEdit?.setOnClickListener(this)
         }
 
-        fun bind(clean: CleanServiceModel) {
-            cleanRoom?.text = clean.userRoom
-            cleanName?.text = clean.userName
-            cleanPhone?.text = clean.userPhone
+        fun bind(food: FoodServiceModel) {
+            foodRoom?.text = food.userfoodRoom
+            foodName?.text = food.userfoodName
+            foodPhone?.text = food.userfoodPhone
 
-            cleanEdit?.isEnabled = true
-            cleanEdit?.isClickable = true
+            foodEdit?.isEnabled = true
+            foodEdit?.isClickable = true
 
         }
 
@@ -63,4 +63,6 @@ class CleanServiceAdapter(val fragment: cleaning_list, val cleanServiceList: Arr
     interface OnItemClickListener{
         fun onItemClick(position: Int)
     }
+
+
 }

@@ -16,7 +16,8 @@ import com.google.firebase.database.*
 
 class cleaning_list : Fragment(),CleanServiceAdapter.OnItemClickListener {
 
-    //Recycler View
+    //Retrieve data to recycler view declaration
+    private val cleanRoomArr = ArrayList<String>()
     private val cleanNameArr = ArrayList<String>()
     private val cleanPhoneArr = ArrayList<String>()
     private val db = FirebaseDatabase.getInstance()
@@ -49,22 +50,6 @@ class cleaning_list : Fragment(),CleanServiceAdapter.OnItemClickListener {
             startActivity(addNewCleanIntent)
         }
 
-        //search data
-        clean_search_input= v.findViewById<EditText>(R.id.editSearch2)
-        clean_search_input!!.addTextChangedListener(object : TextWatcher {
-
-            override fun afterTextChanged(s: Editable) {}
-
-            override fun beforeTextChanged(s: CharSequence, start: Int,
-                                           count: Int, after: Int) {
-            }
-
-            override fun onTextChanged(word: CharSequence, start: Int,
-                                       before: Int, count: Int) {
-
-            }
-
-        })
 
         //get data
         var d = databaseReference.addValueEventListener(object : ValueEventListener {
@@ -78,10 +63,13 @@ class cleaning_list : Fragment(),CleanServiceAdapter.OnItemClickListener {
                 if (clean_search_input!!.text.toString() == "") {
                     for (s in snapshot.children) {
 
+                        val cleanRoom = s.child("Room").getValue().toString()
                         val cleanName = s.child("Name").getValue().toString()
                         val cleanPhone = s.child("Phone").getValue().toString()
                         val cs = s.getValue(CleanServiceModel::class.java)
 
+                        cs!!.userRoom = cleanRoom
+                        cleanRoomArr.add(cleanRoom)
                         cs!!.userName = cleanName
                         cleanNameArr.add(cleanName)
                         cs!!.userPhone = cleanPhone
@@ -96,56 +84,64 @@ class cleaning_list : Fragment(),CleanServiceAdapter.OnItemClickListener {
             }
         })
 
-        /*var getCleanData = object:ValueEventListener{
-           override fun onCancelled(error: DatabaseError) {
+        //search data
+        clean_search_input= v.findViewById<EditText>(R.id.clean_editsearch)
+        clean_search_input!!.addTextChangedListener(object : TextWatcher {
 
-           }
+            override fun afterTextChanged(s: Editable) {}
 
-           override fun onDataChange(snapshot: DataSnapshot) {
-               var sbRoom = StringBuilder()
+            override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
+            }
 
-               for(s in snapshot.children){
-                   val name = s.child("Name").getValue()
-                   sbRoom.append("${name}\n")
-               }
-               v.findViewById<TextView>(R.id.clean_name_result)//.setText(sbRoom)
-           }
+            override fun onTextChanged(word: CharSequence, start: Int, before: Int, count: Int) {
 
+                val clean_search_input:String = word.toString()
 
-       }
-       myRef.addValueEventListener(getCleanData)
-       myRef.addListenerForSingleValueEvent(getCleanData)
+                val cleanSearchRoom:Query=FirebaseDatabase.getInstance().reference.child("Cleaning_list")
+                        .orderByChild("Room").startAt(clean_search_input).endAt(clean_search_input+"\ufbff")
 
+                var f = cleanSearchRoom.addValueEventListener(object:ValueEventListener{
+                    override fun onCancelled(error: DatabaseError) {
 
-        val query: Query = databaseReference//.child("Name")
-        val firebaseRecyclerOptions: FirebaseRecyclerOptions<CleanServiceModel> = FirebaseRecyclerOptions.Builder<CleanServiceModel>()
-                .setQuery(query, CleanServiceModel::class.java)
-                .build()
+                    }
 
-        cleanServiceAdapter = CleanServiceAdapter(firebaseRecyclerOptions)
+                    override fun onDataChange(snapshot: DataSnapshot) {
 
-        recyclerView.layoutManager =LinearLayoutManager(this.context)
+                        cleanServiceList.clear()
+                        for (s in snapshot.children) {
+                            val cleanRoom = s.child("Room").getValue().toString()
+                            val cleanName = s.child("Name").getValue().toString()
+                            val cleanPhone = s.child("Phone").getValue().toString()
+                            val cs = s.getValue(CleanServiceModel::class.java)
+                            cs!!.userRoom = cleanRoom
+                            cleanRoomArr.add(cleanRoom)
+                            cs!!.userName = cleanName
+                            cleanNameArr.add(cleanName)
+                            cs!!.userPhone = cleanPhone
+                            cleanPhoneArr.add(cleanPhone)
+                            cleanServiceList.add(cs)
 
-        recyclerView.adapter = cleanServiceAdapter*/
+                        }
+                        val adapter = CleanServiceAdapter(this@cleaning_list, cleanServiceList, this@cleaning_list)
+
+                        recyclerView.setAdapter(adapter)
+
+                    }
+                })
+            }
+
+        })
+
 
         return v
     }
 
     override fun onItemClick(position: Int) {
-        val cleanIntent = Intent(getActivity(), add_new_cleaning_service::class.java)
+        val cleanIntent = Intent(getActivity(), edit_cleaning_service::class.java);
+        cleanIntent.putExtra("Room", cleanRoomArr[position].toString());
         cleanIntent.putExtra("Name", cleanNameArr[position].toString());
         cleanIntent.putExtra("Phone", cleanPhoneArr[position].toString());
 
         startActivity(cleanIntent)
     }
-
-    /*override fun onStart() {
-        super.onStart()
-        cleanServiceAdapter!!.startListening()
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        cleanServiceAdapter!!.stopListening()
-    }*/
 }

@@ -24,6 +24,7 @@ class add_new_cleaning_service : AppCompatActivity() {
             val name:String = findViewById<TextView>(R.id.add_clean_name).text.toString()
             val phone:String = findViewById<TextView>(R.id.add_clean_phone).text.toString()
 
+            myRef.child(roomNo).child("Room").setValue(roomNo)
             myRef.child(roomNo).child("Name").setValue(name)
             myRef.child(roomNo).child("Phone").setValue(phone)
         }
