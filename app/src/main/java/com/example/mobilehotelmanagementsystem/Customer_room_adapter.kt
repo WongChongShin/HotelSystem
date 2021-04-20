@@ -9,7 +9,8 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class Customer_room_adapter(val context: Context, val roomList: ArrayList<customer_room_list>,private val listener:OnItemClickListener):RecyclerView.Adapter<Customer_room_adapter.Holder>() {
+class Customer_room_adapter(val context: Context, val roomList: ArrayList<customer_room_list>,private val listener:OnItemClickListener):
+        RecyclerView.Adapter<Customer_room_adapter.Holder>() {
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
         holder?.bind(roomList[position])

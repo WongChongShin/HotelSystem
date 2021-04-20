@@ -86,8 +86,6 @@ class Customer_select_room : AppCompatActivity(),Customer_room_adapter.OnItemCli
                 }
 
             }
-
-
         }
 
 
