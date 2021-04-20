@@ -20,7 +20,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/cancel_edit_button"
+        android:id="@+id/cancel_clean_edit_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -29,10 +29,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirm_clean_button" />
+        app:layout_constraintTop_toBottomOf="@+id/confirm_clean_edit_button" />
 
     <Button
-        android:id="@+id/confirm_clean_button"
+        android:id="@+id/confirm_clean_edit_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -41,25 +41,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_clean_phone2" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_clean_phone" />
 
     <EditText
-        android:id="@+id/add_clean_phone2"
+        android:id="@+id/edit_clean_phone"
         android:layout_width="254dp"
         android:layout_height="41dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="30dp"
         android:background="#FFFCFC"
         android:ems="10"
         android:hint="@string/edit_add_phone"
         android:importantForAutofill="no"
         android:inputType="date"
         android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/add_clean_phone_textview2"
-        app:layout_constraintTop_toBottomOf="@+id/add_name2" />
+        app:layout_constraintStart_toEndOf="@+id/edit_clean_phone_tv"
+        app:layout_constraintTop_toBottomOf="@+id/edit_clean_name" />
 
     <TextView
-        android:id="@+id/add_clean_phone_textview2"
+        android:id="@+id/edit_clean_phone_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -68,10 +68,10 @@
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_clean_name_textview2" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_clean_name_tv" />
 
     <EditText
-        android:id="@+id/add_name2"
+        android:id="@+id/edit_clean_name"
         android:layout_width="257dp"
         android:layout_height="39dp"
         android:layout_marginStart="10dp"
@@ -82,11 +82,11 @@
         android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/add_clean_name_textview2"
-        app:layout_constraintTop_toBottomOf="@+id/add_clean_room2" />
+        app:layout_constraintStart_toEndOf="@+id/edit_clean_name_tv"
+        app:layout_constraintTop_toBottomOf="@+id/edit_clean_room" />
 
     <TextView
-        android:id="@+id/add_clean_name_textview2"
+        android:id="@+id/edit_clean_name_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -95,10 +95,10 @@
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_clean_room_textview" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_clean_room_tv" />
 
     <EditText
-        android:id="@+id/add_clean_room2"
+        android:id="@+id/edit_clean_room"
         android:layout_width="217dp"
         android:layout_height="36dp"
         android:layout_marginStart="10dp"
@@ -109,11 +109,11 @@
         android:importantForAutofill="no"
         android:inputType="number"
         android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/edit_clean_room_textview"
+        app:layout_constraintStart_toEndOf="@+id/edit_clean_room_tv"
         app:layout_constraintTop_toTopOf="@+id/add_customer_background3" />
 
     <TextView
-        android:id="@+id/edit_clean_room_textview"
+        android:id="@+id/edit_clean_room_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -125,7 +125,7 @@
         app:layout_constraintTop_toTopOf="@+id/add_customer_background3" />
 
     <ImageView
-        android:id="@+id/add_customer_back_logo3"
+        android:id="@+id/edit_clean_back_button"
         android:layout_width="40dp"
         android:layout_height="35dp"
         android:layout_marginStart="15dp"

@@ -24,6 +24,7 @@ class CleanServiceAdapter(val fragment: cleaning_list, val cleanServiceList: Arr
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
         val view = LayoutInflater.from(fragment.context)
                 .inflate(R.layout.row_clean_service, parent, false)
+
         return Holder(view)
     }
 
@@ -38,6 +39,9 @@ class CleanServiceAdapter(val fragment: cleaning_list, val cleanServiceList: Arr
         val cleanPhone = view?.findViewById<TextView>(R.id.row_clean_phone)
         val cleanEdit = view?.findViewById<ImageButton>(R.id.clean_edit_button)
 
+
+
+
         init{
             cleanEdit?.setOnClickListener(this)
         }
@@ -50,7 +54,10 @@ class CleanServiceAdapter(val fragment: cleaning_list, val cleanServiceList: Arr
             cleanEdit?.isEnabled = true
             cleanEdit?.isClickable = true
 
+
         }
+
+
 
         override fun onClick(v: View?) {
             val position=adapterPosition

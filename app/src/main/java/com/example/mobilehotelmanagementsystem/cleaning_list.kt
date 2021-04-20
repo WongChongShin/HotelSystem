@@ -95,12 +95,12 @@ class cleaning_list : Fragment(),CleanServiceAdapter.OnItemClickListener {
 
             override fun onTextChanged(word: CharSequence, start: Int, before: Int, count: Int) {
 
-                val clean_search_input:String = word.toString()
+                //val clean_search_input:String = word.toString()
 
-                val cleanSearchRoom:Query=FirebaseDatabase.getInstance().reference.child("Cleaning_list")
-                        .orderByChild("Room").startAt(clean_search_input).endAt(clean_search_input+"\ufbff")
+                val cleanSearchRoom:Query=FirebaseDatabase.getInstance().reference.child("Cleaning List")
+                        .orderByChild("Room").startAt(word.toString()).endAt(word.toString()+"\ufbff")
 
-                var f = cleanSearchRoom.addValueEventListener(object:ValueEventListener{
+                cleanSearchRoom.addValueEventListener(object:ValueEventListener{
                     override fun onCancelled(error: DatabaseError) {
 
                     }
@@ -131,7 +131,6 @@ class cleaning_list : Fragment(),CleanServiceAdapter.OnItemClickListener {
             }
 
         })
-
 
         return v
     }

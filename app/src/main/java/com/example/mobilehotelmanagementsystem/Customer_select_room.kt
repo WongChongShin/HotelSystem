@@ -107,8 +107,6 @@ class Customer_select_room : AppCompatActivity(),Customer_room_adapter.OnItemCli
             startActivity(backCustomerMain)
         }
 
-
-
     }
     private fun retriveAllData(){
         roomDatabaseRef.addValueEventListener(object : ValueEventListener {
@@ -142,7 +140,6 @@ class Customer_select_room : AppCompatActivity(),Customer_room_adapter.OnItemCli
                         val adapter = Customer_room_adapter(this@Customer_select_room, roomList, this@Customer_select_room)
 
                         recycleView.setAdapter(adapter)
-
 
                 }
             }
