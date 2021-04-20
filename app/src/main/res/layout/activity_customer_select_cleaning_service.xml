@@ -48,8 +48,8 @@
                         android:layout_width="160dp"
                         android:layout_height="wrap_content"
                         android:translationX="5dp"
-                        app:srcCompat="@drawable/salad"
-                        tools:srcCompat="@drawable/salad" />
+                        app:srcCompat="@drawable/quick_cleaning"
+                        tools:srcCompat="@drawable/quick_cleaning" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -105,8 +105,8 @@
                         android:layout_width="160dp"
                         android:layout_height="wrap_content"
                         android:translationX="5dp"
-                        app:srcCompat="@drawable/american_breakfast"
-                        tools:srcCompat="@drawable/american_breakfast" />
+                        app:srcCompat="@drawable/advance_cleaning"
+                        tools:srcCompat="@drawable/advance_cleaning" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -162,8 +162,8 @@
                         android:layout_width="160dp"
                         android:layout_height="wrap_content"
                         android:translationX="5dp"
-                        app:srcCompat="@drawable/salad"
-                        tools:srcCompat="@drawable/salad" />
+                        app:srcCompat="@drawable/deep_cleaning"
+                        tools:srcCompat="@drawable/deep_cleaning" />
 
                     <TextView
                         android:layout_width="wrap_content"

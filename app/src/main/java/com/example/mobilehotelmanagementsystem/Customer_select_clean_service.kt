@@ -69,7 +69,7 @@ class Customer_select_clean_service : AppCompatActivity() {
         serviceArr[0].description = "A quick room clean up that can be done within 30 minutes"
         serviceArr[0].minTime24 = 10
         serviceArr[0].maxTime24 = 17
-        serviceArr[0].picture = R.drawable.american_breakfast
+        serviceArr[0].picture = R.drawable.quick_cleaning
         serviceArr[0].serviceType = "Cleaning Service"
 
         serviceArr[1].name = "Advanced Cleaning"
@@ -77,7 +77,7 @@ class Customer_select_clean_service : AppCompatActivity() {
         serviceArr[1].description = "Room clean up with changing bed sheets"
         serviceArr[1].minTime24 = 10
         serviceArr[1].maxTime24 = 17
-        serviceArr[1].picture = R.drawable.salad
+        serviceArr[1].picture = R.drawable.advance_cleaning
         serviceArr[1].serviceType = "Cleaning Service"
 
         serviceArr[2].name = "Deep Cleaning"
@@ -85,7 +85,7 @@ class Customer_select_clean_service : AppCompatActivity() {
         serviceArr[2].description = "The most luxurious clean up in the house"
         serviceArr[2].minTime24 = 10
         serviceArr[2].maxTime24 = 17
-        serviceArr[2].picture = R.drawable.tea
+        serviceArr[2].picture = R.drawable.deep_cleaning
         serviceArr[2].serviceType = "Cleaning Service"
 
 

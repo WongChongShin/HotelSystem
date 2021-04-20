@@ -35,7 +35,7 @@ class Customer_service_order : AppCompatActivity() {
         orderName.text = order.name
 
         var orderPrice : TextView = findViewById(R.id.service_order_price_textview)
-        orderPrice.text = "RM ${order.price}"
+        orderPrice.text = String.format("RM %.2f",order.price )
 
         var orderTime : TextView = findViewById(R.id.service_order_time_textview)
         var displayTimeText  = ""
