@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:text="Select Food Service"
+        android:text="@string/select_food_service_title"
         android:textColor="#170539"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,7 +55,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="American Breakfast"
+                        android:text="@string/food_service_name_1"
                         android:textColor="@color/black"
                         android:textSize="22sp"
                         android:translationX="175dp" />
@@ -64,7 +64,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Price: RM 10"
+                        android:text="@string/food_service_price_1"
                         android:translationX="175dp"
                         android:translationY="40dp" />
 
@@ -72,7 +72,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Serving time: 7am ~ 11am"
+                        android:text="@string/food_service_time_1"
                         android:translationX="175dp"
                         android:translationY="65dp" />
 
@@ -80,7 +80,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Availability: Available"
+                        android:text="@string/food_service_availability_1"
                         android:translationX="175dp"
                         android:translationY="90dp" />
 
@@ -89,7 +89,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
                         android:background="@color/purple_500"
-                        android:text="Order"
+                        android:text="@string/food_service_order_btn"
                         android:textColor="#FFFFFF"
                         android:translationX="175dp"
                         android:translationY="120dp" />
@@ -112,7 +112,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Farmer's Salad"
+                        android:text="@string/food_service_name_2"
                         android:textColor="@color/black"
                         android:textSize="22sp"
                         android:translationX="175dp" />
@@ -121,7 +121,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Price: RM 8"
+                        android:text="@string/food_service_price_2"
                         android:translationX="175dp"
                         android:translationY="40dp" />
 
@@ -129,7 +129,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Serving Time: 1am ~ 8pm"
+                        android:text="@string/food_service_time_2"
                         android:translationX="175dp"
                         android:translationY="65dp" />
 
@@ -137,7 +137,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Availability: Available"
+                        android:text="@string/food_service_availability_2"
                         android:translationX="175dp"
                         android:translationY="90dp" />
 
@@ -146,7 +146,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
                         android:background="@color/purple_500"
-                        android:text="Order"
+                        android:text="@string/food_service_order_btn"
                         android:textColor="#FFFFFF"
                         android:translationX="175dp"
                         android:translationY="120dp" />
@@ -169,7 +169,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Specialty Tea"
+                        android:text="@string/food_service_name_3"
                         android:textColor="@color/black"
                         android:textSize="22sp"
                         android:translationX="175dp" />
@@ -178,7 +178,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Price: RM 5"
+                        android:text="@string/food_service_price_3"
                         android:translationX="175dp"
                         android:translationY="40dp" />
 
@@ -186,7 +186,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Serving time: 1pm ~ 8pm"
+                        android:text="@string/food_service_time_3"
                         android:translationX="175dp"
                         android:translationY="65dp" />
 
@@ -194,7 +194,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Availability: Available"
+                        android:text="@string/food_service_availability_3"
                         android:translationX="175dp"
                         android:translationY="90dp" />
 
@@ -203,7 +203,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
                         android:background="@color/purple_500"
-                        android:text="order"
+                        android:text="@string/food_service_order_btn"
                         android:textColor="#FFFFFF"
                         android:translationX="175dp"
                         android:translationY="120dp" />
@@ -226,7 +226,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Kids Meal"
+                        android:text="@string/food_service_name_4"
                         android:textColor="@color/black"
                         android:textSize="22sp"
                         android:translationX="175dp" />
@@ -235,7 +235,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Price: RM 18"
+                        android:text="@string/food_service_price_4"
                         android:translationX="175dp"
                         android:translationY="40dp" />
 
@@ -243,7 +243,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Serving time: 12pm ~ 8pm"
+                        android:text="@string/food_service_time_4"
                         android:translationX="175dp"
                         android:translationY="65dp" />
 
@@ -251,7 +251,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Availability: Available"
+                        android:text="@string/food_service_availability_4"
                         android:translationX="175dp"
                         android:translationY="90dp" />
 
@@ -260,7 +260,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
                         android:background="@color/purple_500"
-                        android:text="order"
+                        android:text="@string/food_service_order_btn"
                         android:textColor="#FFFFFF"
                         android:translationX="175dp"
                         android:translationY="120dp" />
@@ -283,7 +283,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Nyonya Rice Special"
+                        android:text="@string/food_service_name_5"
                         android:textColor="@color/black"
                         android:textSize="22sp"
                         android:translationX="175dp" />
@@ -292,7 +292,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Price: RM 15"
+                        android:text="@string/food_service_price_5"
                         android:translationX="175dp"
                         android:translationY="40dp" />
 
@@ -300,7 +300,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Serving time: 12pm ~ 8pm"
+                        android:text="@string/food_service_time_5"
                         android:translationX="175dp"
                         android:translationY="65dp" />
 
@@ -309,7 +309,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Availability: Available"
+                        android:text="@string/food_service_availability_5"
                         android:translationX="175dp"
                         android:translationY="90dp" />
 
@@ -318,7 +318,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
                         android:background="@color/purple_500"
-                        android:text="order"
+                        android:text="@string/food_service_order_btn"
                         android:textColor="#FFFFFF"
                         android:translationX="175dp"
                         android:translationY="120dp" />
@@ -341,7 +341,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Smoothie Deluxe"
+                        android:text="@string/food_service_name_6"
                         android:textColor="@color/black"
                         android:textSize="22sp"
                         android:translationX="175dp" />
@@ -350,7 +350,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Price: RM  12"
+                        android:text="@string/food_service_price_6"
                         android:translationX="175dp"
                         android:translationY="40dp" />
 
@@ -358,7 +358,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Serving time: 3pm ~ 8pm"
+                        android:text="@string/food_service_time_6"
                         android:translationX="175dp"
                         android:translationY="65dp" />
 
@@ -366,7 +366,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Availability: Unavailable"
+                        android:text="@string/food_service_availability_6"
                         android:textColor="#FF3737"
                         android:translationX="175dp"
                         android:translationY="90dp" />
@@ -376,7 +376,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
                         android:background="@color/purple_500"
-                        android:text="order"
+                        android:text="@string/food_service_order_btn"
                         android:textColor="#FFFFFF"
                         android:translationX="175dp"
                         android:translationY="120dp" />

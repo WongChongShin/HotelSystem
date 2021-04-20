@@ -11,25 +11,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Food Service Order"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Food Service Order" />
 
     <TextView
         android:id="@+id/service_order_name_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="OrderName"
         android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/food_order_image" />
+        app:layout_constraintTop_toBottomOf="@+id/food_order_image"
+        tools:text="OrderName" />
 
     <ImageView
         android:id="@+id/food_order_image"
@@ -47,10 +47,10 @@
         android:layout_height="120dp"
         android:layout_marginStart="36dp"
         android:layout_marginTop="12dp"
-        android:text="this is the description for the service"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/textView14"
-        app:layout_constraintTop_toBottomOf="@+id/service_order_time_textview" />
+        app:layout_constraintTop_toBottomOf="@+id/service_order_time_textview"
+        tools:text="this is the description for the service" />
 
     <TextView
         android:id="@+id/service_order_time_textview"
@@ -58,10 +58,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="12dp"
-        android:text="00am ~ 24pm"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/textView23"
-        app:layout_constraintTop_toBottomOf="@+id/service_order_price_textview" />
+        app:layout_constraintTop_toBottomOf="@+id/service_order_price_textview"
+        tools:text="00am ~ 24pm" />
 
     <TextView
         android:id="@+id/service_order_price_textview"
@@ -69,10 +69,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
         android:layout_marginTop="28dp"
-        android:text="RM 12.00"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/textView16"
-        app:layout_constraintTop_toBottomOf="@+id/service_order_name_textview" />
+        app:layout_constraintTop_toBottomOf="@+id/service_order_name_textview"
+        tools:text="RM 12.00" />
 
     <TextView
         android:id="@+id/textView16"
@@ -80,10 +80,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="28dp"
-        android:text="Price:"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/service_order_name_textview" />
+        app:layout_constraintTop_toBottomOf="@+id/service_order_name_textview"
+        tools:text="Price:" />
 
     <TextView
         android:id="@+id/textView23"
@@ -91,10 +91,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="12dp"
-        android:text="Serving time: "
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+        app:layout_constraintTop_toBottomOf="@+id/textView16"
+        tools:text="Serving time: " />
 
     <TextView
         android:id="@+id/textView14"
@@ -102,17 +102,17 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="12dp"
-        android:text="Description:"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView23" />
+        app:layout_constraintTop_toBottomOf="@+id/textView23"
+        tools:text="Description:" />
 
     <TextView
         android:id="@+id/textView19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Please select a room to continue your order"
+        android:text="@string/room_prompt_text"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -124,7 +124,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
         android:layout_marginTop="60dp"
-        android:text="Room: "
+        android:text="@string/rooom_text"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/service_order_des_textview" />
@@ -134,7 +134,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Confirm Order"
+        android:text="@string/confrim_order_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.568"
         app:layout_constraintStart_toStartOf="parent"
@@ -147,9 +147,10 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="Room No"
+        android:hint="@string/room_no_hint_text"
         android:inputType="textPersonName"
         app:layout_constraintStart_toEndOf="@+id/textView17"
-        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+        app:layout_constraintTop_toBottomOf="@+id/textView19"
+        android:autofillHints="" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

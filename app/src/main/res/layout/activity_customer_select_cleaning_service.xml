@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:text="Select Cleaning Service"
+        android:text="@string/select_cleaning_service_title"
         android:textColor="#170539"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,7 +55,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Quick Cleaning"
+                        android:text="@string/clean_service_name_1"
                         android:textColor="@color/black"
                         android:textSize="22sp"
                         android:translationX="175dp" />
@@ -64,7 +64,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Price: RM 10"
+                        android:text="@string/clean_price_name_1"
                         android:translationX="175dp"
                         android:translationY="40dp" />
 
@@ -72,7 +72,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Serving Time: 10am ~ 5pm"
+                        android:text="@string/clean_service_time_1"
                         android:translationX="175dp"
                         android:translationY="65dp" />
 
@@ -80,7 +80,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Availability: Available"
+                        android:text="@string/clean_service_availability_1"
                         android:translationX="175dp"
                         android:translationY="90dp" />
 
@@ -89,7 +89,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
                         android:background="@color/purple_500"
-                        android:text="Order"
+                        android:text="@string/clean_service_btn"
                         android:textColor="#FFFFFF"
                         android:translationX="175dp"
                         android:translationY="120dp" />
@@ -106,13 +106,14 @@
                         android:layout_height="wrap_content"
                         android:translationX="5dp"
                         app:srcCompat="@drawable/advance_cleaning"
-                        tools:srcCompat="@drawable/advance_cleaning" />
+                        tools:srcCompat="@drawable/advance_cleaning"
+                        android:contentDescription="TODO" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Advanced Cleaning"
+                        android:text="@string/advanced_cleaning"
                         android:textColor="@color/black"
                         android:textSize="22sp"
                         android:translationX="175dp" />
@@ -121,7 +122,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Price: RM 20"
+                        android:text="@string/price_rm_20"
                         android:translationX="175dp"
                         android:translationY="40dp" />
 
@@ -129,7 +130,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Serving Time: 10am ~ 5pm"
+                        android:text="@string/clean_service_time_2"
                         android:translationX="175dp"
                         android:translationY="65dp" />
 
@@ -137,7 +138,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Availability: Available"
+                        android:text="@string/clean_service_availability_2"
                         android:translationX="175dp"
                         android:translationY="90dp" />
 
@@ -146,7 +147,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
                         android:background="@color/purple_500"
-                        android:text="Order"
+                        android:text="@string/clean_service_btn"
                         android:textColor="#FFFFFF"
                         android:translationX="175dp"
                         android:translationY="120dp" />
@@ -169,7 +170,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Deep Cleaning"
+                        android:text="@string/deep_cleaning"
                         android:textColor="@color/black"
                         android:textSize="22sp"
                         android:translationX="175dp" />
@@ -178,7 +179,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Price: RM 35"
+                        android:text="@string/price_rm_35"
                         android:translationX="175dp"
                         android:translationY="40dp" />
 
@@ -186,7 +187,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Serving Time: 10am ~ 5pm"
+                        android:text="@string/clean_service_time_3"
                         android:translationX="175dp"
                         android:translationY="65dp" />
 
@@ -194,7 +195,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Availability: Available"
+                        android:text="@string/clean_service_availability_3"
                         android:translationX="175dp"
                         android:translationY="90dp" />
 
@@ -203,7 +204,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
                         android:background="@color/purple_500"
-                        android:text="Order"
+                        android:text="@string/clean_service_btn"
                         android:textColor="#FFFFFF"
                         android:translationX="175dp"
                         android:translationY="120dp" />

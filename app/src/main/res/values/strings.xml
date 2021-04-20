@@ -197,6 +197,65 @@
     <string name="visa_card">Visa Card</string>
     <string name="master_card">Master Card</string>
 
+    <!-- Strings used for cleaning service select page-->
+    <string name="select_cleaning_service_title">"Select Cleaning Service "</string>
+    <string name="clean_service_name_1">Quick Cleaning</string>
+    <string name="clean_price_name_1">Price: RM 10</string>
+    <string name="clean_service_time_1">Serving Time: 10am ~ 5pm</string>
+    <string name="clean_service_availability_1">Availability: Available</string>
+    <string name="clean_service_btn">Order</string>
+
+    <string name="advanced_cleaning">Advanced Cleaning</string>
+    <string name="price_rm_20">Price: RM 20</string>
+    <string name="clean_service_time_2">Serving Time: 10am ~ 5pm</string>
+    <string name="clean_service_availability_2">Availability: Available</string>
+
+    <string name="deep_cleaning">Deep Cleaning</string>
+    <string name="price_rm_35">Price: RM 35</string>
+    <string name="clean_service_time_3">Serving Time: 10am ~ 5pm</string>
+    <string name="clean_service_availability_3">Availability: Available</string>
+
+
+    <!-- Strings used for service order page-->
+    <string name="room_prompt_text">Please select a room to continue your order</string>
+    <string name="rooom_text">Room:</string>
+    <string name="confrim_order_btn">Confirm Order</string>
+    <string name="room_no_hint_text">Room No</string>
+
+
+    <!-- Strings used for food service select page-->
+    <string name="select_food_service_title">Select Food Service</string>
+    <string name="food_service_name_1">American Breakfast</string>
+    <string name="food_service_price_1">Price: RM 10</string>
+    <string name="food_service_time_1">Serving time: 7am ~ 11am</string>
+    <string name="food_service_availability_1">Availability: Available</string>
+    <string name="food_service_order_btn">Order</string>
+
+    <string name="food_service_name_2">Farmers Salad</string>
+    <string name="food_service_price_2">Price: RM 8</string>
+    <string name="food_service_time_2">Serving Time: 1am ~ 8pm</string>
+    <string name="food_service_availability_2">Availability: Available</string>
+
+    <string name="food_service_name_3">Specialty Tea</string>
+    <string name="food_service_price_3">Price: RM 5</string>
+    <string name="food_service_time_3">Serving time: 1pm ~ 8pm</string>
+    <string name="food_service_availability_3">Availability: Available</string>
+
+    <string name="food_service_name_4">Kids Meal</string>
+    <string name="food_service_price_4">Price: RM 18</string>
+    <string name="food_service_time_4">Serving time: 12pm ~ 8pm</string>
+    <string name="food_service_availability_4">Availability: Available</string>
+
+    <string name="food_service_name_5">Nyonya Rice Special</string>
+    <string name="food_service_price_5">Price: RM 15</string>
+    <string name="food_service_time_5">Serving time: 12pm ~ 8pm</string>
+    <string name="food_service_availability_5">Availability: Available</string>
+
+    <string name="food_service_name_6">Smoothie Deluxe</string>
+    <string name="food_service_price_6">Price: RM 12</string>
+    <string name="food_service_time_6">Serving time: 3pm ~ 8pm</string>
+    <string name="food_service_availability_6">Availability: Unavailable</string>
+
 
 </resources>
 
