@@ -1,14 +1,15 @@
 package com.example.mobilehotelmanagementsystem
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.firebase.ui.database.FirebaseRecyclerOptions
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.FirebaseError
+import com.google.firebase.database.*
 
 
 class checkIn_and_checkOut : AppCompatActivity() {
@@ -16,7 +17,6 @@ class checkIn_and_checkOut : AppCompatActivity() {
     private val bd:FirebaseDatabase = FirebaseDatabase.getInstance()
     private val databaseReference: DatabaseReference = bd.getReference("Customer List")
     var customerAdapter: CustomerAdapter? = null
-    private val recyclerView : RecyclerView = findViewById(R.id.customer_list_view)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,7 +40,8 @@ class checkIn_and_checkOut : AppCompatActivity() {
 
     private fun setUpRecyclerView(){
 
-        val query: DatabaseReference = databaseReference
+        val recyclerView : RecyclerView = findViewById(R.id.customer_list_view)
+        val query: Query = databaseReference
         val firebaseRecyclerOptions: FirebaseRecyclerOptions<CustomerModel> = FirebaseRecyclerOptions.Builder<CustomerModel>()
             .setQuery(query, CustomerModel::class.java).build()
 

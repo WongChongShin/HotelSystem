@@ -35,6 +35,7 @@ class AddNewCustomer : AppCompatActivity() {
             val check_in:String = findViewById<TextView>(R.id.add_checkIn).text.toString()
             val check_out:String = findViewById<TextView>(R.id.add_checkOut).text.toString()
 
+            myRef.child(room_no).child("Room_No").setValue(room_no)
             myRef.child(room_no).child("Name").setValue(name)
             myRef.child(room_no).child("Email").setValue(email)
             myRef.child(room_no).child("Phone").setValue(phone)

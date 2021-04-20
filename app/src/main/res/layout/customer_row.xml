@@ -1,67 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_marginTop="9dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:layout_marginStart="9dp"
+    android:layout_marginTop="9dp"
     android:layout_marginEnd="9dp"
-    app:cardBackgroundColor="#fff"
-    android:layout_height="match_parent">
+    app:cardBackgroundColor="#fff">
 
     <LinearLayout
         android:id="@+id/customer_linear_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="9dp"
         android:orientation="vertical"
-        android:padding="10dp">
+        android:padding="9dp">
 
-        <TextView
-            android:id="@+id/customer_room_no_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:padding="5dp"
-            android:text="Room No"
-            android:textSize="16sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="0dp">
 
-        <TextView
-            android:id="@+id/customer_name_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:padding="5dp"
-            android:text="Name"
-            android:textSize="16sp" />
+            <TextView
+                android:id="@+id/customer_room_no_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:text="Room No:"
+                android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/customer_email_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:padding="5dp"
-            android:text="Email"
-            android:textSize="16sp" />
+            <TextView
+                android:id="@+id/customer_room_no_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:text=""
+                android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/customer_phone_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:padding="5dp"
-            android:text="Phone"
-            android:textSize="16sp" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/customer_checkIn_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:padding="5dp"
-            android:text="Check In"
-            android:textSize="16sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="0dp">
 
-        <TextView
-            android:id="@+id/customer_checkOut_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:padding="5dp"
-            android:text="Check out"
-            android:textSize="16sp" />
+            <TextView
+                android:id="@+id/customer_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:text="Name:"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/customer_name_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:text=""
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="0dp">
+
+            <TextView
+                android:id="@+id/customer_email_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:text="Email:"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/customer_email_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:text=""
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="0dp">
+
+            <TextView
+                android:id="@+id/customer_phone_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:text="Phone:"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/customer_phone_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:text=""
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="0dp">
+
+            <TextView
+                android:id="@+id/customer_checkIn_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:text="Check In:"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/customer_checkIn_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:text=""
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="0dp">
+
+            <TextView
+                android:id="@+id/customer_checkOut_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:text="Check Out:"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/customer_checkOut_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:text=""
+                android:textSize="16sp" />
+        </LinearLayout>
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>
+
