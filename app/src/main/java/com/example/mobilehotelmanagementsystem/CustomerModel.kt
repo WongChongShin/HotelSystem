@@ -8,7 +8,7 @@ class CustomerModel {
     var checkIn: String? = null
     var checkOut: String? = null
 
-    constructor()
+  /*  constructor()
 
     constructor(room_no: String?, name: String?, email: String?, phone: String?, checkIn: String?, checkOut: String?) {
         this.room_no = room_no
@@ -17,5 +17,5 @@ class CustomerModel {
         this.phone = phone
         this.checkIn = checkIn
         this.checkOut = checkOut
-    }
+    }*/
 }
