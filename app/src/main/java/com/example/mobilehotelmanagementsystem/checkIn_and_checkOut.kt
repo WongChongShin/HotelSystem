@@ -162,12 +162,10 @@ class checkIn_and_checkOut : AppCompatActivity(),CustomerAdapter.OnItemClickList
         val deleteCustomerListBtn = findViewById<ImageView>(R.id.delete_row_customer)
         deleteCustomerListBtn.setOnClickListener {
 
-            databaseReference.child("Name").removeValue()
+            databaseReference.child("Room No").removeValue()
 
         }
 
-        val editCustomerListBtn = findViewById<ImageView>(R.id.edit_row_customer)
-        editCustomerListBtn.setOnClickListener {
 
             val customerIntent = Intent(this, EditCustomerList::class.java)
 
@@ -181,6 +179,5 @@ class checkIn_and_checkOut : AppCompatActivity(),CustomerAdapter.OnItemClickList
             startActivity(customerIntent)
 
 
-        }
     }
 }

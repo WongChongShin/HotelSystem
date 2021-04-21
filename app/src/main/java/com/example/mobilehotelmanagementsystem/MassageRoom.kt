@@ -142,9 +142,6 @@ class MassageRoom : AppCompatActivity(), MassageAdapter.OnItemClickListener {
 
         }
 
-        val editMassageListBtn = findViewById<ImageView>(R.id.edit_row_massage)
-        editMassageListBtn.setOnClickListener {
-
             val massageIntent = Intent(this, EditMassageList::class.java)
 
             massageIntent.putExtra("Room No", massageRoomNoArr[position].toString());
@@ -153,7 +150,5 @@ class MassageRoom : AppCompatActivity(), MassageAdapter.OnItemClickListener {
 
             startActivity(massageIntent)
 
-
-        }
     }
 }

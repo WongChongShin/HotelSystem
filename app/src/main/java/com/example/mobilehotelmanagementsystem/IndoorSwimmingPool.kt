@@ -143,9 +143,6 @@ class IndoorSwimmingPool : AppCompatActivity() ,PoolAdapter.OnItemClickListener 
 
         }
 
-        val editPoolListBtn = findViewById<ImageView>(R.id.edit_row_pool)
-        editPoolListBtn.setOnClickListener {
-
             val poolIntent = Intent(this, EditPoolList::class.java)
 
             poolIntent.putExtra("Room No", poolRoomNoArr[position].toString());
@@ -153,8 +150,6 @@ class IndoorSwimmingPool : AppCompatActivity() ,PoolAdapter.OnItemClickListener 
             poolIntent.putExtra("Time", poolTimeArr[position].toString());
 
             startActivity(poolIntent)
-
-
-        }
+        
     }
 }

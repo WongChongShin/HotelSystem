@@ -142,9 +142,6 @@ class KaraokeRoom : AppCompatActivity(),KaraokeAdapter.OnItemClickListener {
 
         }
 
-        val editKaraokeListBtn = findViewById<ImageView>(R.id.edit_row_karaoke)
-        editKaraokeListBtn.setOnClickListener {
-
             val karaokeIntent = Intent(this, EditKaraokeList::class.java)
 
             karaokeIntent.putExtra("Room No", karaokeRoomNoArr[position].toString());
@@ -153,7 +150,5 @@ class KaraokeRoom : AppCompatActivity(),KaraokeAdapter.OnItemClickListener {
 
             startActivity(karaokeIntent)
 
-
-        }
     }
 }
