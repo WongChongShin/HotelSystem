@@ -37,7 +37,7 @@ class EditCustomerList : AppCompatActivity() {
         editCustomerName.setText(customerName)
 
         val editCustomerEmail = findViewById<TextView>(R.id.edit_email)
-        val customerEmail = intent?.getStringExtra("Name")
+        val customerEmail = intent?.getStringExtra("Email")
 
         editCustomerEmail.setText(customerEmail)
 
