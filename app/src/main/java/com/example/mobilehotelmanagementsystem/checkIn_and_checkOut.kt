@@ -162,7 +162,12 @@ class checkIn_and_checkOut : AppCompatActivity(),CustomerAdapter.OnItemClickList
         val deleteCustomerListBtn = findViewById<ImageView>(R.id.delete_row_customer)
         deleteCustomerListBtn.setOnClickListener {
 
-            databaseReference.child("Room No").removeValue()
+            customerRoomNoArr[position] = databaseReference.child("Room_No").removeValue().toString()
+            customerNameArr[position] = databaseReference.child("Name").removeValue().toString()
+            customerEmailArr[position] = databaseReference.child("Email").removeValue().toString()
+            customerPhoneArr[position] = databaseReference.child("Phone").removeValue().toString()
+            customerCheckInArr[position] = databaseReference.child("Check In").removeValue().toString()
+            customerCheckOutArr[position] = databaseReference.child("Check Out").removeValue().toString()
 
         }
 

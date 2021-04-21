@@ -28,6 +28,10 @@ class add_new_food_service : AppCompatActivity() {
             myRef.child(roomNo).child("fRoom").setValue(roomNo)
             myRef.child(roomNo).child("fName").setValue(name)
             myRef.child(roomNo).child("fPhone").setValue(phone)
+
+            val addfoodIntent = Intent(this, food_list::class.java)
+
+            startActivity(addfoodIntent)
         }
 
         val btnCancelFood = findViewById<Button>(R.id.cancel_food_button)

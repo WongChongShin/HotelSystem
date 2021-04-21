@@ -138,7 +138,9 @@ class MassageRoom : AppCompatActivity(), MassageAdapter.OnItemClickListener {
         val deleteMassageListBtn = findViewById<ImageView>(R.id.delete_row_massage)
         deleteMassageListBtn.setOnClickListener {
 
-            databaseReference.child("Name").removeValue()
+            massageRoomNoArr[position] = databaseReference.child("Room No").removeValue().toString()
+            massagePhoneArr[position] = databaseReference.child("Phone").removeValue().toString()
+            massageTimeArr[position] = databaseReference.child("Time").removeValue().toString()
 
         }
 

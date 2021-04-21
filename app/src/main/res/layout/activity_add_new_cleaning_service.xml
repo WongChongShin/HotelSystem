@@ -84,7 +84,7 @@
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/add_customer_back_logo2"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
