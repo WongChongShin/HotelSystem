@@ -119,7 +119,6 @@
         android:ems="3"
         android:hint="@string/edit_edit_massage_list_time"
         android:importantForAutofill="no"
-        android:inputType="time"
         android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/edit_massage_list_time_textView"
         app:layout_constraintTop_toBottomOf="@+id/edit_massage_list_phone" />

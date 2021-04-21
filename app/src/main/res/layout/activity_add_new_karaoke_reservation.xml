@@ -55,7 +55,6 @@
         android:ems="3"
         android:hint="@string/edit_add_karaoke_reservation_time"
         android:importantForAutofill="no"
-        android:inputType="time"
         android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/add_karaoke_reservation_time_textView"
         app:layout_constraintTop_toBottomOf="@+id/add_karaoke_reservation_phone" />
