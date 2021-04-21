@@ -139,7 +139,9 @@ class IndoorSwimmingPool : AppCompatActivity() ,PoolAdapter.OnItemClickListener 
         val deletePoolListBtn = findViewById<ImageView>(R.id.delete_row_pool)
         deletePoolListBtn.setOnClickListener {
 
-            databaseReference.child("Name").removeValue()
+            poolRoomNoArr[position] = databaseReference.child("Room No").removeValue().toString()
+            poolPhoneArr[position] = databaseReference.child("Phone").removeValue().toString()
+            poolTimeArr[position] = databaseReference.child("Time").removeValue().toString()
 
         }
 
@@ -150,6 +152,6 @@ class IndoorSwimmingPool : AppCompatActivity() ,PoolAdapter.OnItemClickListener 
             poolIntent.putExtra("Time", poolTimeArr[position].toString());
 
             startActivity(poolIntent)
-        
+
     }
 }

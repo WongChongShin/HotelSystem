@@ -138,7 +138,9 @@ class KaraokeRoom : AppCompatActivity(),KaraokeAdapter.OnItemClickListener {
         val deleteKaraokeListBtn = findViewById<ImageView>(R.id.delete_row_karaoke)
         deleteKaraokeListBtn.setOnClickListener {
 
-            databaseReference.child("Name").removeValue()
+            karaokeRoomNoArr[position] = databaseReference.child("Room No").removeValue().toString()
+            karaokePhoneArr[position] = databaseReference.child("Phone").removeValue().toString()
+            karaokeTimeArr[position] = databaseReference.child("Time").removeValue().toString()
 
         }
 
