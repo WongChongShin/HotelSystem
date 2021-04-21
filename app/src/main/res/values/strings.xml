@@ -221,6 +221,9 @@
     <string name="rooom_text">Room:</string>
     <string name="confrim_order_btn">Confirm Order</string>
     <string name="room_no_hint_text">Room No</string>
+    <string name="price">Price:</string>
+    <string name="serving_time">Serving time:</string>
+    <string name="description">Description:</string>
 
 
     <!-- Strings used for food service select page-->
@@ -255,6 +258,7 @@
     <string name="food_service_price_6">Price: RM 12</string>
     <string name="food_service_time_6">Serving time: 3pm ~ 8pm</string>
     <string name="food_service_availability_6">Availability: Unavailable</string>
+
 
 
 </resources>

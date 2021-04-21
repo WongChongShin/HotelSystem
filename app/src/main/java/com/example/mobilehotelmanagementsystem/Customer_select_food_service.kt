@@ -82,7 +82,7 @@ class Customer_select_food_service : AppCompatActivity() {
         serviceArr[1].name = "Farmers Salad"
         serviceArr[1].price = 8.00f
         serviceArr[1].description = "An assortment of fresh veggies"
-        serviceArr[1].minTime24 = 10
+        serviceArr[1].minTime24 = 13
         serviceArr[1].maxTime24 = 20
         serviceArr[1].picture = R.drawable.salad
 
