@@ -7,7 +7,7 @@
     tools:context=".edit_food_service">
 
     <View
-        android:id="@+id/add_customer_background3"
+        android:id="@+id/edit_customer_background3"
         android:layout_width="382dp"
         android:layout_height="652dp"
         android:layout_marginTop="3dp"
@@ -41,25 +41,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_food_phone" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_food_phone" />
 
     <EditText
-        android:id="@+id/add_food_phone"
+        android:id="@+id/edit_food_phone"
         android:layout_width="254dp"
         android:layout_height="41dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="32dp"
         android:background="#FFFCFC"
         android:ems="10"
-        android:hint="@string/edit_add_phone"
+        android:hint="@string/edit_edit_phone"
         android:importantForAutofill="no"
         android:inputType="date"
         android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/add_food_phone_textview2"
-        app:layout_constraintTop_toBottomOf="@+id/add_name2" />
+        app:layout_constraintStart_toEndOf="@+id/edit_food_phone_textview2"
+        app:layout_constraintTop_toBottomOf="@+id/edit_food_name" />
 
     <TextView
-        android:id="@+id/add_food_phone_textview2"
+        android:id="@+id/edit_food_phone_textview2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -68,25 +68,25 @@
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_food_name_textview" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_food_name_textview" />
 
     <EditText
-        android:id="@+id/add_name2"
+        android:id="@+id/edit_food_name"
         android:layout_width="257dp"
         android:layout_height="39dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="32dp"
         android:background="#FFFCFC"
         android:ems="10"
-        android:hint="@string/edit_add_name"
+        android:hint="@string/edit_edit_name"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/add_food_name_textview"
-        app:layout_constraintTop_toBottomOf="@+id/add_food_room" />
+        app:layout_constraintStart_toEndOf="@+id/edit_food_name_textview"
+        app:layout_constraintTop_toBottomOf="@+id/edit_food_room" />
 
     <TextView
-        android:id="@+id/add_food_name_textview"
+        android:id="@+id/edit_food_name_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -95,25 +95,25 @@
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_food_room_textview" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_food_room_textview" />
 
     <EditText
-        android:id="@+id/add_food_room"
+        android:id="@+id/edit_food_room"
         android:layout_width="217dp"
         android:layout_height="36dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="50dp"
         android:background="#FFFCFC"
         android:ems="3"
-        android:hint="@string/edit_add_room_no"
+        android:hint="@string/edit_edit_room_no"
         android:importantForAutofill="no"
         android:inputType="number"
         android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/add_food_room_textview"
-        app:layout_constraintTop_toTopOf="@+id/add_customer_background3" />
+        app:layout_constraintStart_toEndOf="@+id/edit_food_room_textview"
+        app:layout_constraintTop_toTopOf="@+id/edit_customer_background3" />
 
     <TextView
-        android:id="@+id/add_food_room_textview"
+        android:id="@+id/edit_food_room_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -122,10 +122,10 @@
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/add_customer_background3" />
+        app:layout_constraintTop_toTopOf="@+id/edit_customer_background3" />
 
     <ImageView
-        android:id="@+id/add_customer_back_logo3"
+        android:id="@+id/edit_food_back_button"
         android:layout_width="40dp"
         android:layout_height="35dp"
         android:layout_marginStart="15dp"
